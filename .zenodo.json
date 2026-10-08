@@ -1,0 +1,21 @@
+{
+  "title": "pcct-vmi-core: a spectral simulation testbed for task detectability and quantitation after denoising of photon-counting-detector CT virtual monoenergetic images",
+  "description": "Synthetic spectral simulation testbed (polyenergetic forward model, two-bin photon-counting detection, FBP reconstruction, water/iodine basis decomposition, virtual monoenergetic image synthesis) for studying how AI denoising shifts detectability-optimal energy and affects iodine quantitation in PCD-CT VMI stacks.",
+  "license": "MIT",
+  "upload_type": "software",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Yamamoto, Shuji",
+      "affiliation": "Institute of One, LISIT Co., Ltd.",
+      "orcid": "0000-0001-9211-1071"
+    }
+  ],
+  "keywords": [
+    "photon-counting detector CT",
+    "virtual monoenergetic imaging",
+    "task-based image quality",
+    "denoising",
+    "simulation"
+  ]
+}

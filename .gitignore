@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+
+# Local tooling
+.claude/
+
+# Generated outputs (regenerable via examples / paper build)
+outputs/
+paper/figures/*.png
+paper/figures/results.json
+
+# Data (public datasets; fetch per docs/DATA.md, never commit)
+data/
+
+# Working temp
+_tmp/
+
+# OS
+Thumbs.db
+.DS_Store
