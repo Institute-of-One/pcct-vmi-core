@@ -1,4 +1,4 @@
-"""Filtered back-projection of photon-counting bin projections."""
+"""Filtered back-projection of detector projections."""
 
 from __future__ import annotations
 
@@ -7,20 +7,25 @@ from skimage.transform import iradon
 
 from pcctvmi.forward import SimulationResult
 
+LOG_SHIFT = 0.5  # shifted-log linearisation for low-count projections
 
-def linearize(counts: np.ndarray, air_counts: float) -> np.ndarray:
+
+def linearize(counts: np.ndarray, air_counts: float, shift: float = LOG_SHIFT) -> np.ndarray:
     """Negative log transmission per detector element.
 
-    Zero counts would give +inf; the forward model's air-count guard
-    (mean air counts >= 100) makes a zero count astronomically unlikely for
-    any realistic water path, but we still raise rather than floor silently.
+    Uses the shifted-log estimator ``log((c + shift) / air)``: zero counts
+    are linearisable (no -inf), and for a Poisson mean mu the estimator bias
+    is O(1/mu^2) — negligible at the frozen dose levels (mean counts >= ~5).
+    Negative counts are physically impossible and raise.
     """
     c = np.asarray(counts, dtype=np.float64)
-    if np.any(c <= 0):
-        raise ValueError("zero or negative counts cannot be linearised; raise n0")
+    if np.any(c < 0):
+        raise ValueError("negative counts cannot be linearised")
     if air_counts <= 0:
         raise ValueError("air_counts must be positive")
-    return -np.log(c / air_counts)
+    if shift <= 0:
+        raise ValueError("shift must be positive")
+    return -np.log((c + shift) / air_counts)
 
 
 def fbp(line_integrals: np.ndarray, theta_deg: np.ndarray, filter_name: str = "hann") -> np.ndarray:

@@ -50,11 +50,20 @@ def test_different_seed_differs() -> None:
     assert not np.array_equal(r1.counts[0], r2.counts[0])
 
 
-def test_reconstruct_rejects_zero_counts() -> None:
+def test_zero_counts_are_linearized_not_rejected() -> None:
+    # Shifted-log policy: a manufactured zero count is linearisable and the
+    # reconstruction stays finite (previously this raised).
     r = _small_result(0)
-    r.counts[0][0, 0] = 0  # manufactured degenerate measurement
+    r.counts[0][0, 0] = 0
+    images = reconstruct_bins(r)
+    assert all(np.all(np.isfinite(img)) for img in images)
+
+
+def test_negative_counts_rejected() -> None:
+    from pcctvmi.recon import linearize
+
     with pytest.raises(ValueError):
-        reconstruct_bins(r)
+        linearize(np.array([[-1.0, 1.0]]), air_counts=1.0e5)
 
 
 def test_decompose_rejects_singular() -> None:

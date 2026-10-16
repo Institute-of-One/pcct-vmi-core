@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from collections.abc import Sequence
+
 import numpy as np
 
 from pcctvmi.materials import mu_rho
@@ -32,7 +34,9 @@ def decompose(
 
 
 def vmi_hu(
-    water_density: np.ndarray, iodine_density: np.ndarray, energy_kev: float | np.ndarray
+    water_density: np.ndarray,
+    iodine_density: np.ndarray,
+    energy_kev: float | np.ndarray | Sequence[float],
 ) -> np.ndarray:
     """Virtual monoenergetic image in HU.
 

@@ -10,7 +10,9 @@ clinical performance claims; institutional review, informed consent, and clinica
 validation are therefore not applicable.
 
 Real public data (Zenodo walnut PCD-CT dataset, CC BY 4.0; TCIA EID CT, CC BY
-3.0) are used only as external validation inputs and are never redistributed.
+3.0) are **planned** as external validation inputs only (not yet used in the
+current code) and are never redistributed. See `docs/PROTOCOL_FREEZE.md` §4
+and `docs/DATA.md` for conditions and the planned scope.
 
 ## What it does
 

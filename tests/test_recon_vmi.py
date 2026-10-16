@@ -5,7 +5,7 @@ from __future__ import annotations
 import numpy as np
 import pytest
 
-from pcctvmi.forward import simulate
+from pcctvmi.forward import REFERENCE_N0, simulate
 from pcctvmi.materials import mu_rho
 from pcctvmi.phantom import Insert, make_water_cylinder_phantom
 from pcctvmi.recon import reconstruct_bins
@@ -128,7 +128,10 @@ def test_two_bin_decomposition_poly() -> None:
         pixel_size_cm=0.1,
         inserts=(Insert(x_cm=0.0, y_cm=5.0, diameter_cm=2.0, iodine_g_cm3=INSERT_DENSITY),),
     )
-    res = simulate(spec, ph, theta_deg=THETA, thresholds_kev=(30.0,), n0=1.0e6, seed=5)
+    # Frozen reference fluence: at n0=1e6 the Low-bin mean at 20 cm water is
+    # ~4.5 counts and the shifted-log shift (0.5) would bias the line
+    # integral by ~10%; REFERENCE_N0 keeps that bias < 0.3%.
+    res = simulate(spec, ph, theta_deg=THETA, thresholds_kev=(30.0,), n0=REFERENCE_N0, seed=5)
     mat = np.array(
         [
             [res.mu_eff[0]["water"], res.mu_eff[0]["iodine"]],

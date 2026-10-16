@@ -16,7 +16,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import numpy as np
 
-from pcctvmi.forward import simulate
+from pcctvmi.forward import REFERENCE_N0, simulate
 from pcctvmi.phantom import Insert, make_water_cylinder_phantom
 from pcctvmi.recon import reconstruct_bins
 from pcctvmi.spectrum import Spectrum
@@ -24,7 +24,7 @@ from pcctvmi.vmi import VMI_GRID_KEV, decompose, vmi_stack
 
 OUT = Path(__file__).resolve().parent.parent / "outputs"
 SEED = 20261009  # frozen simulation seed
-N0 = 2.0e5
+N0 = REFERENCE_N0  # 4.0e7 photons/element @100% (frozen, docs/PROTOCOL_FREEZE.md S1-6)
 
 
 def _roi_mean(img: np.ndarray, cy: int, cx: int, radius: int) -> float:

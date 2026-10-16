@@ -14,6 +14,9 @@ outputs/
 paper/figures/*.png
 paper/figures/results.json
 
+# Quantitation baseline chunk intermediates (merged JSON is committed)
+results/quantitation_baseline_part*.json
+
 # Data (public datasets; fetch per docs/DATA.md, never commit)
 data/
 

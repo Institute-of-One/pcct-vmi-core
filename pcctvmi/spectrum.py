@@ -89,22 +89,25 @@ class Spectrum:
         thresholds_kev: tuple[float, ...],
         reference_water_path_cm: float,
         materials: tuple[str, ...] = ("water", "iodine"),
+        energy_weighted: bool = False,
     ) -> list[dict[str, float]]:
         """Transmission-weighted effective mass attenuation per bin.
 
-        Weight per energy: fluence x exp(-mu/rho_water(E) x path). The linear
-        forward model uses these effective coefficients for the basis
-        decomposition; residual spectral non-linearity appears physically as
-        beam-hardening bias.
+        Weight per energy: fluence x exp(-mu/rho_water(E) x path); with
+        ``energy_weighted=True`` the fluence is multiplied by E first (EID
+        detection weighting). The linear forward model uses these effective
+        coefficients for the basis decomposition; residual spectral
+        non-linearity appears physically as beam-hardening bias.
         """
         from pcctvmi.materials import mu_rho
 
         if reference_water_path_cm < 0:
             raise ValueError("reference water path must be non-negative")
+        fluence = self.fluence * self.energies_kev if energy_weighted else self.fluence
         trans = np.exp(-mu_rho("water", self.energies_kev) * reference_water_path_cm)
         out: list[dict[str, float]] = []
         for mask in self.bin_masks(thresholds_kev):
-            w = self.fluence * trans * mask
+            w = fluence * trans * mask
             denom = float(w.sum())
             if denom <= 0:
                 raise ValueError("bin has zero reference transmission weight")

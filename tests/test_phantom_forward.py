@@ -91,8 +91,16 @@ def test_forward_degenerate_n0_rejected() -> None:
         simulate(spec, ph, theta_deg=THETA_SMALL, thresholds_kev=(), n0=10.0, seed=0)
 
 
-def test_linearize_zero_counts_rejected() -> None:
+def test_linearize_negative_counts_rejected() -> None:
     from pcctvmi.recon import linearize
 
     with pytest.raises(ValueError):
-        linearize(np.array([[0.0, 1.0]]), air_counts=1.0e5)
+        linearize(np.array([[-1.0, 1.0]]), air_counts=1.0e5)
+
+
+def test_linearize_zero_counts_finite() -> None:
+    # Shifted-log policy: zero counts must linearise to a finite value.
+    from pcctvmi.recon import linearize
+
+    y = linearize(np.array([[0.0]]), air_counts=1.0e5)
+    assert np.all(np.isfinite(y))
