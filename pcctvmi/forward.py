@@ -70,6 +70,7 @@ def simulate(
     n0: float = REFERENCE_N0,
     seed: int = 0,
     detector: str = "pcd",
+    projections: tuple[np.ndarray, np.ndarray] | None = None,
 ) -> SimulationResult:
     """Simulate detector projections with exact Poisson statistics.
 
@@ -83,10 +84,16 @@ def simulate(
         seed: seed for the Poisson generator.
         detector: "pcd" (photon-counting bins) or "eid" (energy-integrating;
             requires ``thresholds_kev=()`` and yields float signal, not counts).
+        projections: optional cached ``areal_density_projections(phantom,
+            theta)`` result. The projections are deterministic in the phantom,
+            so ensemble tools may compute them once and reuse them across
+            noise realisations. Shape and angle consistency are validated;
+            the physics is unchanged.
 
     Raises:
         ValueError: degenerate fluence (mean air signal < 100 in any bin),
-            unknown detector, or EID with thresholds.
+            unknown detector, EID with thresholds, or inconsistent cached
+            projections.
     """
     if n0 < 100:
         raise ValueError(
@@ -104,7 +111,17 @@ def simulate(
         if theta_deg is None
         else np.asarray(theta_deg, dtype=np.float64)
     )
-    a_w, a_i = areal_density_projections(phantom, theta)
+    if projections is None:
+        a_w, a_i = areal_density_projections(phantom, theta)
+    else:
+        a_w, a_i = projections
+        for name, arr in (("water", a_w), ("iodine", a_i)):
+            if arr.shape != (phantom.shape[0], theta.size):
+                raise ValueError(
+                    f"cached {name} projections have shape {arr.shape}, expected "
+                    f"{(phantom.shape[0], theta.size)} ({phantom.shape[0]} detector "
+                    f"elements x {theta.size} angles)"
+                )
 
     energies = spectrum.energies_kev
     mu_w = mu_rho("water", energies)

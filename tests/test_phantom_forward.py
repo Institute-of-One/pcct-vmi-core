@@ -91,6 +91,38 @@ def test_forward_degenerate_n0_rejected() -> None:
         simulate(spec, ph, theta_deg=THETA_SMALL, thresholds_kev=(), n0=10.0, seed=0)
 
 
+def test_forward_cached_projections_equivalent() -> None:
+    # Ensemble tools reuse areal projections across noise realisations; the
+    # cached path must be bit-identical to computing them inside simulate.
+    spec = Spectrum.mono(60.0)
+    ph = make_water_cylinder_phantom(n=128, diameter_cm=10.0, pixel_size_cm=0.1)
+    res_ref = simulate(spec, ph, theta_deg=THETA_SMALL, thresholds_kev=(), n0=1.0e5, seed=7)
+    projections = areal_density_projections(ph, THETA_SMALL)
+    res_cached = simulate(
+        spec,
+        ph,
+        theta_deg=THETA_SMALL,
+        thresholds_kev=(),
+        n0=1.0e5,
+        seed=7,
+        projections=projections,
+    )
+    np.testing.assert_array_equal(res_ref.counts[0], res_cached.counts[0])
+    np.testing.assert_array_equal(res_ref.expected_counts[0], res_cached.expected_counts[0])
+    # Cached projections of the wrong shape are rejected, not silently broadcast.
+    bad = (projections[0][:, :100], projections[1][:, :100])
+    with pytest.raises(ValueError, match="cached water projections"):
+        simulate(
+            spec,
+            ph,
+            theta_deg=THETA_SMALL,
+            thresholds_kev=(),
+            n0=1.0e5,
+            seed=7,
+            projections=bad,
+        )
+
+
 def test_linearize_negative_counts_rejected() -> None:
     from pcctvmi.recon import linearize
 

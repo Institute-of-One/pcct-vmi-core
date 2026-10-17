@@ -1,5 +1,34 @@
 # Changelog
 
+## Unreleased (2026-10-17) — Sprint 2: task detectability (NPWE port, H1)
+
+- **Model observers ported from taskiq-core** (`pcctvmi/observers.py`, mm-based
+  per the S2 freeze): ensemble 2-D NPS measurement (`nps_2d`, integral ==
+  variance identity at rtol 1e-10), NPWE / plain NPW and the ideal linear
+  observer (closed-form, with the ported guards: zeroed-DC-bin weight check
+  for non-prewhitening observers, dynamic-range / noise-floor check for the
+  prewhitening one), Burgess eye filter, image scoring, and d'/AUC figures of
+  merit. `detrend` now zeroes the DC bin exactly (float residue ~1e-32 made
+  the "measured NPS has a zeroed DC" contract unreliable).
+- **Closed-form + Monte-Carlo tests** (`tests/test_observers.py`): white-noise
+  identity d' = ||s||/sigma, NPW == ideal observer in white noise, ideal
+  upper-bounds NPWE on correlated noise, NPWE immunity to the zeroed DC bin,
+  floorless-NPS rejection, and simulated-score agreement with the closed form
+  (rel 0.05).
+- **Detectability spectrum** (`tools/detectability_spectrum.py`,
+  `results/detectability_spectrum.json`): NPWE and ideal d'(E) on the frozen
+  40-190 keV grid for 0.3/0.5/0.8 cm inserts (5 mgI/mL, r = 3 cm) at 100%/25%
+  dose, R = 64 noise realisations per condition. Headline: NPWE d'(E) peaks at
+  60 keV for every condition; d' scales as sqrt(dose) (3.78 -> 1.92 at
+  60 keV, 0.3 cm); NPWE efficiency vs the ideal observer falls with insert
+  size (35% at 0.3 cm vs 10% at 0.8 cm, 70 keV) — efficiency is
+  signal-dependent and must not be assumed constant.
+- **Projection caching in `simulate`**: optional `projections=` kwarg reuses
+  `areal_density_projections` across ensemble realisations (validated shape
+  check; bit-identical results — test added).
+- Docs: PROTOCOL_FREEZE.md §7 freezes the Sprint-2 evaluation design (S2-1..S2-7)
+  and records the measured detectability characteristics.
+
 ## Unreleased (2026-10-16) — Sprint 1 physics/statistics audit
 
 - **Photon economy fixed (S1-6):** the forward model now uses the sum-to-one

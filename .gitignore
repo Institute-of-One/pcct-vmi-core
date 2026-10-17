@@ -16,6 +16,9 @@ paper/figures/results.json
 
 # Quantitation baseline chunk intermediates (merged JSON is committed)
 results/quantitation_baseline_part*.json
+# Detectability spectrum chunk intermediates and regenerable plots
+results/detectability_spectrum_part*.json
+results/*.png
 
 # Data (public datasets; fetch per docs/DATA.md, never commit)
 data/
