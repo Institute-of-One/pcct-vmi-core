@@ -34,3 +34,6 @@ _tmp/
 # OS
 Thumbs.db
 .DS_Store
+
+# chunked run intermediates (merged JSON is committed)
+results/*_part*.json
