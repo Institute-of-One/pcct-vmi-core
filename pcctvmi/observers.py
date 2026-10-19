@@ -39,7 +39,9 @@ __all__ = [
     "ObserverResult",
     "auc_from_scores",
     "burgess_eye_filter",
+    "cho",
     "d_prime_from_scores",
+    "gabor_channel_bank",
     "ideal_linear",
     "nps_2d",
     "npwe",
@@ -708,3 +710,137 @@ def _average_ranks(values: np.ndarray) -> np.ndarray:
         ranks[order[i : j + 1]] = 0.5 * (i + j) + 1.0
         i = j + 1
     return ranks
+
+
+# --------------------------------------------------------------------------------------
+# channelized Hotelling observer (Sprint-5 freeze, PROTOCOL_FREEZE.md S5-2)
+# --------------------------------------------------------------------------------------
+
+
+def gabor_channel_bank(
+    roi_shape: tuple[int, int],
+    spacing_mm: float,
+    frequencies_cyc_mm: tuple[float, ...] = (0.25, 0.5, 0.75),
+    orientations_deg: tuple[float, ...] = (0.0, 60.0, 120.0),
+) -> np.ndarray:
+    """Gabor channel bank for the CHO, centred on the ROI.
+
+    Each channel is ``exp(-r^2 / (2 sigma^2)) * cos(2 pi f u)`` with the
+    one-wavelength envelope ``sigma = 1 / f`` (frozen S5-2) and
+    ``u = x cos(theta) + y sin(theta)`` the on-frequency coordinate in mm.
+    Channel scale is arbitrary: scaling a channel scales its response and
+    its covariance row/column together, leaving d' invariant.
+
+    Frequencies must stay below the pixel Nyquist (``f < 1 / (2 spacing)``);
+    at exactly one cycle per pixel the carrier degenerates to a constant
+    and same-frequency channels become linearly dependent (found by the
+    covariance singularity guard — a 1 cy/px carrier samples cos(2 pi k) = 1
+    at every pixel, erasing the orientation dependence).
+    """
+    ny, nx = (int(v) for v in roi_shape)
+    if ny < 4 or nx < 4:
+        raise ValueError(f"roi_shape must be at least 4x4, got {roi_shape}")
+    spacing = _check_spacing(spacing_mm)
+    nyquist = 1.0 / (2.0 * spacing)
+    y, x = np.mgrid[0:ny, 0:nx]
+    xm = (x - (nx - 1) / 2.0) * spacing
+    ym = (y - (nx - 1) / 2.0) * spacing
+    r2 = xm**2 + ym**2
+    chans: list[np.ndarray] = []
+    for f in frequencies_cyc_mm:
+        f = float(f)
+        if not np.isfinite(f) or f <= 0.0:
+            raise ValueError(f"frequencies must be positive, got {f!r}")
+        if f >= nyquist:
+            raise ValueError(
+                f"channel frequency {f} cy/mm is at or above the pixel Nyquist "
+                f"({nyquist} cy/mm): the carrier is not representable on this grid"
+            )
+        env = np.exp(-r2 / (2.0 * (1.0 / f) ** 2))
+        for th in orientations_deg:
+            u = xm * np.cos(np.radians(th)) + ym * np.sin(np.radians(th))
+            chans.append(env * np.cos(2.0 * np.pi * f * u))
+    return np.stack(chans)
+
+
+def cho(
+    signal: np.ndarray,
+    rois: np.ndarray,
+    spacing_mm: float,
+    channels: np.ndarray,
+) -> ObserverResult:
+    r"""Channelized Hotelling observer d' for an SKE/BKE task.
+
+    Channel responses are Riemann-sum inner products over the ROI
+    (``spacing^2`` factor included on both signal and noise sides, so it
+    cancels in d' but keeps the units of the covariance consistent).
+    Noise ROIs are mean-detrended exactly as in :func:`nps_2d` (the frozen
+    background model is a uniform field); the channel covariance uses the
+    unbiased ``ddof=1`` estimate across the ensemble. With
+    ``d'^2 = s^T C^{-1} s`` the template in image space is
+    ``sum_c w_c channel_c`` with ``w = C^{-1} s_channels``.
+
+    Guards: raises if the signal is identically zero, if a channel is
+    identically zero, or if the covariance is not positive definite
+    (e.g. fewer independent ROIs than channels) — a pseudo-d' from a
+    regularised inverse is not reported.
+    """
+    sig = _as_signal(signal)
+    spacing = _check_spacing(spacing_mm)
+    ch = np.asarray(channels, dtype=np.float64)
+    if ch.ndim != 3 or ch.shape[1:] != sig.shape:
+        raise ValueError(
+            f"channels must have shape (n_channels, {sig.shape[0]}, {sig.shape[1]}), got {ch.shape}"
+        )
+    if not np.all(np.isfinite(ch)):
+        raise ValueError("channels contain non-finite values")
+    if not np.all(np.any(ch != 0.0, axis=(-2, -1))):
+        raise ValueError("every channel must be non-zero somewhere")
+
+    arr = np.asarray(rois, dtype=np.float64)
+    if arr.ndim == 2:
+        arr = arr[None, ...]
+    if arr.ndim != 3 or arr.shape[1:] != sig.shape:
+        raise ValueError(
+            f"rois must have shape (n, {sig.shape[0]}, {sig.shape[1]}), got {arr.shape}"
+        )
+    if arr.shape[0] < ch.shape[0] + 1:
+        raise ValueError(
+            f"need at least n_channels+1 ROIs to estimate the covariance, "
+            f"got {arr.shape[0]} ROIs for {ch.shape[0]} channels"
+        )
+
+    resid = arr - arr.mean(axis=(-2, -1), keepdims=True)
+    a2 = spacing * spacing
+    t = np.einsum("rxy,cxy->rc", resid, ch) * a2
+    s_ch = np.einsum("xy,cxy->c", sig, ch) * a2
+
+    # np.cov returns a scalar for a single channel — normalise to 2-D.
+    cov = np.atleast_2d(np.cov(t, rowvar=False, ddof=1))
+    try:
+        w = np.linalg.solve(cov, s_ch)
+    except np.linalg.LinAlgError as exc:
+        raise ValueError(
+            "channel covariance is not positive definite; the ensemble cannot "
+            "support the CHO (more ROIs or fewer channels)"
+        ) from exc
+    d2 = float(s_ch @ w)
+    if d2 < 0.0:
+        raise ValueError(f"CHO signal power is negative ({d2}); covariance not PD")
+    d_prime = float(np.sqrt(d2))
+    template = np.einsum("c,cxy->xy", w, ch)
+
+    return ObserverResult(
+        name="cho",
+        d_prime=d_prime,
+        auc=float(ndtr(d_prime / np.sqrt(2.0))),
+        template=template,
+        signal_power=d2,
+        noise_power=1.0,  # absorbed: d'^2 = s^T C^{-1} s is already normalised
+        spacing=spacing,
+        meta={
+            "n_channels": int(ch.shape[0]),
+            "n_rois": int(arr.shape[0]),
+            "channel_responses": s_ch.tolist(),
+        },
+    )

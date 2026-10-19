@@ -1,5 +1,38 @@
 # Changelog
 
+## Unreleased (2026-10-19) — Sprint 5: sensitivity analysis (eye sweep, CHO, TV control, 12.5% extrapolation)
+
+- **CHO observer** (`pcctvmi/observers.py`, `tests/test_cho.py`): channelized
+  Hotelling observer with the frozen Gabor bank (frequencies {0.25, 0.5, 0.75}
+  cy/mm x 3 orientations, one-wavelength envelopes, PROTOCOL_FREEZE.md S5-2).
+  Channel covariance from mean-detrended noise ROIs (ddof=1); raises rather
+  than regularises when the covariance is not PD. Closed-form white-noise
+  test (single channel: d' = |<s,g>| / (sigma ||g||)); channel-scale
+  invariance pinned. Review finding: a carrier at exactly 1 cycle/pixel
+  samples cos(2 pi k) = 1, erasing orientation dependence and making the
+  covariance singular — frequencies are frozen below the pixel Nyquist and
+  the builder guards against it.
+- **Eye-filter sweep + extrapolation** (`tools/sensitivity_eval.py`,
+  `results/sensitivity_eval.json`): NPWE d'(E) at Burgess peaks {0.8, 1.0,
+  1.5} cy/mm and the CHO, on the 6 frozen conditions plus 3 conditions at
+  12.5% dose (outside the denoiser training range, S5-4). Peak keV stays at
+  40 keV for every eye peak; CHO confirms the peak on the frozen template
+  and tracks the processed-signal attenuation. At 12.5% the attenuation
+  ratios diverge (signal sign flips per keV) and processed d' degrades
+  below the 25% level — honest limit for the paper.
+- **3-D TV control arm** (`pcctvmi/tv.py`, `tools/tv_weight_selection.py`,
+  `tools/tv_eval.py`, `results/tv_eval.json`): Chambolle-dual isotropic TV
+  over (keV, y, x), weight = 0.5 x sigma_hat^2 (sigma_hat = 3-D Laplacian
+  MAD; constant selected on the S3 validation split only, S5-3). Review
+  finding: the dual-ascent sign convention matters — the '+' variant
+  converges to -p and *amplifies* variance; KKT-verified fix (stationarity
+  ~1e-14, |p - gx/|gx|| ~3e-8). TV suppresses insert contrast to ~35% at
+  every dose, biases quantitation by -4 to -7 mgI/mL and leaves 3.6-6.6 HU
+  2-basis residual — UNet dominates it on quantitation and spectral
+  fidelity while TV shows higher apparent d': the Pareto control axis.
+- Docs: PROTOCOL_FREEZE.md §10 freezes the sensitivity design (S5-1..S5-4)
+  and §10.2 records the measured results.
+
 ## Unreleased (2026-10-19) — Sprint 4: evaluation revisions and EID audit fix
 
 - **EID air normalisation fix** (`pcctvmi/forward.py`): `air_counts` for the

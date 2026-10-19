@@ -1,0 +1,505 @@
+[
+  {
+    "size_cm": 0.5,
+    "dose_fraction": 0.125,
+    "extrapolated": true,
+    "per_kev": [
+      {
+        "kev": 40,
+        "signal_attenuation_raw": 1.9112341504679748,
+        "signal_attenuation_denoised": 0.5252203357568468,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.2932167817238055,
+            "denoised": 91.1753358540311,
+            "raw_processed": 0.560405926720851,
+            "denoised_processed": 47.88714050999749
+          },
+          "1.0": {
+            "raw": 0.28957898866822757,
+            "denoised": 90.82578172812556,
+            "raw_processed": 0.5534532524006952,
+            "denoised_processed": 47.70354757462419
+          },
+          "1.5": {
+            "raw": 0.28871980240574513,
+            "denoised": 91.34884481836106,
+            "raw_processed": 0.5518111462742259,
+            "denoised_processed": 47.97827094649969
+          }
+        },
+        "cho": {
+          "raw": 0.013052165843979642,
+          "denoised": 6.938129014174386,
+          "raw_processed": 0.02494574509858555,
+          "denoised_processed": 3.6440464503489913
+        }
+      },
+      {
+        "kev": 50,
+        "signal_attenuation_raw": 1.6296044854483223,
+        "signal_attenuation_denoised": 0.5724698526335649,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.4359999200918628,
+            "denoised": 59.14961016596136,
+            "raw_processed": 0.7105074254368097,
+            "denoised_processed": 33.86136861504071
+          },
+          "1.0": {
+            "raw": 0.4310005222911477,
+            "denoised": 58.54122998774649,
+            "raw_processed": 0.7023603843562239,
+            "denoised_processed": 33.513089304072864
+          },
+          "1.5": {
+            "raw": 0.4299565950606404,
+            "denoised": 58.54299874702305,
+            "raw_processed": 0.7006591958589076,
+            "denoised_processed": 33.51410186543526
+          }
+        },
+        "cho": {
+          "raw": 0.01938273861682218,
+          "denoised": 4.544294457533987,
+          "raw_processed": 0.03158619779024584,
+          "denoised_processed": 2.6014715784280074
+        }
+      },
+      {
+        "kev": 60,
+        "signal_attenuation_raw": 1.2034719570718382,
+        "signal_attenuation_denoised": 0.6514257224511295,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 1.4765379099828637,
+            "denoised": 39.32146307421969,
+            "raw_processed": 1.7769719682178386,
+            "denoised_processed": 25.615012490958975
+          },
+          "1.0": {
+            "raw": 1.470763562949461,
+            "denoised": 39.18727697872164,
+            "raw_processed": 1.7700227034927376,
+            "denoised_processed": 25.527600216756262
+          },
+          "1.5": {
+            "raw": 1.4791118796839868,
+            "denoised": 39.53363208329154,
+            "raw_processed": 1.780069668571493,
+            "denoised_processed": 25.753224840975346
+          }
+        },
+        "cho": {
+          "raw": 0.06296701515693084,
+          "denoised": 3.0833003871317493,
+          "raw_processed": 0.07577903696188366,
+          "denoised_processed": 2.008541182221147
+        }
+      },
+      {
+        "kev": 70,
+        "signal_attenuation_raw": 0.5888092669499461,
+        "signal_attenuation_denoised": 0.7110880615140038,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.8582381895548666,
+            "denoised": 28.713461651105952,
+            "raw_processed": 0.5053385992602499,
+            "denoised_processed": 20.41779978484162
+          },
+          "1.0": {
+            "raw": 0.8666465845697623,
+            "denoised": 29.080741824375245,
+            "raw_processed": 0.5102895401651961,
+            "denoised_processed": 20.67896833128421
+          },
+          "1.5": {
+            "raw": 0.8845777477964029,
+            "denoised": 29.850180396355615,
+            "raw_processed": 0.5208475752402343,
+            "denoised_processed": 21.226106913887833
+          }
+        },
+        "cho": {
+          "raw": 0.03246484390169069,
+          "denoised": 2.16746456139202,
+          "raw_processed": 0.01911560093939892,
+          "denoised_processed": 1.541258173360552
+        }
+      },
+      {
+        "kev": 80,
+        "signal_attenuation_raw": -0.290765643825476,
+        "signal_attenuation_denoised": 0.8336208380507603,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.3555774550372936,
+            "denoised": 23.401265613457674,
+            "raw_processed": -0.10338970764374292,
+            "denoised_processed": 19.507782652139024
+          },
+          "1.0": {
+            "raw": 0.3642068981166582,
+            "denoised": 24.09220148494361,
+            "raw_processed": -0.10589885321656965,
+            "denoised_processed": 20.083761192366463
+          },
+          "1.5": {
+            "raw": 0.37743809489475194,
+            "denoised": 25.12020362608479,
+            "raw_processed": -0.10974603066633365,
+            "denoised_processed": 20.940725198782552
+          }
+        },
+        "cho": {
+          "raw": 0.011414463754279666,
+          "denoised": 1.5807526408190722,
+          "raw_processed": -0.003318933902435687,
+          "denoised_processed": 1.3177483411905473
+        }
+      },
+      {
+        "kev": 90,
+        "signal_attenuation_raw": -1.569592421871035,
+        "signal_attenuation_denoised": 0.9254615819119951,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.24670570953451962,
+            "denoised": 20.783371042103784,
+            "raw_processed": -0.3872274121176988,
+            "denoised_processed": 19.234211442089318
+          },
+          "1.0": {
+            "raw": 0.25546473426596883,
+            "denoised": 21.636785210569148,
+            "raw_processed": -0.4009755109591624,
+            "denoised_processed": 20.024013468463384
+          },
+          "1.5": {
+            "raw": 0.2678224916897882,
+            "denoised": 22.771169545351974,
+            "raw_processed": -0.42037215336290984,
+            "denoised_processed": 21.073842589427684
+          }
+        },
+        "cho": {
+          "raw": 0.006585450720932071,
+          "denoised": 1.2164399890317967,
+          "raw_processed": -0.010336473546180122,
+          "denoised_processed": 1.1257684765503766
+        }
+      },
+      {
+        "kev": 100,
+        "signal_attenuation_raw": -3.493886408064152,
+        "signal_attenuation_denoised": 1.120329808753953,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.20376718747399683,
+            "denoised": 19.596534984419353,
+            "raw_processed": -0.7119394067248574,
+            "denoised_processed": 21.954582291334685
+          },
+          "1.0": {
+            "raw": 0.21252271758440566,
+            "denoised": 20.538011839053794,
+            "raw_processed": -0.7425302343730114,
+            "denoised_processed": 23.00934687583356
+          },
+          "1.5": {
+            "raw": 0.2245050952454609,
+            "denoised": 21.720414196121165,
+            "raw_processed": -0.7843953008192637,
+            "denoised_processed": 24.334027482397072
+          }
+        },
+        "cho": {
+          "raw": 0.004578279388583866,
+          "denoised": 0.9976056531170937,
+          "raw_processed": -0.015995988128093424,
+          "denoised_processed": 1.117647350568536
+        }
+      },
+      {
+        "kev": 110,
+        "signal_attenuation_raw": -6.577196525891875,
+        "signal_attenuation_denoised": 1.5000902120092465,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.18247766104281354,
+            "denoised": 18.890406056604508,
+            "raw_processed": -1.2001914382636683,
+            "denoised_processed": 28.337313226392613
+          },
+          "1.0": {
+            "raw": 0.19117150207569328,
+            "denoised": 19.873887968106317,
+            "raw_processed": -1.2573725393017812,
+            "denoised_processed": 29.812624815524618
+          },
+          "1.5": {
+            "raw": 0.20291779863013562,
+            "denoised": 21.06885922567399,
+            "raw_processed": -1.3346302401917551,
+            "denoised_processed": 31.605189502634264
+          }
+        },
+        "cho": {
+          "raw": 0.0035547937156368515,
+          "denoised": 0.864530923267716,
+          "raw_processed": -0.02338057687674897,
+          "denoised_processed": 1.2968743759732178
+        }
+      },
+      {
+        "kev": 120,
+        "signal_attenuation_raw": -12.108369999375736,
+        "signal_attenuation_denoised": 1.885871945846915,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.17043066035694393,
+            "denoised": 18.786596507119075,
+            "raw_processed": -2.0636374948398153,
+            "denoised_processed": 35.42911531072151
+          },
+          "1.0": {
+            "raw": 0.17904643023241515,
+            "denoised": 19.795812912270403,
+            "raw_processed": -2.1679604243214965,
+            "denoised_processed": 37.33236821648487
+          },
+          "1.5": {
+            "raw": 0.1906204219875442,
+            "denoised": 20.99357772642925,
+            "raw_processed": -2.308102598862323,
+            "denoised_processed": 39.591199277229585
+          }
+        },
+        "cho": {
+          "raw": 0.0029776922950061784,
+          "denoised": 0.8049454495888414,
+          "raw_processed": -0.036055000052225096,
+          "denoised_processed": 1.5180240413167283
+        }
+      },
+      {
+        "kev": 130,
+        "signal_attenuation_raw": -24.4728012971699,
+        "signal_attenuation_denoised": 3.2285873253153605,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.1629789568288892,
+            "denoised": 18.37078234794354,
+            "raw_processed": -3.988551626093437,
+            "denoised_processed": 59.31167504469767
+          },
+          "1.0": {
+            "raw": 0.1715182243812832,
+            "denoised": 19.37424053892557,
+            "raw_processed": -4.197531424126546,
+            "denoised_processed": 62.551427441586135
+          },
+          "1.5": {
+            "raw": 0.18295948828445968,
+            "denoised": 20.543715198384408,
+            "raw_processed": -4.477531202217467,
+            "denoised_processed": 66.32717850439244
+          }
+        },
+        "cho": {
+          "raw": 0.0026323684571740295,
+          "denoised": 0.7578899047352183,
+          "raw_processed": -0.06442143019335772,
+          "denoised_processed": 2.446913740412592
+        }
+      },
+      {
+        "kev": 140,
+        "signal_attenuation_raw": -74.40740432888944,
+        "signal_attenuation_denoised": 8.385139022917661,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.15805951208335664,
+            "denoised": 18.588644873324288,
+            "raw_processed": -11.760798023613305,
+            "denoised_processed": 155.8683715104698
+          },
+          "1.0": {
+            "raw": 0.16653023672702122,
+            "denoised": 19.616199873807542,
+            "raw_processed": -12.391082657133142,
+            "denoised_processed": 164.48456304321613
+          },
+          "1.5": {
+            "raw": 0.1778668319739672,
+            "denoised": 20.80183751002041,
+            "raw_processed": -13.234609283385618,
+            "denoised_processed": 174.42629945366448
+          }
+        },
+        "cho": {
+          "raw": 0.0024168747091754222,
+          "denoised": 0.7525491860160792,
+          "raw_processed": -0.17983337369788271,
+          "denoised_processed": 6.3102295463283475
+        }
+      },
+      {
+        "kev": 150,
+        "signal_attenuation_raw": 175.28028164331272,
+        "signal_attenuation_denoised": -15.683005790237855,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.1546455751221591,
+            "denoised": 18.561767484866,
+            "raw_processed": 27.10631996230412,
+            "denoised_processed": -291.10430694220224
+          },
+          "1.0": {
+            "raw": 0.16305715679858807,
+            "denoised": 19.57924668065842,
+            "raw_processed": 28.58070436761432,
+            "denoised_processed": -307.06143906126135
+          },
+          "1.5": {
+            "raw": 0.17431003426138877,
+            "denoised": 20.734913857474524,
+            "raw_processed": 30.553111898591713,
+            "denoised_processed": -325.1857740868561
+          }
+        },
+        "cho": {
+          "raw": 0.0022777275689447683,
+          "denoised": 0.7543776385066346,
+          "raw_processed": 0.399240729791377,
+          "denoised_processed": -11.83090887272551
+        }
+      },
+      {
+        "kev": 160,
+        "signal_attenuation_raw": 50.84329606521225,
+        "signal_attenuation_denoised": -4.912265043229856,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.15218104628982526,
+            "denoised": 18.62249202300379,
+            "raw_processed": 7.737385992027356,
+            "denoised_processed": -91.47861658242836
+          },
+          "1.0": {
+            "raw": 0.16054240124856523,
+            "denoised": 19.654865476431137,
+            "raw_processed": 8.162504837700903,
+            "denoised_processed": -96.549908609258
+          },
+          "1.5": {
+            "raw": 0.17172756668650108,
+            "denoised": 20.826016340999303,
+            "raw_processed": 8.731195515600254,
+            "denoised_processed": -102.30291206162462
+          }
+        },
+        "cho": {
+          "raw": 0.0021851362887317385,
+          "denoised": 0.753446781164697,
+          "raw_processed": 0.1110995312708269,
+          "denoised_processed": -3.701130285049396
+        }
+      },
+      {
+        "kev": 170,
+        "signal_attenuation_raw": 33.11748150808936,
+        "signal_attenuation_denoised": -2.8730646844610104,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.15034439027785354,
+            "denoised": 18.554300134768766,
+            "raw_processed": 4.979027564871784,
+            "denoised_processed": -53.30770446209431
+          },
+          "1.0": {
+            "raw": 0.15866333048266124,
+            "denoised": 19.58313740779968,
+            "raw_processed": 5.254529913271405,
+            "denoised_processed": -56.26362049729659
+          },
+          "1.5": {
+            "raw": 0.16979318606393323,
+            "denoised": 20.748708582488923,
+            "raw_processed": 5.623122699671885,
+            "denoised_processed": -59.612381876521994
+          }
+        },
+        "cho": {
+          "raw": 0.0021218259130735104,
+          "denoised": 0.7568001884425056,
+          "raw_processed": 0.0702695304395968,
+          "denoised_processed": -2.1743358946076006
+        }
+      },
+      {
+        "kev": 180,
+        "signal_attenuation_raw": 26.08026923535552,
+        "signal_attenuation_denoised": -2.000046477181054,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.14893925176515346,
+            "denoised": 18.56806265753108,
+            "raw_processed": 3.884375785747602,
+            "denoised_processed": -37.136988306272116
+          },
+          "1.0": {
+            "raw": 0.15722238417155138,
+            "denoised": 19.587402906536063,
+            "raw_processed": 4.100402109018558,
+            "denoised_processed": -39.17571618034339
+          },
+          "1.5": {
+            "raw": 0.16830664044987115,
+            "denoised": 20.72687072863019,
+            "raw_processed": 4.3894824970308175,
+            "denoised_processed": -41.45470478378392
+          }
+        },
+        "cho": {
+          "raw": 0.0020774437775922293,
+          "denoised": 0.7639282962966168,
+          "raw_processed": 0.05418029304091937,
+          "denoised_processed": -1.527892097826973
+        }
+      },
+      {
+        "kev": 190,
+        "signal_attenuation_raw": 22.32887710144917,
+        "signal_attenuation_denoised": -1.4583044592475212,
+        "eye_sweep": {
+          "0.8": {
+            "raw": 0.14784034619303923,
+            "denoised": 18.518651404755346,
+            "raw_processed": 3.3011089207800715,
+            "denoised_processed": -27.005831922805093
+          },
+          "1.0": {
+            "raw": 0.1560931709931235,
+            "denoised": 19.524940787762965,
+            "raw_processed": 3.485385231480945,
+            "denoised_processed": -28.47330821733854
+          },
+          "1.5": {
+            "raw": 0.1671395033503215,
+            "denoised": 20.639781124567833,
+            "raw_processed": 3.73203742910658,
+            "denoised_processed": -30.099084851850087
+          }
+        },
+        "cho": {
+          "raw": 0.0020456117809063497,
+          "denoised": 0.7700811029461119,
+          "raw_processed": 0.04567621405313445,
+          "denoised_processed": -1.1230127064085644
+        }
+      }
+    ]
+  }
+]
