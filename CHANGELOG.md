@@ -1,5 +1,32 @@
 # Changelog
 
+## Unreleased (2026-10-19) — Sprint 3: AI denoiser (D1/D2) and its evaluation
+
+- **Denoiser** (`pcctvmi/denoiser.py`, `tools/train_denoiser.py`): small
+  frozen UNet (308k params, GroupNorm, fully convolutional with reflect
+  padding) mapping the 16-keV VMI stack to itself. Teacher = noiseless
+  baseline decomposition (S6.1); loss = L2 + 0.1 x L1 on first differences
+  (S3-4). Trained 4000 steps, Adam 1e-3, batch 16, on 160 random-insert
+  phantoms (S3-5, seeds 20261019, disjoint from evaluation); final val loss
+  78.2 from ~1e4. Weights and training log committed
+  (`results/denoiser_weights.pt`, `results/denoiser_log.jsonl`); resumable
+  checkpoint stays gitignored.
+- **2-basis projection** (`pcctvmi/projection.py`): closed-form per-pixel
+  least-squares fit of any VMI stack back to (water, iodine) densities, with
+  the RMS off-manifold residual — the quantitation path for denoised stacks
+  and the spectral-consistency metric. Exact-recovery tests included.
+- **Evaluation** (`tools/denoised_eval.py`, `results/denoised_eval.json`):
+  Raw / denoised / noiseless compared on the frozen Sprint-1/2 conditions
+  with identical seeds. Built-in consistency check: the Raw arm must
+  reproduce the Sprint-2 detectability spectrum (0.00% deviation observed;
+  output refused above 1%). Headline results recorded in
+  PROTOCOL_FREEZE.md §8: d'(E) shape inverts (raw peaks at 60 keV, denoised
+  peaks at 40 keV); quantitation bias shrinks ~3x and can flip sign; 2-basis
+  residual 0.38-0.95 HU where raw is exactly zero.
+- Docs: PROTOCOL_FREEZE.md §8 freezes the Sprint-3 design (S3-1..S3-9) and
+  records the measured denoising effects. torch added as a dependency
+  (CPU build).
+
 ## Unreleased (2026-10-17) — Sprint 2: task detectability (NPWE port, H1)
 
 - **Model observers ported from taskiq-core** (`pcctvmi/observers.py`, mm-based

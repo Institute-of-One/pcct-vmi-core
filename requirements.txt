@@ -2,3 +2,5 @@ numpy
 scipy
 scikit-image
 matplotlib
+# CPU build; for CUDA install from https://pytorch.org/get-started/locally/ instead
+torch

@@ -19,6 +19,11 @@ results/quantitation_baseline_part*.json
 # Detectability spectrum chunk intermediates and regenerable plots
 results/detectability_spectrum_part*.json
 results/*.png
+# Denoised-eval chunk intermediates; training checkpoint (weights are committed)
+results/denoised_eval_part*.json
+results/denoiser_checkpoint.pt
+# Training data (publicly regenerable via tools/make_training_data.py)
+data/training/
 
 # Data (public datasets; fetch per docs/DATA.md, never commit)
 data/

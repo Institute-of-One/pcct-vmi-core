@@ -17,6 +17,7 @@ dependencies = [
   "scipy",
   "scikit-image",
   "matplotlib",
+  "torch",
 ]
 
 [project.urls]
@@ -44,6 +45,10 @@ warn_redundant_casts = true
 module = ["scipy.*", "skimage.*", "matplotlib.*", "xraylib", "spekpy"]
 ignore_missing_imports = true
 follow_imports = "skip"
+
+[[tool.mypy.overrides]]
+module = ["torch.*", "torch"]
+ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
