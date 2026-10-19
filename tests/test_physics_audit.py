@@ -129,3 +129,81 @@ def test_eid_rejects_thresholds() -> None:
     spec = Spectrum.from_csv()
     with pytest.raises(ValueError):
         simulate(spec, _phantom(), theta_deg=THETA, thresholds_kev=(30.0,), detector="eid")
+
+
+def test_eid_air_is_zero_path_signal() -> None:
+    # The flat field of an energy-integrating detector is the zero-path
+    # SIGNAL sum_E E * n0 * w_E (keV-weighted photon counts), not n0 itself.
+    # A wrong air normalisation by the energy-weighted mean energy makes
+    # signal/air exceed 1 at clinical paths and drives the line integral
+    # negative. Closed form from the spectrum, no hard-coded energy.
+    spec = Spectrum.from_csv()
+    e = spec.energies_kev
+    w_e = spec.fluence * e
+    w_e = w_e / w_e.sum()
+    res = simulate(
+        spec,
+        _phantom(),
+        theta_deg=np.array([0.0]),
+        thresholds_kev=(),
+        n0=1.0e7,
+        seed=0,
+        detector="eid",
+    )
+    air_theory = 1.0e7 * float((w_e * e).sum())
+    assert float(res.air_counts[0]) == pytest.approx(air_theory, rel=1e-12)
+    # and the ratio must stay a transmission (<= 1) everywhere on the phantom
+    # (float accumulation order allows ~1 ulp above the exact flat field)
+    assert float(res.expected_counts[0].max()) <= air_theory * (1.0 + 1e-12)
+
+
+def test_eid_transmission_ratio_closed_form() -> None:
+    # E[signal]/air at a ray of known path equals the E-weighted mean
+    # transmission sum(E w_E e^-p) / sum(E w_E) with the same path the
+    # forward model used. Catches both air-normalisation and detection-
+    # weighting defects (the E factor must appear in the numerator too).
+    from pcctvmi.forward import areal_density_projections
+    from pcctvmi.materials import mu_rho
+
+    spec = Spectrum.from_csv()
+    e = spec.energies_kev
+    w_e = spec.fluence * e
+    w_e = w_e / w_e.sum()
+    ph = _phantom()
+    theta = np.array([0.0])
+    res = simulate(spec, ph, theta_deg=theta, thresholds_kev=(), n0=1.0e7, seed=0, detector="eid")
+    ci = 128
+    a_w, a_i = areal_density_projections(ph, theta)
+    p = mu_rho("water", e) * a_w[ci, 0] + mu_rho("iodine", e) * a_i[ci, 0]
+    ratio_theory = float((w_e * e * np.exp(-p)).sum() / (w_e * e).sum())
+    ratio_meas = float(res.expected_counts[0][ci, 0] / res.air_counts[0])
+    assert ratio_meas == pytest.approx(ratio_theory, rel=1e-9)
+
+
+def test_eid_shifted_log_bias_negligible() -> None:
+    # Sprint-4 audit (2026-10-19): the +0.5 shifted log is a Poisson-count
+    # correction; EID signals are keV-weighted and enormous (min signal over
+    # the worst-case sinogram ~ 5.7e6 at 25 cm, 25% dose), so both the shift
+    # bias (shift/signal) and the log-Jensen bias of the compound-Poisson
+    # sum (Var/(2 mean^2) = kappa/(2 mean), kappa = sum(E^2 w)/sum(E w))
+    # convert to far below 0.01 HU. Bounds are closed-form, fixed by test.
+    spec = Spectrum.from_csv()
+    w = spec.normalized()
+    e = spec.energies_kev
+    kappa = float((w * e**2).sum() / (w * e).sum())
+    ph = make_water_cylinder_phantom(n=256, diameter_cm=25.0, pixel_size_cm=0.1)
+    res = simulate(
+        spec,
+        ph,
+        theta_deg=THETA,
+        thresholds_kev=(),
+        n0=0.25 * REFERENCE_N0,
+        seed=0,
+        detector="eid",
+    )
+    s_min = float(res.expected_counts[0].min())
+    mu_eff = res.mu_eff[0]["water"]
+    dhu_shift = 1000.0 * mu_eff * 0.5 / s_min
+    dhu_jensen = 1000.0 * mu_eff * kappa / (2.0 * s_min)
+    assert dhu_shift < 0.01
+    assert dhu_jensen < 0.01

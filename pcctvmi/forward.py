@@ -155,7 +155,12 @@ def simulate(
     else:  # eid: exact compound Poisson, sampled per energy
         signal = np.zeros_like(a_w, dtype=np.float64)
         exp_signal = np.zeros_like(a_w, dtype=np.float64)
-        mean_air = float(n0 * weights.sum())
+        # Air = zero-path *signal*: n0 x sum(E w_E). With the photon-count
+        # normalisation (weights.sum() == 1) the old weights.sum() made air
+        # equal n0, i.e. smaller than the actual flat field by the
+        # energy-weighted mean energy; the ratio signal/air then exceeded 1
+        # and the line integral went negative. See tests/test_physics_audit.py.
+        mean_air = float(n0 * (weights * energies).sum())
         if mean_air < 100.0:
             raise ValueError("mean air signal < 100; increase n0")
         for e_idx in range(spectrum.n_energies):

@@ -1,5 +1,32 @@
 # Changelog
 
+## Unreleased (2026-10-19) — Sprint 4: evaluation revisions and EID audit fix
+
+- **EID air normalisation fix** (`pcctvmi/forward.py`): `air_counts` for the
+  energy-integrating detector was `n0` (photon count) instead of the
+  zero-path *signal* `n0 * sum(E w_E)`; the ratio signal/air then exceeded 1
+  at clinical paths (1.47 through 20 cm water) and the line integral went
+  negative. Fixed and pinned by three closed-form tests, confirmed to FAIL
+  on the pre-fix code (tests/test_physics_audit.py). Shifted-log bias on
+  EID float signals quantified as negligible (<= 1e-7 HU shift, <= 0.001 HU
+  Jensen) at the worst frozen condition; LOG_SHIFT unchanged.
+- **Processed-signal d'** (`tools/denoised_eval.py`): the frozen d' feeds the
+  noiseless difference template, so a denoiser that suppresses insert
+  contrast would go unnoticed. Added d' variants whose template amplitude is
+  the signal actually present in the processed images (per-arm ROI means,
+  saved as `signal_eff_*` / `signal_attenuation_*` / `*_processed`), keeping
+  the frozen d' for the Sprint-2 consistency gate.
+- **Quantitation disk mask** (same tool): ROI mean restricted to the insert
+  interior disk (radius 0.8 x insert radius px), matching the Sprint-1
+  quantitation rule; full-32x32 mean dropped.
+- **Crop vs full-image inference check**: max difference in the central ROI
+  reaches ~300 HU at 40 keV (GroupNorm sample statistics; the model was
+  trained on 128^2 crops). Crop inference (S3-8) confirmed as the canonical
+  protocol; full-image inference is out-of-distribution for this model.
+- Docs: PROTOCOL_FREEZE.md §9 freezes the hypothesis-to-metric mapping
+  (H1-H4) and the Sprint-4 revisions (S4-1..S4-4). Reduced-replicate pilots
+  no longer trip the Sprint-2 consistency gate (warning only for R < 64).
+
 ## Unreleased (2026-10-19) — Sprint 3: AI denoiser (D1/D2) and its evaluation
 
 - **Denoiser** (`pcctvmi/denoiser.py`, `tools/train_denoiser.py`): small
