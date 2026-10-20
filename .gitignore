@@ -22,6 +22,11 @@ results/*.png
 # Denoised-eval chunk intermediates; training checkpoint (weights are committed)
 results/denoised_eval_part*.json
 results/denoiser_checkpoint.pt
+# D2 spectral-loss arm: main-run checkpoint and beta-selection debris
+# (weights/logs are kept on disk as rejection evidence but not committed)
+results/denoiser_d2_checkpoint.pt
+results/denoiser_d2b*_checkpoint.pt
+results/denoiser_d2b*_weights.pt
 # Training data (publicly regenerable via tools/make_training_data.py)
 data/training/
 

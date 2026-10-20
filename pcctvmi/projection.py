@@ -11,16 +11,21 @@ in closed form, giving a quantitation path that works on *any* VMI stack —
 including denoised ones whose two-bin origin has been processed away.
 :func:`basis_residual` is the RMS of the component the 2 bases cannot
 explain; it is the Sprint-3 subsidiary metric (PROTOCOL_FREEZE.md S3-8/S3-9).
+
+:func:`fit_basis_torch` is the differentiable twin used in the D2 training
+loss (PROTOCOL_FREEZE.md §11): identical closed-form normal equations on a
+torch tensor, verified against :func:`fit_basis` to float32 tolerance.
 """
 
 from __future__ import annotations
 
 import numpy as np
+import torch
 
 from pcctvmi.materials import mu_rho
 from pcctvmi.vmi import VMI_GRID_KEV
 
-__all__ = ["fit_basis", "basis_residual"]
+__all__ = ["fit_basis", "fit_basis_torch", "basis_residual", "gram_matrix"]
 
 
 def _r_values(energies_kev: np.ndarray) -> np.ndarray:
@@ -78,6 +83,54 @@ def fit_basis(
     a = (s_rr * s_y - s_r * s_ry) / det
     b = (n * s_ry - s_r * s_y) / det
     return a, b
+
+
+def fit_basis_torch(
+    stack_hu: torch.Tensor,
+    r_values: torch.Tensor,
+    gram: tuple[float, float, float, float],
+) -> tuple[torch.Tensor, torch.Tensor]:
+    """Differentiable twin of :func:`fit_basis` for the D2 training loss.
+
+    Parameters
+    ----------
+    stack_hu:
+        VMI cube ``(batch, n_energy, ny, nx)`` in HU.
+    r_values:
+        Frozen iodine/water attenuation ratios, ``(n_energy,)``.
+    gram:
+        ``(n, s_r, s_rr, det)`` precomputed from ``r_values`` (pass
+        :func:`gram_matrix` once and reuse).
+
+    Returns
+    -------
+    (a, b) each ``(batch, ny, nx)`` in g/cm^3, exactly as :func:`fit_basis`.
+    """
+    v = stack_hu
+    if v.ndim != 4:
+        raise ValueError(f"stack_hu must be (batch, n_energy, ny, nx), got {v.shape}")
+    n, s_r, s_rr, det = gram
+    y = v / 1000.0 + 1.0
+    r = r_values.view(1, -1, 1, 1)
+    s_y = y.sum(dim=1)
+    s_ry = (r * y).sum(dim=1)
+    a = (s_rr * s_y - s_r * s_ry) / det
+    b = (n * s_ry - s_r * s_y) / det
+    return a, b
+
+
+def gram_matrix(
+    energies_kev: tuple[float, ...] = VMI_GRID_KEV,
+) -> tuple[float, float, float, float]:
+    """``(n, s_r, s_rr, det)`` of the frozen 2-basis Gram matrix."""
+    r = _r_values(np.asarray(energies_kev, dtype=np.float64))
+    n = float(r.size)
+    s_r = float(r.sum())
+    s_rr = float(r @ r)
+    det = n * s_rr - s_r * s_r
+    if det <= 0.0:
+        raise ValueError("degenerate energy grid for the 2-basis fit")
+    return n, s_r, s_rr, det
 
 
 def basis_residual(

@@ -32,8 +32,15 @@ Chunked execution (one condition per chunk, ~3 minutes):
     python tools/denoised_eval.py --start 5 --stop 6
     python tools/denoised_eval.py --merge [--plot]
 
+Alternate denoiser / output (e.g. the D2 spectral-loss arm, 2026-10-20)::
+
+    python tools/denoised_eval.py --start 0 --stop 1 \
+        --weights results/denoiser_d2_weights.pt --final denoised_eval_d2.json
+    ...
+    python tools/denoised_eval.py --merge --final denoised_eval_d2.json
+
 Outputs ``results/denoised_eval.json`` and (with --plot)
-``results/denoised_eval.png``.
+``results/denoised_eval.png`` (or the ``--final``-derived names).
 """
 
 from __future__ import annotations
@@ -112,9 +119,15 @@ def _masked_mean(roi: np.ndarray, mask: np.ndarray) -> float:
     return float(np.mean(roi[mask]))
 
 
-def _load_model() -> VMIDenoiser:
+def _load_model(weights: Path | None = None) -> VMIDenoiser:
+    """Load the denoiser; ``weights=None`` uses the module-level WEIGHTS.
+
+    The default is resolved at call time (not as a default argument) so
+    ``main()`` can override WEIGHTS via ``--weights``; importers calling
+    ``_load_model()`` with no argument still get the default weights.
+    """
     model = VMIDenoiser(n_channels=len(VMI_GRID_KEV))
-    model.load_state_dict(torch.load(WEIGHTS, weights_only=True))
+    model.load_state_dict(torch.load(WEIGHTS if weights is None else weights, weights_only=True))
     model.eval()
     return model
 
@@ -407,13 +420,32 @@ def plot(results: dict, path: Path) -> None:
 
 
 def main() -> None:
+    # D2 (2026-10-20): allow evaluating alternate denoisers (e.g. the
+    # spectral-loss D2 arm) without touching the frozen D1 artifacts.
+    # Chunked runs are separate processes, so overriding the module globals
+    # here is sufficient; both must be passed identically to every chunk.
+    global WEIGHTS, FINAL
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--start", type=int, default=None)
     ap.add_argument("--stop", type=int, default=None)
     ap.add_argument("--merge", action="store_true")
     ap.add_argument("--plot", action="store_true")
+    ap.add_argument(
+        "--weights",
+        type=Path,
+        default=WEIGHTS,
+        help="denoiser weights to evaluate (default: results/denoiser_weights.pt, the D1 arm)",
+    )
+    ap.add_argument(
+        "--final",
+        type=Path,
+        default=FINAL,
+        help="output JSON path (default: results/denoised_eval.json)",
+    )
     args = ap.parse_args()
     OUT.mkdir(exist_ok=True)
+    WEIGHTS = args.weights
+    FINAL = args.final
     if args.merge:
         parts = [
             json.loads(p.read_text(encoding="utf-8"))
@@ -425,7 +457,7 @@ def main() -> None:
         FINAL.write_text(json.dumps(results, indent=2), encoding="utf-8")
         print(f"wrote {FINAL}")
         if args.plot:
-            plot(results, OUT / "denoised_eval.png")
+            plot(results, OUT / f"{FINAL.stem}.png")
         return
     if args.start is None or args.stop is None:
         raise SystemExit("chunk mode requires --start and --stop (or use --merge)")

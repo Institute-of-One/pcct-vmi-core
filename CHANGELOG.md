@@ -1,5 +1,37 @@
 # Changelog
 
+## Unreleased (2026-10-20) — Sprint 6: D2 spectral-consistency loss (H3, rejected)
+
+- **Torch projection basis** (`pcctvmi/projection.py`,
+  `tests/test_fit_basis_torch.py`): differentiable closed-form 2-basis fit
+  (`fit_basis_torch` + `gram_matrix`) matching the numpy `fit_basis`
+  (teacher recovery, gradient, and shape-guard tests).
+- **Spectral loss** (`tools/train_denoiser.py`): optional
+  `--spectral-beta beta` adds beta * mean((1000*da)^2 + (1000*db)^2) against
+  the noiseless teacher's decomposition coordinates; `--suffix` separates
+  artifacts. Beta selected on the frozen val criterion (val_l2 + val_b2,
+  beta_criterion = 1) over {0.3, 1.0, 3.0} x 1200 steps: beta = 3.0 won
+  (200.5 vs 255.6 / 332.2) — PROTOCOL_FREEZE.md §11.1.
+- **Alternate-arm evaluation** (`tools/denoised_eval.py`): `--weights` /
+  `--final` overrides so the D2 arm is evaluated without touching frozen
+  D1 artifacts; `_load_model` resolves its default at call time so
+  importers (sensitivity_eval, tv_eval) are unaffected.
+- **Main D2 run + H3 verdict** (`results/denoiser_d2_weights.pt`,
+  `results/denoiser_d2_log.jsonl`, `results/denoised_eval_d2.json`,
+  `tools/compare_d1_d2.py`): 4000 steps at beta = 3.0
+  (final val_criterion 71.52). H3 is **rejected**: the spectral loss does
+  not recover quantitation — 25%-dose large-insert bias improves
+  (0.5 cm: -2.10 -> -1.67; 0.8 cm: -2.59 -> -1.87 mgI/mL) but 0.3 cm/25%
+  is unchanged and all 100%-dose conditions acquire a systematic positive
+  bias (+0.34 / +0.63 / +0.39 mgI/mL); the 2-basis residual degrades
+  ~5-6x at 25% dose (5.3 HU vs D1's 0.9); processed d' rises everywhere
+  but only via stronger smoothing (att_den 0.33 vs 0.66 at 0.3 cm/25%).
+  The loss shifts the solution along the smoothing axis rather than
+  selectively fixing the measured b-contraction failure. D1 remains the
+  denoiser; PROTOCOL_FREEZE.md §11.2 records the measurements.
+- Housekeeping: beta-selection weights/checkpoints and the D2 main
+  checkpoint are gitignored (kept on disk as evidence, not committed).
+
 ## Unreleased (2026-10-19) — Sprint 5: sensitivity analysis (eye sweep, CHO, TV control, 12.5% extrapolation)
 
 - **CHO observer** (`pcctvmi/observers.py`, `tests/test_cho.py`): channelized
