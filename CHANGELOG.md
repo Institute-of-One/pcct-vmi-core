@@ -1,5 +1,30 @@
 # Changelog
 
+## Unreleased (2026-10-20) — Sprint 7 start: H4 real-data arm (walnut PCCT)
+
+- **Data acquisition** (`tools/fetch_reconstructions.py`, `docs/DATA.md`,
+  `data/walnut/PROVENANCE.json`): Zenodo record 15738313's file URLs now
+  404; canonical record is **17328375**. CalibrationTable.zip (62.5 MB) and
+  Reconstructions.zip (19.03 GB, 284-segment parallel ranged download with
+  resume, md5 verified against the record) fetched. Acquisition per the
+  Sci Data 2025 paper (DOI 10.1038/s41597-025-06246-4): 80 kVp, 200 uA,
+  0.5 mm Al, thresholds 15/30 keV, 1000x1000 @ 0.05 mm, 1200 slices.
+- **Data inspection** (facts frozen in PROTOCOL_FREEZE.md §12.1): the
+  published VMI synthesis (Watercali/HAPcali linear map) reproduces the
+  shipped VirtualMonoImg exactly (40 keV: sd 0.29, max 0.5 = DICOM
+  quantization). The shipped MD_Pulp_Shell series is NOT any linear map of
+  the shipped bin images (empirical fits leave residual SD 600-1500) —
+  dataset drift; the arm computes reference MD from the published
+  calibration itself (cond(DM) = 166.9).
+- **Protocol freeze §12** (before any evaluation implementation): H4 runs
+  in the 2-channel (Low, High) bin domain (both VMI and MD are linear in
+  bins), slices 500-559, image-domain stationary correlated Gaussian noise
+  at 25% (primary) and 12.5% (extrapolation) with NPS/cross-channel
+  covariance from the simulator at matched config (80 kVp, thresholds
+  15/30, 35 mm water, 0.05 mm pixels), arms Raw / D1w (D1 retrained,
+  2-ch) / 3D TV (S5-3 weight rule), metrics: VMI RMSE/SSIM, MD bias/SD in
+  reference-MD ROIs, noise NPS.
+
 ## Unreleased (2026-10-20) — Sprint 6: D2 spectral-consistency loss (H3, rejected)
 
 - **Torch projection basis** (`pcctvmi/projection.py`,
