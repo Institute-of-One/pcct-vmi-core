@@ -146,3 +146,21 @@ def test_two_bin_decomposition_poly() -> None:
     iodine = _roi_mean(b, ci + 50, ci, 8)
     assert water == pytest.approx(1.0, rel=0.05)
     assert iodine == pytest.approx(INSERT_DENSITY, rel=0.25)
+
+
+def test_bin_indices_subset_matches_full_reconstruction() -> None:
+    # bin_indices must reconstruct exactly the requested bins of the full
+    # call (used by the walnut arm to skip the rejected sub-15 keV bin).
+    spec = Spectrum.from_csv()
+    ph = make_water_cylinder_phantom(n=256, diameter_cm=20.0, pixel_size_cm=0.1)
+    res = simulate(spec, ph, theta_deg=THETA, thresholds_kev=(30.0,), n0=1.0e6, seed=3)
+    full = reconstruct_bins(res, use_expected=True)
+    assert len(full) == 2
+    for idxs in [(0,), (1,), (1, 0)]:
+        subset = reconstruct_bins(res, use_expected=True, bin_indices=idxs)
+        assert len(subset) == len(idxs)
+        for got, want in zip(subset, idxs, strict=True):
+            assert np.array_equal(got, full[want])
+    # Defect pinning: silently reconstructing all bins despite a subset
+    # request would return 2 images, not 1.
+    assert len(reconstruct_bins(res, use_expected=True, bin_indices=(1,))) == 1

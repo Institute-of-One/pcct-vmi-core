@@ -47,7 +47,9 @@ def _ensemble_spectra(
     model: NoiseModel, seed: int
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
     """Independent draws, tiled, stacked into ROIs; DFT-product spectral estimates."""
-    s_ll_acc = s_hh_acc = s_lh_acc = None
+    s_ll_acc: np.ndarray | None = None
+    s_hh_acc: np.ndarray | None = None
+    s_lh_acc: np.ndarray | None = None
     resid_all = []
     tiles_y = tiles_x = int(np.sqrt(ROIS_PER_DRAW))
     for draw in range(N_DRAWS):
@@ -68,6 +70,7 @@ def _ensemble_spectra(
         s_lh_acc = c if s_lh_acc is None else s_lh_acc + c
     n = N_DRAWS
     resid = np.concatenate(resid_all, axis=1)
+    assert s_ll_acc is not None and s_hh_acc is not None and s_lh_acc is not None
     return s_ll_acc / n, s_hh_acc / n, s_lh_acc / n, resid
 
 

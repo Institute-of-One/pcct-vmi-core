@@ -1,5 +1,39 @@
 # Changelog
 
+## Unreleased (2026-10-22) — Sprint 7 complete: H4 evaluation executed, H4 supported
+
+- **Noise model + injection engine** (9f7ff10, `pcctvmi/noise_inject.py`,
+  `tools/walnut_noise_model.py`): frozen S12-4 noise model at n0 = 3.0e4
+  (S1-6 photon criterion would give ~410; the frozen S1 air-count floor is
+  binding at 12.5% dose: n0 >= 2.78e4). Bin convention discovered:
+  thresholds (15,30) yield 3 bins; walnut (Low,High) = simulator bins
+  (1,2). Realised SD 25%: 0.179/0.080 1/cm (~319/313 HU); 12.5%: 0.253/0.113
+  (~452/443 HU); Parseval NPS-integral SD matches realised SD (<0.01%).
+  Synthesis: Hermitian cross-spectrum model, tiled NPS-domain generation,
+  validated by ensemble tests incl. defect pinning.
+- **D1w training** (`tools/make_training_data_walnut.py`,
+  `tools/train_denoiser_walnut.py`): 192 walnut-config phantoms (35 mm water
+  disk, 0.14x S3-5 insert geometry, 80 kVp/15-30 keV, dose 25-100% of
+  n0=3e4), stored as (Low,High) HU pairs with 100%-dose water calibration;
+  flesh DC offset -228/-130 HU (measured on eval slices) added to input and
+  teacher (S3-4 loss invariant). 4000 steps, final val_l2 161.1
+  (from 33,920). Weights: `results/denoiser_d1w_weights.pt`.
+- **Walnut operators** (`pcctvmi/walnut.py`, `tests/test_walnut.py`):
+  VMI operator frozen as per-keV linear coefficients regressed from the
+  dataset's own VirtualMonoImg (R^2 >= 0.9999988, slice drift < 2.1e-3;
+  replaces the un-reproducible HAP assembly noted in the 10-20 inspection —
+  the published constant ordering could not be recovered). Reference MD =
+  DM^-1 [L+1000; H+1000] * 1000 with cond(DM) = 166.88. ROI definitions
+  (flesh > -900 HU; central disc r=250 px; median/quartile cross-conditions)
+  unit-tested with defect pinning.
+- **Evaluation** (`tools/walnut_eval.py`, `tools/walnut_summary.py`,
+  `results/walnut_eval_summary.json`): 60 slices x 2 doses, 4 arms.
+  At 25%: D1w improves VMI RMSE 680->132 HU, SSIM 0.047->0.654, MD total
+  error pulp 20,440->3,779 / shell 18,308->2,227. At 12.5% D1w VMI-SSIM
+  degrades to 0.318 (outside training dose range) while TV holds 0.641;
+  D1w still best on MD shell (2,158 vs TV 3,277). Same-direction effect as
+  the simulation arms => **H4 supported**, with the extrapolation caveat.
+
 ## Unreleased (2026-10-20) — Sprint 7 start: H4 real-data arm (walnut PCCT)
 
 - **Data acquisition** (`tools/fetch_reconstructions.py`, `docs/DATA.md`,
@@ -12,10 +46,13 @@
 - **Data inspection** (facts frozen in PROTOCOL_FREEZE.md §12.1): the
   published VMI synthesis (Watercali/HAPcali linear map) reproduces the
   shipped VirtualMonoImg exactly (40 keV: sd 0.29, max 0.5 = DICOM
-  quantization). The shipped MD_Pulp_Shell series is NOT any linear map of
-  the shipped bin images (empirical fits leave residual SD 600-1500) —
-  dataset drift; the arm computes reference MD from the published
-  calibration itself (cond(DM) = 166.9).
+  quantization). *Correction (2026-10-21): the implementing script was not
+  preserved and the published constants' ordering could not be recovered;
+  the VMI operator is now frozen as directly regressed per-keV linear
+  coefficients (see the 10-22 entry).* The shipped MD_Pulp_Shell series is
+  NOT any linear map of the shipped bin images (empirical fits leave
+  residual SD 600-1500) — dataset drift; the arm computes reference MD from
+  the published calibration itself (cond(DM) = 166.9).
 - **Protocol freeze §12** (before any evaluation implementation): H4 runs
   in the 2-channel (Low, High) bin domain (both VMI and MD are linear in
   bins), slices 500-559, image-domain stationary correlated Gaussian noise

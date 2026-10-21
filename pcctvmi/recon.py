@@ -40,7 +40,10 @@ def fbp(line_integrals: np.ndarray, theta_deg: np.ndarray, filter_name: str = "h
 
 
 def reconstruct_bins(
-    result: SimulationResult, use_expected: bool = False, filter_name: str = "hann"
+    result: SimulationResult,
+    use_expected: bool = False,
+    filter_name: str = "hann",
+    bin_indices: list[int] | tuple[int, ...] | None = None,
 ) -> list[np.ndarray]:
     """Reconstruct every bin into a linear-attenuation image (1/cm).
 
@@ -55,10 +58,14 @@ def reconstruct_bins(
         use_expected: linearise the noise-free means instead of the noisy
             counts (validation path; deterministic given the phantom).
         filter_name: FBP filter.
+        bin_indices: optional subset of bin indices to reconstruct (the
+            walnut config's 3-bin simulations skip the hardware-rejected
+            sub-15 keV bin via ``bin_indices=(1, 2)``). None = all bins.
     """
     pixel_size_cm = float(result.meta["pixel_size_cm"])
+    idxs = range(len(result.counts)) if bin_indices is None else bin_indices
     images: list[np.ndarray] = []
-    for idx in range(len(result.counts)):
+    for idx in idxs:
         data = result.expected_counts[idx] if use_expected else result.counts[idx]
         y = linearize(np.asarray(data, dtype=np.float64), float(result.air_counts[idx]))
         images.append(fbp(y, result.theta_deg, filter_name=filter_name) / pixel_size_cm)
