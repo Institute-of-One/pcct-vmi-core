@@ -30,8 +30,10 @@ results/denoiser_d2b*_weights.pt
 # Training data (publicly regenerable via tools/make_training_data.py)
 data/training/
 
-# Data (public datasets; fetch per docs/DATA.md, never commit)
-data/
+# Data (public datasets; fetch per docs/DATA.md, never commit).
+# Root-anchored: a bare "data/" would also match pcctvmi/data/ and silently
+# untrack the packaged spectrum/attenuation CSVs.
+/data/
 
 # Working temp
 _tmp/
@@ -42,3 +44,5 @@ Thumbs.db
 
 # chunked run intermediates (merged JSON is committed)
 results/*_part*.json
+# Walnut noise-model chunk intermediates (merged npz/json are committed)
+results/walnut_noise_model_*_part*.npz

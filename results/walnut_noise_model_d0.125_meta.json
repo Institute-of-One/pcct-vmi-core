@@ -1,0 +1,26 @@
+{
+  "n0": 30000.0,
+  "n0_photon_criterion": 409.970721466472,
+  "n0_air_floor": 27730.785591153715,
+  "binding": "air_floor",
+  "low_bin_photons_per_n0_centre": 0.04878397151986774,
+  "air_photons_per_n0_min_bin": 0.028848804061836774,
+  "spectrum_csv": "spectrum_80kvp.csv",
+  "thresholds_kev": [
+    15.0,
+    30.0
+  ],
+  "bin_convention": "3 bins: 0=[E_min,15) rejected, 1=Low [15,30), 2=High [30,E_max)",
+  "low_bin_index": 1,
+  "high_bin_index": 2,
+  "n": 1024,
+  "pixel_size_cm": 0.005,
+  "water_diameter_cm": 3.5,
+  "theta": "180 views over 360 deg",
+  "roi": 256,
+  "seed_base": 20261021,
+  "reps": 32,
+  "min_low_photons_at_25pct": 5.0,
+  "min_air_counts_per_bin": 100.0,
+  "dose": 0.125
+}
