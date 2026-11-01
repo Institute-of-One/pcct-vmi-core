@@ -5,6 +5,7 @@ import tempfile
 import unittest
 import zipfile
 from pathlib import Path
+from xml.etree import ElementTree as ET
 HERE=Path(__file__).resolve().parent
 spec=importlib.util.spec_from_file_location('checker',HERE/'check_template_conformance.py')
 checker=importlib.util.module_from_spec(spec);spec.loader.exec_module(checker)
@@ -70,5 +71,32 @@ class CleanedReferenceTest(unittest.TestCase):
         text=self.rendered()
         for name in ('De Man B','La Rivière PJ','Sanchez del Rio M'):
             self.assertIn(name,text)
+
+class DraftStampTest(unittest.TestCase):
+    """The title page must say DRAFT for as long as any gate is open.
+
+    The warning used to be keyed on two fields of paper/author.json, so supplying the
+    telephone would have removed a sentence that also named the generative-AI disclosure
+    and the data locator. It is resolved from the gates now, and a warning that can
+    vanish without anyone noticing is worse than none.
+    """
+    def setUp(self):
+        spec=importlib.util.spec_from_file_location('gates',HERE/'readiness_gates.py')
+        self.gates=importlib.util.module_from_spec(spec);spec.loader.exec_module(self.gates)
+    def test_an_annotated_pass_counts_as_passed(self):
+        self.assertEqual(self.gates.pending_gates({'a':'PASS - 36 references, measured'}),[])
+    def test_every_other_verdict_is_pending(self):
+        for verdict in ('PARTIAL','PENDING','BLOCKED','passed','PASSABLE','PASSED but'):
+            self.assertEqual(self.gates.pending_gates({'a':verdict}),['a'],verdict)
+    def test_the_built_title_page_names_the_open_gates(self):
+        open_gates=self.gates.pending_gates()
+        text=' '.join(ET.fromstring(zipfile.ZipFile(HERE/'output/title_page.docx')
+                                    .read('word/document.xml')).itertext())
+        if not open_gates:
+            self.assertNotIn('DRAFT',text,'nothing is open, so the stamp must be gone')
+            return
+        self.assertIn('DRAFT',text,'gates are open and the title page does not say so')
+        for gate in open_gates:
+            self.assertIn(gate,text,gate)
 
 if __name__=='__main__':unittest.main()

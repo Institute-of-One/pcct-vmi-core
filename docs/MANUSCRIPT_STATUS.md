@@ -61,3 +61,26 @@ after nonlinear processing, scalar rather than full-shape signal correction,
 input-extent sensitivity from GroupNorm, and walnut adaptation using test-slice means.
 The current manuscript discloses these limits; disclosure is not a claim that they
 have been experimentally eliminated.
+
+## Update — 2026-11-02
+
+Everything above is the record of 2026-10-29 and some of it has been overtaken.
+`paper/readiness.json` is the current state; the differences that matter:
+
+- The body is 5,193 words and carries 36 references, not 4,670 and ten. The journal's
+  recent research articles cite 26 at the thinnest and 40 at the median
+  (`paper/venue_reference_benchmark.json`, measured from Europe PMC), and JXST has no
+  Note category to be reclassified into, so the old list was a rejection risk.
+- The affiliation now resolves against the three Crossref records under the author's
+  ORCID, and the author supplied his telephone and approved the contact block on
+  2026-11-02, so contact details are no longer unresolved.
+- Ethics, conflicting interest, funding, contributions and acknowledgement are final
+  wording on the author's instruction of 2026-11-02: no conflicting interests and no
+  funding. The generative-AI declaration still carries two to-do sentences.
+- Every page of the manuscript and title page has been opened at 150 dpi and the review
+  is pinned to the page rasters, which a rebuild leaves byte-identical when the content
+  is unchanged. Four reference-list defects visible only on the page were fixed.
+- Structural injection tests are 14, not 5; pytest is still 96.
+- Still open and still the author's: the public code locator and version DOI (no Git
+  remote is configured), the clean-environment figure rebuild, independent review, the
+  full pipeline rerun, and his own inspection.

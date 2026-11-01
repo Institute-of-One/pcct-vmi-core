@@ -134,16 +134,25 @@ def selftest():
 
     swapped = dict(live, affiliation='Institute of One, LISIT Co., Ltd., 150-0044 Tokyo, Japan')
     blank = dict(live, email='')
-    unapproved = dict(live, telephone='+81-3-0000-0000', confirmed_by_author=False)
+    unapproved = dict(live, confirmed_by_author=False)
+    other_phone = dict(live, telephone='+81-3-0000-0000')
     planted_src = src.replace('a=json.loads', "_=%r\n    a=json.loads" % live['affiliation'], 1)
     thin_title = (title or '').replace(live['affiliation'], 'LISIT') if title else 'nothing'
 
+    # Each case names the one rule it is planted against, and must produce that rule's
+    # finding. Without the expected text a case can pass on a different rule: planting a
+    # telephone the page lacks also used to clear confirmed_by_author, so the case named
+    # for the title-page rule was reported by the approval rule instead.
     cases = [
-        ('postcode before the city', dict(author=swapped)),
-        ('email removed', dict(author=blank)),
-        ('telephone set but missing from the built page', dict(author=unapproved)),
-        ('builder keeps its own affiliation', dict(builder_src=planted_src)),
-        ('title page lost the affiliation', dict(title_text=thin_title)),
+        ('postcode before the city', dict(author=swapped), 'is on none of the'),
+        ('email removed', dict(author=blank), 'email is empty'),
+        ('approval withdrawn', dict(author=unapproved), 'confirmed_by_author is false'),
+        ('telephone changed after the page was built', dict(author=other_phone),
+         'does not carry the telephone'),
+        ('builder keeps its own affiliation', dict(builder_src=planted_src),
+         'contains the affiliation literally'),
+        ('title page lost the affiliation', dict(title_text=thin_title),
+         'does not carry the affiliation'),
     ]
     ok = True
     # Negative control: once the two author-owned items are resolved and the page carries
@@ -157,16 +166,20 @@ def selftest():
     if quiet:
         print('           -> %s' % quiet[0][:130])
     ok = ok and not quiet
-    for name, kwargs in cases:
+    for name, kwargs, expect in cases:
         # NO-OP guard: a case that changed nothing proves nothing.
         changed = any(kwargs[k] != {'author': live, 'builder_src': src,
                                     'title_text': title}[k] for k in kwargs)
         found = [f for f in whole(**kwargs) if f not in baseline]
-        verdict = 'DETECTED' if found else ('MISSED' if changed else 'NO-OP')
+        hit = [f for f in found if expect in f]
+        verdict = ('DETECTED' if hit else
+                   'WRONG' if found else 'MISSED' if changed else 'NO-OP')
         print('  %-8s %s' % (verdict, name))
-        if found:
-            print('           -> %s' % found[0][:130])
-        ok = ok and bool(found) and changed
+        if hit:
+            print('           -> %s' % hit[0][:130])
+        elif found:
+            print('           -> expected %r; got %s' % (expect, found[0][:100]))
+        ok = ok and bool(hit) and changed
     print('selftest %s' % ('PASS' if ok else 'FAIL'))
     return 0 if ok else 1
 

@@ -170,17 +170,17 @@ In the specified PCCT simulation, denoising changed energy-dependent observer es
 
 ## Acknowledgements
 
-The public dataset and open-source software used in this work are cited in the reference list. No additional individual acknowledgement is included in this draft.
+The public dataset and open-source software used in this work are cited in the reference list. There is no further acknowledgement.
 
 ## Author Contributions
 
-Proposed for author confirmation: Shuji Yamamoto — conceptualization, methodology, software, investigation, formal analysis, visualization, and writing. Final responsibility for the manuscript rests with the author.
+Shuji Yamamoto: conceptualization, methodology, software, investigation, formal analysis, visualization, and writing. The article has one author, who carries final responsibility for the manuscript.
 
 ## Statements and Declarations
 
 ### Ethical considerations
 
-This study used synthetic phantoms and publicly available walnut reconstruction data. No human participants, human tissue, or patient records were included. Institutional human-research approval was not required for these materials; this statement requires author confirmation before submission.
+This study used synthetic phantoms and publicly available walnut reconstruction data. No human participants, human tissue, or patient records were included, and no animal experiment was performed. Institutional human-research approval and informed consent were therefore not required for these materials.
 
 ### Consent to participate
 
@@ -192,11 +192,11 @@ Not applicable.
 
 ### Declaration of conflicting interest
 
-Author confirmation required: disclose relevant employment, ownership, financial interests, and other potential conflicts. The proposed institutional affiliation is LISIT Co., Ltd.; a blanket no-conflict statement has not been inferred from the study design.
+The author declared no potential conflicts of interest with respect to the research, authorship, and/or publication of this article. No commercial product was evaluated, and no commercial party had any role in the design, execution, analysis, or reporting of this study.
 
 ### Funding statement
 
-Author confirmation required: identify all financial and in-kind support, or confirm that no specific grant supported this research.
+The author received no financial support for the research, authorship, and/or publication of this article.
 
 ### Data availability
 

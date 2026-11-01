@@ -103,7 +103,11 @@ the submission gates must enforce rather than remember:
 ## Open gates
 
 See `readiness.json` and `submission/jxst/output/conformance_report.json`.
-Author declarations and contact details are deliberately unresolved.
+Contact details are resolved: on 2026-11-02 the author supplied his telephone number and
+approved the block, so `check_author_identity.py` passes. Of the declarations, ethics,
+conflicting interest, funding, contributions and acknowledgement are final wording; the
+generative-AI declaration still carries two sentences that are to-do notes rather than
+declarations, because only the author knows the full tool list from the research stages.
 No public code locator or version archive DOI was invented (this checkout has no
 configured Git remote). A clean snapshot/new environment figure rebuild remains.
 AI-Check's existing 2026-10-26 fixed-prompt report records errors for both services;

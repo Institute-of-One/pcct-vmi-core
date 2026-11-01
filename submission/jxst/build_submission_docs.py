@@ -4,6 +4,7 @@ import hashlib
 import html
 import json
 import re
+import sys
 from pathlib import Path
 from docx import Document
 from docx.shared import Inches, Pt, RGBColor
@@ -13,6 +14,8 @@ from docx.oxml.ns import qn
 ROOT=Path(__file__).resolve().parents[2]
 PAPER=ROOT/'paper'
 OUT=ROOT/'submission/jxst/output'
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+from readiness_gates import pending_gates
 
 def load(name): return json.loads((ROOT/'results'/name).read_text())
 def conditions(name): return {(c['size_cm'],c['dose_fraction']):c for c in load(name)['conditions']}
@@ -133,8 +136,13 @@ def main():
                                    'Address: '+(a['street_address'] or '[PENDING]'),
                                    'Telephone: '+(a['telephone'] or '[PENDING]'),
                                    'Email: '+a['email']]))
-    if not a['confirmed_by_author'] or not a['telephone']:
-        title.add_paragraph('Author confirmation required: telephone and the English wording of the street address; authorship and contribution statement; funding; relevant conflicts and employment/ownership disclosure; ethics wording; complete generative-AI disclosure; final data/code locator.')
+    # The draft stamp is resolved from the gates, not from a sentence written here. It
+    # used to be keyed on two fields of author.json, so filling in the telephone would
+    # have removed a warning that also named the AI disclosure and the data locator.
+    open_gates=pending_gates()
+    if open_gates:
+        title.add_paragraph('DRAFT - not for submission while these gates are open in '
+                            'paper/readiness.json: '+', '.join(open_gates)+'.')
     for heading in ('Acknowledgements','Author Contributions','Statements and Declarations'):
         part=source.split('## '+heading+'\n',1)[1].split('\n## ',1)[0]
         title.add_heading(heading,level=1)
@@ -146,7 +154,7 @@ def main():
     abstract=source.split('## Abstract')[1].split('Keywords:')[0]
     summary={'body_words':len(body.split()),'abstract_words_including_labels':len(abstract.split()),'tables':3,'figures':5,
              'inputs':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [PAPER/'manuscript.md',PAPER/'references.json',Path(__file__)]},
-             'status':'DRAFT - author declarations and submission gates pending'}
+             'status':('DRAFT - open gates: '+', '.join(open_gates)) if open_gates else 'all gates in paper/readiness.json record PASS'}
     (OUT/'build_report.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
     print(summary)
 

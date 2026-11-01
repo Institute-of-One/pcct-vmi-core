@@ -5,5 +5,6 @@
   "affiliation_note": "City before postcode. Verified 2026-11-02 against the three journal articles Crossref carries under this ORCID; all three agree exactly.",
   "orcid": "0000-0001-9211-1071",
   "email": "yamamoto@lisit.jp",
-  "confirmed_by_author": false
+  "confirmed_by_author": true,
+  "confirmed_by_author_note": "2026-11-02: the author supplied the telephone number and stated that there are no conflicting interests and no funding. The street address above is the one his own billing records carry; he has not separately commented on the English transliteration, so it is still worth his eye before the ScholarOne fields are filled, which must match this page exactly."
 }
