@@ -24533,6 +24533,12 @@
           ]
         ]
       }
-    }
+    },
+    "display_authors": [
+      "Wang Z",
+      "Bovik AC",
+      "Sheikh HR",
+      "Simoncelli EP"
+    ]
   }
 ]

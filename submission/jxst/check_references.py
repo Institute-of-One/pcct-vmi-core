@@ -40,15 +40,22 @@ def main():
                 raise ValueError('registered title changed')
             if ref.get('year') and ref['year'] != year: raise ValueError('year changed')
             entry = {'doi':doi, 'title':title, 'year':year, 'csl':record}
-            fix = overrides.get(doi)
-            if fix:
-                # The override stands only while the record is still wrong in the way
-                # that was recorded. If the publisher corrects it, this fails rather
-                # than quietly printing a correction nobody checked again.
+            fix = overrides.get(doi, {})
+            # An override stands only while the record is still wrong in the way that
+            # was recorded. If the publisher corrects it, this fails rather than quietly
+            # printing a correction nobody checked again.
+            if 'registered' in fix:
                 if normalise(fix['registered']) != normalise(title):
                     raise ValueError('title override for %s no longer matches the '
                                      'registered title %r' % (doi, title))
                 entry['display_title'] = fix['display']
+            if 'authors' in fix:
+                want = fix['authors']['registered_first_family']
+                got = (record.get('author') or [{}])[0].get('family', '')
+                if normalise(want) != normalise(got):
+                    raise ValueError('author override for %s no longer matches the '
+                                     'registered first author %r' % (doi, got))
+                entry['display_authors'] = fix['authors']['display']
             records.append(entry)
             print('RESOLVED', doi, year, entry.get('display_title', title))
         except Exception as exc:

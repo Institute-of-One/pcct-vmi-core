@@ -53,10 +53,17 @@ def check(review=None, readiness=None, manifest=None, live=None):
         # Attribute the staleness to the gate it actually invalidates: a regenerated
         # figure does not unreview the document, and a rebuilt document does not
         # unreview the figures.
-        gate = ('figure_visual_review' if 'figures' in rel.replace('\\', '/')
+        gate = ('figure_visual_review' if '/figures/' in rel.replace('\\', '/')
                 else 'document_all_page_visual_review')
         stale.setdefault(gate, []).append(why)
         bad.append('the visual review no longer covers what would be submitted: %s' % why)
+
+    # The pinned artefacts are the rendered pages, so the review covers a document only
+    # while every page of it has been rasterized and opened.
+    rendered = [r for r in review.get('artifacts', {}) if 'final-page-' in r]
+    if review.get('manuscript_pages') and len(rendered) != review['manuscript_pages']:
+        bad.append('the review says %d manuscript pages but pins %d page images'
+                   % (review['manuscript_pages'], len(rendered)))
 
     # Every figure that ships must have been opened, and the count comes from the
     # manifest rather than from a number written into this file.

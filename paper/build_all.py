@@ -58,7 +58,13 @@ def main():
     subprocess.run([docx_python,'-X','utf8','-B',str(ROOT/'submission/jxst/build_submission_docs.py')],cwd=ROOT,check=True)
     if not args.no_pdf:
         if os.name!='nt': raise RuntimeError('PDF export requires Windows Word; use --no-pdf for a draft-only build')
-        subprocess.run(['powershell','-NoProfile','-ExecutionPolicy','Bypass','-File',str(ROOT/'submission/jxst/render_word.ps1')],cwd=ROOT,check=True)
+        # DOCX_PYTHON drives Word through DispatchEx so the author's own Word, if open,
+        # is neither used nor quit. render_word.ps1 bound to whatever instance was
+        # running and quit it at the end.
+        subprocess.run([docx_python,'-X','utf8','-B',str(ROOT/'submission/jxst/render_word.py')],cwd=ROOT,check=True)
+        # The page rasters are what the visual review pins, so the build makes them
+        # rather than leaving them to whoever remembers to run the tool.
+        subprocess.run([sys.executable,'-X','utf8','-B',str(ROOT/'paper/verify_render_changes.py')],cwd=ROOT,check=True)
     output=ROOT/'submission/jxst/output'
     artifacts=list(output.glob('*.docx'))+list(output.glob('*.pdf'))+list(output.glob('*.csv'))+[output/'manuscript.txt']
     (output/'delivery_manifest.json').write_text(json.dumps({str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in artifacts},indent=2))

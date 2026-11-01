@@ -204,7 +204,7 @@ The source walnut dataset is available at https://doi.org/10.5281/zenodo.1732837
 
 ### Declaration of generative AI use
 
-OpenAI Codex assisted with manuscript drafting, code preparation, and local checks. The author must verify all claims, citations, numerical outputs, and final wording and confirm the complete list of tools used during the earlier research stages. Generative AI is not an author. Independent Codex–Claude review of this manuscript package has not been completed.
+OpenAI Codex assisted with manuscript drafting, code preparation, and local checks. Anthropic Claude assisted on 2 November 2026 with the literature search behind the related-work citations, with placing those citations in the text, and with the submission checks in submission/jxst; the candidate references were retrieved from Europe PMC and every digital object identifier was resolved through doi.org before it was written into the manuscript. Both assistants worked under the author's direction, neither selected a result or a conclusion, and generative AI is not an author. The author must verify all claims, citations, numerical outputs, and final wording and confirm the complete list of tools used during the earlier research stages. Independent Codex–Claude review of this manuscript package has not been completed.
 
 ## References
 

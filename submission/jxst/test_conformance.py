@@ -51,10 +51,24 @@ class CleanedReferenceTest(unittest.TestCase):
         self.assertIn('&amp;',unclean)          # without clean(), the entity is printed
         self.assertNotIn('&amp;',builder.refs_text())
     def test_title_override_is_applied(self):
-        spec=importlib.util.spec_from_file_location('builder',HERE/'build_submission_docs.py')
-        builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
-        text=builder.refs_text()
+        text=self.rendered()
         self.assertIn('Low-dose CT via convolutional neural network',text)
         self.assertNotIn('aLow-dose',text)
+    def rendered(self):
+        spec=importlib.util.spec_from_file_location('builder',HERE/'build_submission_docs.py')
+        builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
+        return builder.refs_text()
+    def test_initials_registered_without_spaces_are_kept(self):
+        """'F.R.' is one token; splitting on spaces alone rendered it as 'F'."""
+        self.assertIn('Verdun FR',self.rendered())
+    def test_author_override_is_applied(self):
+        """One Crossref record holds the whole name in the family field."""
+        text=self.rendered()
+        self.assertIn('Wang Z, Bovik AC, Sheikh HR, Simoncelli EP',text)
+        self.assertNotIn('Zhou Wang',text)
+    def test_multiword_surnames_survive(self):
+        text=self.rendered()
+        for name in ('De Man B','La Rivière PJ','Sanchez del Rio M'):
+            self.assertIn(name,text)
 
 if __name__=='__main__':unittest.main()

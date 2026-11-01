@@ -4,5 +4,12 @@
     "registered": "aLow-dose CT via convolutional neural network",
     "display": "Low-dose CT via convolutional neural network",
     "source": "The Crossref record carries a stray leading 'a'. PubMed (Europe PMC, DOI:10.1364/boe.8.000679, checked 2026-11-02) and the article itself give 'Low-dose CT via convolutional neural network', Biomed Opt Express 2017;8(2):679-694."
+  },
+  "10.1109/TIP.2003.819861": {
+    "authors": {
+      "registered_first_family": "Zhou Wang",
+      "display": ["Wang Z", "Bovik AC", "Sheikh HR", "Simoncelli EP"],
+      "source": "The Crossref record puts the first author's whole name in the family field and leaves the given name empty, so the formatter rendered 'Zhou Wang' where every other entry is 'Family I'. The author is Zhou Wang; the family name is Wang. IEEE Trans Image Process 2004;13(4):600-612."
+    }
   }
 }

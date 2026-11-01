@@ -47,10 +47,14 @@ def refs_text():
     refs=json.loads((PAPER/'references.json').read_text(encoding='utf-8'))
     out=[]
     for i,r in enumerate(refs,1):
-        c=r['csl']; authors=[]
-        for a in c.get('author',[])[:6]:
-            authors.append((a.get('family',a.get('literal',''))+' '+''.join(p[0] for p in a.get('given','').split())).strip())
-        if len(c.get('author',[]))>6: authors.append('et al.')
+        c=r['csl']; authors=list(r.get('display_authors',[]))
+        if not authors:
+            for a in c.get('author',[])[:6]:
+                # Split on dots as well as spaces: 'F.R.' is one token and rendered as
+                # 'F', which lost an initial on two references.
+                given=[p for p in re.split(r'[\s.\-]+',a.get('given','') or '') if p]
+                authors.append((a.get('family',a.get('literal',''))+' '+''.join(p[0] for p in given)).strip())
+            if len(c.get('author',[]))>6: authors.append('et al.')
         container=c.get('container-title','')
         if isinstance(container,list): container='; '.join(container)
         container=clean(container)
