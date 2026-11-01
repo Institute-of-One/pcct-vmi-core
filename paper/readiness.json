@@ -1,6 +1,6 @@
 {
   "author_declarations": "PENDING",
-  "reference_list_matches_the_venue": "FAIL - 10 references against a measured JXST floor of 26 and median of 40 (paper/venue_reference_benchmark.json, Europe PMC, 2025-2026 papers). The journal has no Note category, so a manuscript that reads as slight is rejected rather than reclassified. submission/jxst/check_reference_density.py",
+  "reference_list_matches_the_venue": "PASS - 36 references over 5193 body words, against a measured JXST floor of 26 and median of 40 (paper/venue_reference_benchmark.json, Europe PMC, 2025-2026). Was 10. Every DOI resolves; numbering follows first appearance. submission/jxst/check_reference_density.py",
   "author_contact_details": "PENDING - paper/author.json now holds the block and the title page is built from it; the telephone Sage requires is null and confirmed_by_author is false. Both are the author's to give and check_author_identity.py fails while they are",
   "affiliation_crossref_match": "PASS - 2026-11-02, submission/jxst/check_author_identity.py; the string in paper/author.json is the one Crossref carries on all three journal articles under ORCID 0000-0001-9211-1071",
   "public_code_and_version_doi": "PENDING",

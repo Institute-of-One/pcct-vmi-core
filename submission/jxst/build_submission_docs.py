@@ -1,6 +1,7 @@
 """Build Word manuscript from editable text and frozen JSON; never edit DOCX manually."""
 import csv
 import hashlib
+import html
 import json
 import re
 from pathlib import Path
@@ -38,6 +39,10 @@ TITLES=['Table 1. Peak energy (keV) / NPWE d′ magnitude. Scaled columns retain
         'Table 2. Noiseless iodine baseline and deviation mean ± realization SD (mgI/mL). N = 64 per condition.',
         'Table 3. Walnut summary over 60 adjacent slices from one specimen. Material bias / mean pixel SD are on the calibration-table mg/cm³-scale. RMSE is centrally masked; SSIM is whole-image.']
 
+def clean(s):
+    """Crossref titles carry HTML. Printed as-is they reach the editor as '&amp;'."""
+    return re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',html.unescape(str(s)))).strip()
+
 def refs_text():
     refs=json.loads((PAPER/'references.json').read_text(encoding='utf-8'))
     out=[]
@@ -48,12 +53,14 @@ def refs_text():
         if len(c.get('author',[]))>6: authors.append('et al.')
         container=c.get('container-title','')
         if isinstance(container,list): container='; '.join(container)
+        container=clean(container)
+        title=clean(r.get('display_title',r['title']))
         if r['doi'].startswith('10.5281/'):
             publication=f"Zenodo. {r['year']}."
         else:
             vol=c.get('volume',''); pages=c.get('page',c.get('article-number',''))
             publication=f"{container}. {r['year']}"+(f';{vol}' if vol else '')+(f':{pages}' if pages else '')+'.'
-        out.append(f"[{i}] {', '.join(authors).rstrip('.')}. {r['title']}. {publication} https://doi.org/{r['doi']}")
+        out.append(f"[{i}] {', '.join(authors).rstrip('.')}. {title}. {publication} https://doi.org/{r['doi']}")
     return '\n\n'.join(out)
 
 def configure(doc):

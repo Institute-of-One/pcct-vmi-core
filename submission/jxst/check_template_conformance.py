@@ -29,6 +29,10 @@ def audit(source,docx):
         xml=z.read('word/document.xml'); tree=ET.fromstring(xml)
         text=' '.join(tree.itertext())
         if '{{' in text: problems.append('Unexpanded source placeholder')
+        # Crossref metadata carries HTML. Four container titles reached the reference
+        # list as 'Physics in Medicine &amp; Biology' and two titles kept <i> tags.
+        markup=sorted(set(re.findall(r'&[a-zA-Z][a-zA-Z0-9]{1,8};|&#\d+;|</?[a-zA-Z][^>]*>',text)))
+        if markup: problems.append('Markup printed as text in the document: '+', '.join(markup[:6]))
         if len(tree.findall('.//w:tbl',NS))!=3: problems.append('Expected three tables')
         if len(tree.findall('.//w:drawing',NS))!=5: problems.append('Expected five embedded figures')
         footers=[z.read(n) for n in z.namelist() if re.fullmatch(r'word/footer\d+\.xml',n)]

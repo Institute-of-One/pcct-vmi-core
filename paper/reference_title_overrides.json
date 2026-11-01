@@ -1,0 +1,8 @@
+{
+  "_why": "A registered title that is wrong would be printed wrong. An override here is narrow and checked: check_references.py applies it only while the registered title is still the string recorded in 'registered', so if the publisher corrects the record the gate says so instead of silently keeping a stale correction. The DOI is never changed.",
+  "10.1364/boe.8.000679": {
+    "registered": "aLow-dose CT via convolutional neural network",
+    "display": "Low-dose CT via convolutional neural network",
+    "source": "The Crossref record carries a stray leading 'a'. PubMed (Europe PMC, DOI:10.1364/boe.8.000679, checked 2026-11-02) and the article itself give 'Low-dose CT via convolutional neural network', Biomed Opt Express 2017;8(2):679-694."
+  }
+}

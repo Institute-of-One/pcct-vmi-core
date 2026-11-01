@@ -19,6 +19,9 @@ def normalise(s):
 def main():
     target = OUT / 'references.json'
     seeds = json.loads((OUT / 'reference_seed.json').read_text())
+    overrides = {k: v for k, v in
+                 json.loads((OUT / 'reference_title_overrides.json').read_text(encoding='utf-8')).items()
+                 if not k.startswith('_')}
     previous = {r['doi']:r for r in json.loads(target.read_text())} if target.exists() else {}
     refs = [previous.get(r['doi'],r) for r in seeds]
     records, errors = [], []
@@ -36,8 +39,18 @@ def main():
             if ref.get('title') and normalise(ref['title']) != normalise(title):
                 raise ValueError('registered title changed')
             if ref.get('year') and ref['year'] != year: raise ValueError('year changed')
-            records.append({'doi':doi, 'title':title, 'year':year, 'csl':record})
-            print('RESOLVED', doi, year, title)
+            entry = {'doi':doi, 'title':title, 'year':year, 'csl':record}
+            fix = overrides.get(doi)
+            if fix:
+                # The override stands only while the record is still wrong in the way
+                # that was recorded. If the publisher corrects it, this fails rather
+                # than quietly printing a correction nobody checked again.
+                if normalise(fix['registered']) != normalise(title):
+                    raise ValueError('title override for %s no longer matches the '
+                                     'registered title %r' % (doi, title))
+                entry['display_title'] = fix['display']
+            records.append(entry)
+            print('RESOLVED', doi, year, entry.get('display_title', title))
         except Exception as exc:
             errors.append({'doi':doi, 'error':str(exc)})
     report = {'checked_at':datetime.now(timezone.utc).isoformat(),
