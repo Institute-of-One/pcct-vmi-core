@@ -1,0 +1,9 @@
+{
+  "_why": "One place for the author block. It used to be a string literal inside build_submission_docs.py, which made the affiliation a thing the builder remembered. AGENTS.md section 2 forbids answering the affiliation from memory, so check_author_identity.py resolves this file against Crossref and refuses a builder that carries its own copy.",
+  "name": "Shuji Yamamoto",
+  "affiliation": "Institute of One, LISIT Co., Ltd., Tokyo 150-0044, Japan",
+  "affiliation_note": "City before postcode. Verified 2026-11-02 against the three journal articles Crossref carries under this ORCID; all three agree exactly.",
+  "orcid": "0000-0001-9211-1071",
+  "email": "yamamoto@lisit.jp",
+  "confirmed_by_author": false
+}

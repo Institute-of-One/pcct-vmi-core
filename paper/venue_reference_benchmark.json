@@ -1,0 +1,131 @@
+{
+  "measured": "2026-11-01",
+  "query": "JOURNAL:\"J Xray Sci Technol\" AND (PUB_YEAR:2025 OR PUB_YEAR:2026)",
+  "source": "Europe PMC",
+  "note": "Papers whose reference list Europe PMC does not hold come back as 0 and are excluded; they are not papers with no references.",
+  "papers_sampled": 20,
+  "papers_with_reference_data": 16,
+  "minimum": 26,
+  "median": 40,
+  "maximum": 61,
+  "counts": [
+    26,
+    28,
+    33,
+    34,
+    35,
+    36,
+    37,
+    39,
+    40,
+    45,
+    46,
+    46,
+    48,
+    51,
+    53,
+    61
+  ],
+  "rows": [
+    {
+      "id": "42961097",
+      "title": "Modified FBP and BPF algorithms for stationary computed tomography with linearly distribut",
+      "references": 35
+    },
+    {
+      "id": "42921947",
+      "title": "Photon-counting CT in tumor imaging: A review of comparative evaluations and technical inn",
+      "references": 61
+    },
+    {
+      "id": "42878606",
+      "title": "GFC-Unet: An optimized 3D U-Net-based method for brain tumor segmentation.",
+      "references": 0
+    },
+    {
+      "id": "42865065",
+      "title": "Evaluation of radiation dose reduction effect of a foldable attached lead curtain in porta",
+      "references": 0
+    },
+    {
+      "id": "42847544",
+      "title": "Short-Trajectory artifact-reversal diffusion for CCTA calcium deblooming.",
+      "references": 0
+    },
+    {
+      "id": "42726021",
+      "title": "In vitro CT imaging and cellular evaluation of hyaluronic acid-functionalized Bi&lt;sub&gt",
+      "references": 37
+    },
+    {
+      "id": "42709745",
+      "title": "CSRCT: Generalized sparse regularization and convolutional sparse representation for low-d",
+      "references": 53
+    },
+    {
+      "id": "42693389",
+      "title": "LGMUNet: Global-local synergy of Mamba and CNN for dental X-ray segmentation.",
+      "references": 46
+    },
+    {
+      "id": "42647755",
+      "title": "PDDUNet: A primal-dual deep unrolling network for CT metal artifact reduction.",
+      "references": 45
+    },
+    {
+      "id": "42669810",
+      "title": "A novel WF-Mamba algorithm for eliminating radial edge artifacts in CT images reconstructi",
+      "references": 33
+    },
+    {
+      "id": "42647660",
+      "title": "A dual domain reconstruction network for sparse-view spectral CT integrating SSM and cross",
+      "references": 48
+    },
+    {
+      "id": "42606275",
+      "title": "SwinDent-Seg: Hybrid Swin transformer-CNN with cross-scale feature fusion for automated de",
+      "references": 39
+    },
+    {
+      "id": "42523164",
+      "title": "DBT reconstruction based on 3D coordinate transformation of multi-angle projections.",
+      "references": 34
+    },
+    {
+      "id": "42530490",
+      "title": "Grating based laboratory 5.41 keV X-ray phase contrast microscopy with zone-plate: design,",
+      "references": 26
+    },
+    {
+      "id": "42464493",
+      "title": "AI-assisted cardiomegaly screening via implicit morphological inference and human-in-the-l",
+      "references": 36
+    },
+    {
+      "id": "42466728",
+      "title": "EEA-UNet: An efficient element-wise adaptive attention-based network for abdominal multi-o",
+      "references": 28
+    },
+    {
+      "id": "42411995",
+      "title": "BPENet: Boundary perception enhancement network for retinal vessel and coronary angiogram ",
+      "references": 46
+    },
+    {
+      "id": "42377358",
+      "title": "Semi-supervised YOLO-DEP for high-resolution X-ray component localization and counting.",
+      "references": 0
+    },
+    {
+      "id": "42328830",
+      "title": "Attention based multi-scale edge-aware segmentation and convolutional transformer framewor",
+      "references": 51
+    },
+    {
+      "id": "42307230",
+      "title": "Improving the robustness of radiomic features to patient size variations in CBCT imaging f",
+      "references": 40
+    }
+  ]
+}

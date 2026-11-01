@@ -25,7 +25,11 @@ def save(fig, n):
     # Deliberate top headroom for portal labels; do not use bbox_inches='tight'.
     fig.subplots_adjust(top=0.84 if n==2 else 0.87, bottom=0.16, left=0.10, right=0.97, hspace=0.55, wspace=0.8 if n==5 else 0.4)
     fig.savefig(FIG/f'figure{n}.png', dpi=300, facecolor='white')
-    fig.savefig(FIG/f'figure{n}.pdf', facecolor='white')
+    # Omit the PDF CreationDate. With it, every rebuild produced different bytes for
+    # identical content, so the manifest and the visual review went stale on a rerun and
+    # a clean-environment byte comparison could never pass. The PNGs were already
+    # reproducible; only the date differed.
+    fig.savefig(FIG/f'figure{n}.pdf', facecolor='white', metadata={'CreationDate': None})
     plt.close(fig)
 
 def main():

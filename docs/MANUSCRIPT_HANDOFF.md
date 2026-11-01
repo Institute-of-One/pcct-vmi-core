@@ -85,9 +85,18 @@ cd D:\DevGit\pcct-vmi-core
 
 ## 6. 投稿ゲート（AGENTS.md §3・計画 §9 Sprint 5。すべて未実施）
 
-- [ ] JXST 特集 CFP の再確認（計画 §9: 内部調査は 2026-09-25。投稿直前に募集が生きているか確認）
+- [x] **JXST 特集 CFP の再確認（2026-11-02 に公式ページで実施）。募集は生きている。**
+      締切 2026-12-31、初回判定 2027-02-28、刊行 2027 Q2。投稿は ScholarOne
+      `https://mc.manuscriptcentral.com/xst`、種別 `Special Issue - AI in PCCT`。
+      受理時 $450／£350 は購読ルートでも必須。査読は single-anonymized で、
+      **Revise へ進むには独立した査読2件が必要**。9/25 の内部調査に誤りは無かった。
+      Sage は自動化対策で WebFetch と内蔵ブラウザを拒むため、利用者の Chrome から確認した。
 - [ ] runbook §2（体裁要件）・§11（チェックリスト）の読了
-- [ ] JXST 実テンプレートの取得・確認（Guide for Authors の散文ではなく配布ファイルの実体）
+- [x] **JXST 実テンプレート: 配布物は存在しない（2026-11-02 確認）。** 投稿規定の実文が
+      "The preferred format for your manuscript is Word. You do not need to follow a template,
+      but please ensure your heading levels are clear, and the sections clearly defined."
+      AGENTS.md §2 は「散文ではなく配布ファイルの実体を読む」と要求するが、本誌には実体が無く、
+      節構成は原稿側で決める。同じページから読み取った拘束条件は paper/README.md に転記した。
 - [ ] `submission/jxst/build_submission_docs.py` と `check_template_conformance.py` / `check_references.py` を IORN 既存実装から複製・適合化（AGENTS.md §3 のゲート構成どおり）
 - [ ] 参考文献全件の DOI 解決検査（計画 §11 のアンカー 9 件＋本文引用分。推測で DOI を書かない）
 - [ ] クリーンチェックアウト（`git archive` → 新規 venv）で図が出る経路を検証

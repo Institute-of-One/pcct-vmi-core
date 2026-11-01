@@ -114,8 +114,16 @@ def main():
     doc.save(OUT/'manuscript.docx')
     title=Document(); configure(title)
     title.add_paragraph(source.splitlines()[0][2:],style='Title')
-    title.add_paragraph('Shuji Yamamoto\nInstitute of One, LISIT Co., Ltd., Tokyo 150-0044, Japan\nORCID: 0000-0001-9211-1071\nCorrespondence: yamamoto@lisit.jp')
-    title.add_paragraph('Author confirmation required: full institutional street address and telephone; authorship and contribution statement; funding; relevant conflicts and employment/ownership disclosure; ethics wording; complete generative-AI disclosure; final data/code locator.')
+    # The author block comes from paper/author.json, never from a literal here: the
+    # affiliation is checked against Crossref and a second copy would drift from it.
+    a=json.loads((PAPER/'author.json').read_text(encoding='utf-8'))
+    title.add_paragraph('\n'.join([a['name'],a['affiliation'],'ORCID: '+a['orcid']]))
+    title.add_paragraph('\n'.join(['Corresponding author: '+a['name'],
+                                   'Address: '+(a['street_address'] or '[PENDING]'),
+                                   'Telephone: '+(a['telephone'] or '[PENDING]'),
+                                   'Email: '+a['email']]))
+    if not a['confirmed_by_author'] or not a['telephone']:
+        title.add_paragraph('Author confirmation required: telephone and the English wording of the street address; authorship and contribution statement; funding; relevant conflicts and employment/ownership disclosure; ethics wording; complete generative-AI disclosure; final data/code locator.')
     for heading in ('Acknowledgements','Author Contributions','Statements and Declarations'):
         part=source.split('## '+heading+'\n',1)[1].split('\n## ',1)[0]
         title.add_heading(heading,level=1)

@@ -1,12 +1,13 @@
 {
   "author_declarations": "PENDING",
-  "author_contact_details": "PENDING",
-  "affiliation_crossref_match": "PENDING",
+  "reference_list_matches_the_venue": "FAIL - 10 references against a measured JXST floor of 26 and median of 40 (paper/venue_reference_benchmark.json, Europe PMC, 2025-2026 papers). The journal has no Note category, so a manuscript that reads as slight is rejected rather than reclassified. submission/jxst/check_reference_density.py",
+  "author_contact_details": "PENDING - paper/author.json now holds the block and the title page is built from it; the telephone Sage requires is null and confirmed_by_author is false. Both are the author's to give and check_author_identity.py fails while they are",
+  "affiliation_crossref_match": "PASS - 2026-11-02, submission/jxst/check_author_identity.py; the string in paper/author.json is the one Crossref carries on all three journal articles under ORCID 0000-0001-9211-1071",
   "public_code_and_version_doi": "PENDING",
   "clean_new_environment_figure_rebuild": "PENDING",
   "independent_codex_claude_review": "BLOCKED - latest fixed-prompt probes failed; no project sent",
   "figure_visual_review": "PASS",
-  "document_all_page_visual_review": "PASS",
+  "document_all_page_visual_review": "PENDING - was PASS for the 2026-10-29 review, but the title page was rebuilt on 2026-11-02 to read the author block from paper/author.json, so manuscript.docx and title_page.docx are no longer the files that were opened. Re-review and re-record the hashes in paper/visual_review.json; submission/jxst/check_visual_review_currency.py refuses the PASS until they agree",
   "research_end_to_end_reexecution": "PARTIAL - both walnut summaries and one slice replay passed; full training/simulation not rerun",
   "author_visual_approval": "PENDING"
 }

@@ -69,6 +69,37 @@ the older PDF points to Editorial Manager, so the current page/CFP takes precede
 The author page itself has inconsistent color-print fee wording; obtain a quote if
 print color is requested. No payment or submission has been performed.
 
+### Re-checked 2026-11-02, immediately before submission
+
+The call is still open and nothing above has changed. Sage serves both pages behind a
+bot challenge that refuses WebFetch and the in-app browser, so the pages were read in
+the author's own Chrome. Requirements taken verbatim from the live pages, each of which
+the submission gates must enforce rather than remember:
+
+- Submission deadline 31 December 2026; first decision 28 February 2027; issue in Q2 2027.
+- ScholarOne at `https://mc.manuscriptcentral.com/xst`, manuscript type
+  `Special Issue - AI in PCCT`.
+- A publication fee of `$450/£350` is payable on acceptance *on the subscription route*;
+  open access via Sage Choice is a separate, optional fee.
+- Single-anonymized. "Two independent reviews are required for a manuscript to reach a
+  Revise decision", so the submission needs suggested reviewers to be realistic about
+  timing - but see AGENTS.md section 1: reviewer names are the author's to supply.
+- Structured abstract of 200 words between the title and the body; minimum 4-5 keywords.
+- Sage Vancouver references. "Citations to preprints are otherwise discouraged."
+- Title page as a separate file, not sent to reviewers, carrying the title, every author
+  with affiliations, and corresponding-author contact details that must include a
+  **telephone number and institutional street address**, plus Acknowledgments,
+  declaration of conflicting interest, funding statement, ethical approval and informed
+  consent statements, and a data availability statement.
+- A `Statements and Declarations` section at the end of the article itself, after
+  Acknowledgements and Author Contributions, repeating those sub-headings.
+- "The author information you enter at submission must exactly match what is included on
+  your manuscript and/or title page, including full names, academic affiliations, and
+  corresponding author contact details."
+- Article types list only Research articles. There is no Note or Short Communication
+  category, so there is no bucket to be downgraded into; a manuscript that reads as too
+  slight is rejected rather than reclassified.
+
 ## Open gates
 
 See `readiness.json` and `submission/jxst/output/conformance_report.json`.

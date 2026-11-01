@@ -52,7 +52,9 @@ def main():
     refcheck=json.loads((ROOT/'paper/reference_check.json').read_text())
     if refcheck['status']!='PASS': errors.append('DOI resolution failed')
     readiness=json.loads((ROOT/'paper/readiness.json').read_text())
-    pending=[k for k,v in readiness.items() if v!='PASS']
+    # A gate may record what it passed on, so the value is read as a verdict plus a
+    # reason. Exact equality against 'PASS' made every annotated gate look pending.
+    pending=[k for k,v in readiness.items() if not re.match(r'PASS\b',str(v))]
     report={'structural_status':'FAIL' if errors else 'PASS','errors':errors,
             'submission_status':'BLOCKED' if pending else 'PASS','pending_gates':pending}
     (OUT/'conformance_report.json').write_text(json.dumps(report,indent=2))
