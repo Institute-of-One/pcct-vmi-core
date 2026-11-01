@@ -1,0 +1,4843 @@
+[
+  {
+    "doi": "10.1148/radiol.2018172656",
+    "title": "Photon-counting CT: Technical Principles and Clinical Prospects",
+    "year": 2018,
+    "csl": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            28
+          ]
+        ],
+        "date-time": "2026-10-28T02:13:02Z",
+        "timestamp": 1793153582932,
+        "version": "4.5.0"
+      },
+      "reference-count": 98,
+      "publisher": "Radiological Society of North America (RSNA)",
+      "issue": "2",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2018,
+            11
+          ]
+        ]
+      },
+      "DOI": "10.1148/radiol.2018172656",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2018,
+            9,
+            4
+          ]
+        ],
+        "date-time": "2018-09-04T09:58:10Z",
+        "timestamp": 1536055090000
+      },
+      "page": "293-312",
+      "source": "Crossref",
+      "is-referenced-by-count": 1329,
+      "title": "Photon-counting CT: Technical Principles and Clinical Prospects",
+      "prefix": "10.1148",
+      "volume": "289",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-6991-6557",
+          "authenticated-orcid": false,
+          "given": "Martin J.",
+          "family": "Willemink",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Mats",
+          "family": "Persson",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-7149-5424",
+          "authenticated-orcid": false,
+          "given": "Amir",
+          "family": "Pourmorteza",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Norbert J.",
+          "family": "Pelc",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Dominik",
+          "family": "Fleischmann",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "1577",
+      "reference": [
+        {
+          "key": "r1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.ejrad.2011.11.020"
+        },
+        {
+          "key": "r2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0031-9155/21/5/002"
+        },
+        {
+          "key": "r3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1097/RLI.0000000000000109"
+        },
+        {
+          "key": "r4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1097/RLI.0000000000000251"
+        },
+        {
+          "key": "r5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0022-3727/59/22/6709"
+        },
+        {
+          "key": "r6",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.4820371"
+        },
+        {
+          "key": "r7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0031-9155/55/7/014"
+        },
+        {
+          "key": "r8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TNS.2011.2122267"
+        },
+        {
+          "key": "r9",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.3245875"
+        },
+        {
+          "key": "r10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.nima.2006.08.115"
+        },
+        {
+          "key": "r11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.4894733"
+        },
+        {
+          "key": "r12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TMI.2011.2142188"
+        },
+        {
+          "key": "r13",
+          "first-page": "90331C",
+          "volume-title": "Proceedings of SPIE: medical imaging 2014—physics of medical imaging. Vol 9033",
+          "author": "Kappler S",
+          "year": "2014"
+        },
+        {
+          "key": "r14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.4898102"
+        },
+        {
+          "key": "r15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.3539602"
+        },
+        {
+          "key": "r16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.3592932"
+        },
+        {
+          "key": "r17",
+          "unstructured": "Knoll GF. Radiation detection and measurement. 4th ed. Hoboken, NJ: Wiley, 2010."
+        },
+        {
+          "key": "r18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.3148535"
+        },
+        {
+          "key": "r19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0031-9155/30/6/002"
+        },
+        {
+          "key": "r20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0031-9155/50/24/004"
+        },
+        {
+          "key": "r21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3174/ajnr.A5402"
+        },
+        {
+          "key": "r22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1097/RLI.0000000000000418"
+        },
+        {
+          "key": "r23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/1361-6560/aa8103"
+        },
+        {
+          "key": "r24",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.4922654"
+        },
+        {
+          "key": "r25",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/1361-6560/62/1/202"
+        },
+        {
+          "key": "r26",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/radiol.2017162587"
+        },
+        {
+          "key": "r27",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.653245"
+        },
+        {
+          "key": "r28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.4957952"
+        },
+        {
+          "key": "r30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.4760773"
+        },
+        {
+          "key": "r31",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/radiol.2016160890"
+        },
+        {
+          "key": "r32",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.nima.2017.04.014"
+        },
+        {
+          "key": "r33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0031-9155/61/4/1572"
+        },
+        {
+          "key": "r34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0031-9155/53/15/002"
+        },
+        {
+          "key": "r35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TNS.2007.914034"
+        },
+        {
+          "key": "r37",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/1.JMI.3.4.043504"
+        },
+        {
+          "key": "r38",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0031-9155/58/5/1433"
+        },
+        {
+          "key": "r39",
+          "first-page": "101",
+          "volume-title": "Radiological Society of North America scientific assembly and annual meeting program",
+          "author": "Pourmorteza A",
+          "year": "2017"
+        },
+        {
+          "key": "r40",
+          "first-page": "101320V",
+          "volume-title": "Proceedings of SPIE: medical imaging 2017—physics of medical imaging. Vol 10132",
+          "author": "Rajbhandary PL",
+          "year": "2017"
+        },
+        {
+          "key": "r41",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.nima.2004.05.076"
+        },
+        {
+          "key": "r42",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.3301615"
+        },
+        {
+          "key": "r43",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0031-9155/52/15/020"
+        },
+        {
+          "key": "r44",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.4824057"
+        },
+        {
+          "key": "r45",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.3658568"
+        },
+        {
+          "key": "r46",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s00330-006-0517-6"
+        },
+        {
+          "key": "r47",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.4957946"
+        },
+        {
+          "key": "r48",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s10554-017-1104-4"
+        },
+        {
+          "key": "r49",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/mp.12301"
+        },
+        {
+          "key": "r50",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0031-9155/57/7/N83"
+        },
+        {
+          "key": "r51",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0031-9155/53/5/020"
+        },
+        {
+          "key": "r52",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.3097632"
+        },
+        {
+          "key": "r53",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TMI.2014.2362795"
+        },
+        {
+          "key": "r54",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TMI.2013.2290198"
+        },
+        {
+          "key": "r55",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/1.JMI.2.4.043504"
+        },
+        {
+          "key": "r56",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1001/archinternmed.2009.440"
+        },
+        {
+          "key": "r57",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.icrp.2012.06.004"
+        },
+        {
+          "key": "r58",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.crad.2016.01.022"
+        },
+        {
+          "key": "r59",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/mp.12314"
+        },
+        {
+          "key": "r60",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s00330-012-2765-y"
+        },
+        {
+          "key": "r61",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.911295"
+        },
+        {
+          "key": "r62",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.acra.2016.09.017"
+        },
+        {
+          "key": "r63",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0031-9155/60/6/2453"
+        },
+        {
+          "key": "r64",
+          "first-page": "97831I",
+          "volume-title": "Proceedings of SPIE: medical imaging 2016—physics of medical imaging. Vol 9783",
+          "author": "Leng S",
+          "year": "2016"
+        },
+        {
+          "key": "r65",
+          "first-page": "101320Y",
+          "volume-title": "Proceedings of SPIE: medical imaging 2017—physics of medical imaging. Vol 10132",
+          "author": "Leng S",
+          "year": "2017"
+        },
+        {
+          "key": "r66",
+          "first-page": "10132",
+          "author": "Zhou W",
+          "year": "2017",
+          "journal-title": "Proc SPIE Int Soc Opt Eng"
+        },
+        {
+          "key": "r67",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1161/CIR.0b013e3181fcae66"
+        },
+        {
+          "key": "r68",
+          "first-page": "139",
+          "volume-title": "Radiological Society of North America scientific assembly and annual meeting program",
+          "author": "Sandfort V",
+          "year": "2017"
+        },
+        {
+          "key": "r69",
+          "first-page": "101",
+          "volume-title": "Radiological Society of North America scientific assembly and annual meeting program",
+          "author": "Symons R",
+          "year": "2017"
+        },
+        {
+          "key": "r70",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/radiol.12112217"
+        },
+        {
+          "key": "r71",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/radiol.2017161063"
+        },
+        {
+          "key": "r72",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/radiol.10091230"
+        },
+        {
+          "key": "r73",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s10140-014-1249-6"
+        },
+        {
+          "key": "r74",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/radiol.12111719"
+        },
+        {
+          "key": "r75",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/radiol.2016152601"
+        },
+        {
+          "key": "r76",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.3284538"
+        },
+        {
+          "key": "r77",
+          "first-page": "94120W",
+          "volume-title": "Proceedings of SPIE: medical imaging 2015—physics of medical imaging. Vol 9412",
+          "author": "Yu Z",
+          "year": "2015"
+        },
+        {
+          "key": "r78",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/radiol.11101782"
+        },
+        {
+          "key": "r79",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1371/journal.pone.0124831"
+        },
+        {
+          "key": "r80",
+          "first-page": "97835N",
+          "volume-title": "Proceedings of SPIE: medical imaging 2016—physics of medical imaging. Vol 9783",
+          "author": "Muenzel D",
+          "year": "2016"
+        },
+        {
+          "key": "r81",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1201/b18865-16"
+        },
+        {
+          "key": "r82",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1097/RCT.0b013e31828f5020"
+        },
+        {
+          "key": "r83",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1259/bjr/16337436"
+        },
+        {
+          "key": "r84",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/rg.2016150185"
+        },
+        {
+          "key": "r85",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/radiol.12120692"
+        },
+        {
+          "key": "r86",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s13244-010-0057-0"
+        },
+        {
+          "key": "r87",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.ejmp.2015.06.004"
+        },
+        {
+          "key": "r88",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.addr.2016.09.001"
+        },
+        {
+          "key": "r89",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1161/01.RES.0000119321.18573.5A"
+        },
+        {
+          "key": "r90",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1161/ATVBAHA.108.165506"
+        },
+        {
+          "key": "r91",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1039/C7NR01153A"
+        },
+        {
+          "key": "r92",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.nima.2014.10.079"
+        },
+        {
+          "key": "r93",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1364/OE.25.009378"
+        },
+        {
+          "key": "r94",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/radiol.10092473"
+        },
+        {
+          "key": "r95",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jcct.2008.05.146"
+        },
+        {
+          "key": "r96",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/cmmi.1573"
+        },
+        {
+          "key": "r97",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/s41598-017-04659-9"
+        },
+        {
+          "key": "r98",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TNS.2009.2013709"
+        },
+        {
+          "key": "r99",
+          "first-page": "101323J",
+          "volume-title": "Proceedings of SPIE: medical imaging 2017—physics of medical imaging. Vol 10132",
+          "author": "Ferrero A",
+          "year": "2017"
+        },
+        {
+          "key": "r100",
+          "first-page": "99670B",
+          "volume-title": "Proceedings of SPIE: optical engineering 2016—developments in x-ray tomography X. Vol 9967",
+          "author": "Jorgensen SM",
+          "year": "2016"
+        }
+      ],
+      "container-title": "Radiology",
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "http://pubs.rsna.org/doi/pdf/10.1148/radiol.2018172656",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2018,
+            10,
+            17
+          ]
+        ],
+        "date-time": "2018-10-17T13:11:56Z",
+        "timestamp": 1539781916000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "http://pubs.rsna.org/doi/10.1148/radiol.2018172656"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2018,
+            11
+          ]
+        ]
+      },
+      "references-count": 98,
+      "journal-issue": {
+        "issue": "2",
+        "published-print": {
+          "date-parts": [
+            [
+              2018,
+              11
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1148/radiol.2018172656"
+      ],
+      "URL": "http://dx.doi.org/10.1148/radiol.2018172656",
+      "relation": {},
+      "ISSN": [
+        "0033-8419",
+        "1527-1315"
+      ],
+      "subject": [],
+      "container-title-short": "Radiology",
+      "published": {
+        "date-parts": [
+          [
+            2018,
+            11
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "doi": "10.1109/TMI.2021.3076810",
+    "title": "Assessing the Impact of Deep Neural Network-Based Image Denoising on Binary Signal Detection Tasks",
+    "year": 2021,
+    "csl": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            21
+          ]
+        ],
+        "date-time": "2026-10-21T15:10:32Z",
+        "timestamp": 1792595432187,
+        "version": "4.5.0"
+      },
+      "reference-count": 48,
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "issue": "9",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2021,
+                9,
+                1
+              ]
+            ],
+            "date-time": "2021-09-01T00:00:00Z",
+            "timestamp": 1630454400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0/legalcode"
+        }
+      ],
+      "funder": [
+        {
+          "DOI": "10.13039/100000002",
+          "name": "NIH",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "R01EB020604"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "R01EB020604"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/100000002",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        },
+        {
+          "DOI": "10.13039/100000002",
+          "name": "NIH",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "R01EB023045"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "R01EB023045"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/100000002",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        },
+        {
+          "DOI": "10.13039/100000002",
+          "name": "NIH",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "R01NS102213"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "R01NS102213"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/100000002",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        },
+        {
+          "DOI": "10.13039/100000002",
+          "name": "NIH",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "R01CA233873"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "R01CA233873"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/100000002",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        },
+        {
+          "DOI": "10.13039/100000002",
+          "name": "NIH",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "R21CA223799"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "R21CA223799"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/100000002",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2021,
+            9
+          ]
+        ]
+      },
+      "DOI": "10.1109/tmi.2021.3076810",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2021,
+            4,
+            30
+          ]
+        ],
+        "date-time": "2021-04-30T15:50:32Z",
+        "timestamp": 1619797832000
+      },
+      "page": "2295-2305",
+      "source": "Crossref",
+      "is-referenced-by-count": 66,
+      "title": "Assessing the Impact of Deep Neural Network-Based Image Denoising on Binary Signal Detection Tasks",
+      "prefix": "10.1109",
+      "volume": "40",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-3608-590X",
+          "authenticated-orcid": false,
+          "given": "Kaiyan",
+          "family": "Li",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0001-6678-4088",
+          "authenticated-orcid": false,
+          "given": "Weimin",
+          "family": "Zhou",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-5629-2247",
+          "authenticated-orcid": false,
+          "given": "Hua",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-3192-4172",
+          "authenticated-orcid": false,
+          "given": "Mark A.",
+          "family": "Anastasio",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "263",
+      "reference": [
+        {
+          "key": "ref39",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s11227-017-2080-0"
+        },
+        {
+          "key": "ref38",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.media.2011.04.003"
+        },
+        {
+          "key": "ref33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1364/JOSAA.4.002447"
+        },
+        {
+          "key": "ref32",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TMI.2019.2911211"
+        },
+        {
+          "key": "ref31",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1364/JOSAA.20.000430"
+        },
+        {
+          "key": "ref30",
+          "first-page": "432",
+          "article-title": "An intuitive proof of the data processing inequality",
+          "volume": "12",
+          "author": "beaudry",
+          "year": "2012",
+          "journal-title": "Quantum Inf Comput"
+        },
+        {
+          "key": "ref37",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1364/JOSAA.11.001237"
+        },
+        {
+          "key": "ref36",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.594559"
+        },
+        {
+          "key": "ref35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1364/JOSAA.18.000473"
+        },
+        {
+          "key": "ref34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/3.832716.ch11"
+        },
+        {
+          "key": "ref10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/mp.12344"
+        },
+        {
+          "key": "ref40",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/CVPR.2016.90"
+        },
+        {
+          "key": "ref11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TMI.2017.2715284"
+        },
+        {
+          "key": "ref12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.media.2019.03.004"
+        },
+        {
+          "key": "ref13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.mri.2019.05.042"
+        },
+        {
+          "key": "ref14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TIP.2020.2964518"
+        },
+        {
+          "key": "ref15",
+          "first-page": "563",
+          "article-title": "Deep learning for image denoising: A survey",
+          "author": "tian",
+          "year": "2018",
+          "journal-title": "Proc Int Conf Genet Evol Comput"
+        },
+        {
+          "key": "ref16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TIP.2003.819861"
+        },
+        {
+          "key": "ref17",
+          "author": "barrett",
+          "year": "2013",
+          "journal-title": "Foundations of Image Science"
+        },
+        {
+          "key": "ref18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.597511"
+        },
+        {
+          "key": "ref19",
+          "doi-asserted-by": "crossref",
+          "first-page": "243",
+          "DOI": "10.1016/S1078-8174(97)90038-9",
+          "article-title": "ICRU Report 54: Medical imaging&#x2014;The assessment of image quality: ISBN 0-913394-53-X. April 1996, Maryland, USA",
+          "volume": "3",
+          "author": "vennart",
+          "year": "1997",
+          "journal-title": "Radiography"
+        },
+        {
+          "key": "ref28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.2582324"
+        },
+        {
+          "key": "ref4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.media.2013.05.005"
+        },
+        {
+          "key": "ref27",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.2513062"
+        },
+        {
+          "key": "ref3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/10.909641"
+        },
+        {
+          "key": "ref6",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ISBI.2017.7950488"
+        },
+        {
+          "key": "ref29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.mri.2020.04.006"
+        },
+        {
+          "key": "ref5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TRPMS.2018.2877644"
+        },
+        {
+          "key": "ref8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TMI.2018.2827462"
+        },
+        {
+          "key": "ref7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1515/9783110524116"
+        },
+        {
+          "key": "ref2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.4851635"
+        },
+        {
+          "key": "ref9",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ICDMW.2016.0041"
+        },
+        {
+          "key": "ref1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.3232004"
+        },
+        {
+          "key": "ref46",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.acra.2007.03.012"
+        },
+        {
+          "key": "ref20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0031-9155/30/6/001"
+        },
+        {
+          "key": "ref45",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0272989X9801800118"
+        },
+        {
+          "key": "ref48",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1364/JOSAA.24.000B91"
+        },
+        {
+          "key": "ref22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.2582327"
+        },
+        {
+          "key": "ref47",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1364/JOSAA.22.000003"
+        },
+        {
+          "key": "ref21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.7150/thno.5138"
+        },
+        {
+          "key": "ref42",
+          "author": "chollet",
+          "year": "2015",
+          "journal-title": "Keras"
+        },
+        {
+          "key": "ref24",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.90.21.9758"
+        },
+        {
+          "key": "ref41",
+          "article-title": "Adam: A method for stochastic optimization",
+          "author": "kingma",
+          "year": "2014",
+          "journal-title": "arXiv 1412 6980"
+        },
+        {
+          "key": "ref23",
+          "first-page": "575",
+          "article-title": "Ai-based methods for nuclear-medicine imaging: Need for objective task-specific evaluation",
+          "volume": "61",
+          "author": "yu",
+          "year": "2020",
+          "journal-title": "J Nucl Med"
+        },
+        {
+          "key": "ref44",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/CVPR.2009.5206848"
+        },
+        {
+          "key": "ref26",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1364/JOSAA.2.001752"
+        },
+        {
+          "key": "ref43",
+          "article-title": "Very deep convolutional networks for large-scale image recognition",
+          "author": "simonyan",
+          "year": "2014",
+          "journal-title": "arXiv 1409 1556"
+        },
+        {
+          "key": "ref25",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/radiol.15132091"
+        }
+      ],
+      "container-title": "IEEE Transactions on Medical Imaging",
+      "original-title": [],
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx7/42/9526230/09419965.pdf?arnumber=9419965",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2021,
+            12,
+            17
+          ]
+        ],
+        "date-time": "2021-12-17T15:01:37Z",
+        "timestamp": 1639753297000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://ieeexplore.ieee.org/document/9419965/"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2021,
+            9
+          ]
+        ]
+      },
+      "references-count": 48,
+      "journal-issue": {
+        "issue": "9"
+      },
+      "URL": "http://dx.doi.org/10.1109/TMI.2021.3076810",
+      "relation": {},
+      "ISSN": [
+        "0278-0062",
+        "1558-254X"
+      ],
+      "subject": [],
+      "container-title-short": "IEEE Trans. Med. Imaging",
+      "published": {
+        "date-parts": [
+          [
+            2021,
+            9
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "doi": "10.1117/1.JMI.11.S1.S12804",
+    "title": "Improved noise reduction in photon-counting detector CT using prior knowledge-aware iterative denoising neural network",
+    "year": 2024,
+    "csl": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            9,
+            24
+          ]
+        ],
+        "date-time": "2026-09-24T00:59:12Z",
+        "timestamp": 1790211552648,
+        "version": "4.1.0"
+      },
+      "reference-count": 23,
+      "publisher": "SPIE-Intl Soc Optical Eng",
+      "issue": "S1",
+      "funder": [
+        {
+          "DOI": "10.13039/100000070",
+          "name": "National Institute of Biomedical Imaging and Bioengineering",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "R01 EB028590"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "R01 EB028590"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/100000070",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        },
+        {
+          "DOI": "10.13039/100000002",
+          "name": "National Institutes of Health",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "R01 EB028590"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "R01 EB028590"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/100000002",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2024,
+            5,
+            24
+          ]
+        ]
+      },
+      "abstract": "<jats:p>PurposeWe aim to reduce image noise in high-resolution (HR) virtual monoenergetic images (VMIs) from photon-counting detector (PCD) CT scans by developing a prior knowledge-aware iterative denoising neural network (PKAID-Net) that efficiently exploits the unique noise characteristics of VMIs at different energy (keV) levels.ApproachPKAID-Net offers two major features: first, it utilizes a lower-noise VMI (e.g., 70 keV) as a prior input; second, it iteratively constructs a refined training dataset to improve the neural network’s denoising performance. In each iteration, the denoised image from the previous module serves as an updated target image, which is included in the dataset for the subsequent training iteration. Our study includes 10 patient coronary CT angiography exams acquired on a clinical dual-source PCD-CT (NAEOTOM Alpha, Siemens Healthineers). The HR VMIs were reconstructed at 50, 70, and 100 keV, using a sharp vascular kernel (Bv68) and thin (0.6 mm) slice thickness (0.3 mm increment). PKAID-Net’s performance was evaluated in terms of image noise, spatial detail preservation, and quantitative accuracy.ResultsPKAID-Net achieved a noise reduction of 96% compared to filtered back projection and 65% relative to iterative reconstruction, all while preserving spatial and spectral fidelity and maintaining a natural noise texture. The iterative refinement of PCD-CT data during the training process substantially enhanced the robustness of deep learning-based denoising compared to the original method, which resulted in some spatial detail loss.ConclusionsThe PKAID-Net provides substantial noise reduction while maintaining spatial and spectral fidelity of the HR VMIs from PCD-CT.</jats:p>",
+      "DOI": "10.1117/1.jmi.11.s1.s12804",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2024,
+            5,
+            24
+          ]
+        ],
+        "date-time": "2024-05-24T12:49:56Z",
+        "timestamp": 1716554996000
+      },
+      "page": "1-10",
+      "source": "Crossref",
+      "is-referenced-by-count": 3,
+      "title": "Improved noise reduction in photon-counting detector CT using prior knowledge-aware iterative denoising neural network",
+      "prefix": "10.1117",
+      "volume": "11",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0003-0550-9650",
+          "authenticated-orcid": false,
+          "given": "Shaojie",
+          "family": "Chang",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Mayo Clinic"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jeffrey F.",
+          "family": "Marsh",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Mayo Clinic"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Emily K.",
+          "family": "Koons",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Mayo Clinic"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Hao",
+          "family": "Gong",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Mayo Clinic"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-5346-332X",
+          "authenticated-orcid": false,
+          "given": "Cynthia H.",
+          "family": "McCollough",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Mayo Clinic"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "ORCID": "https://orcid.org/0000-0002-6453-9481",
+          "authenticated-orcid": false,
+          "given": "Shuai",
+          "family": "Leng",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Mayo Clinic"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "189",
+      "reference": [
+        {
+          "key": "r1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/rg.2019180115"
+        },
+        {
+          "key": "r2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/radiol.212579"
+        },
+        {
+          "key": "r3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1148/radiol.2015140857"
+        },
+        {
+          "key": "r4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.ejrad.2017.11.005"
+        },
+        {
+          "key": "r5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/mp.16411"
+        },
+        {
+          "key": "r6",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/1361-6560/ac8866"
+        },
+        {
+          "key": "r7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TIP.2007.901238"
+        },
+        {
+          "key": "r8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.595662"
+        },
+        {
+          "key": "r9",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TMI.2006.882141"
+        },
+        {
+          "key": "r10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.2836423"
+        },
+        {
+          "key": "r11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/1361-6560/ab17fa"
+        },
+        {
+          "key": "r12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TMI.2019.2924920"
+        },
+        {
+          "key": "r13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TMI.2017.2715284"
+        },
+        {
+          "key": "r14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/s42256-019-0057-9"
+        },
+        {
+          "key": "r15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s00256-021-03828-2"
+        },
+        {
+          "key": "r16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/s42256-020-00273-z"
+        },
+        {
+          "key": "r17",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/mp.14796"
+        },
+        {
+          "key": "r18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.2653904"
+        },
+        {
+          "key": "r19",
+          "first-page": "473",
+          "article-title": "S2MS: self-supervised learning driven multi-spectral CT image enhancement",
+          "author": "Zhang",
+          "year": "2022"
+        },
+        {
+          "key": "r20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TMI.2022.3231428"
+        },
+        {
+          "key": "r21",
+          "first-page": "2098",
+          "article-title": "IDR: self-supervised image denoising via iterative data refinement",
+          "author": "Zhang",
+          "year": "2022"
+        },
+        {
+          "key": "r22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-3-319-24574-4_28"
+        },
+        {
+          "key": "r23",
+          "article-title": "Adam: a method for stochastic optimization",
+          "author": "Kingma",
+          "year": "2014"
+        }
+      ],
+      "container-title": "Journal of Medical Imaging",
+      "original-title": [],
+      "link": [
+        {
+          "URL": "https://www.spiedigitallibrary.org/journals/journal-of-medical-imaging/volume-11/issue-S1/S12804/Improved-noise-reduction-in-photon-counting-detector-CT-using-prior/10.1117/1.JMI.11.S1.S12804.full",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            9,
+            23
+          ]
+        ],
+        "date-time": "2026-09-23T23:59:10Z",
+        "timestamp": 1790207950000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.spiedigitallibrary.org/journals/journal-of-medical-imaging/volume-11/issue-S1/S12804/Improved-noise-reduction-in-photon-counting-detector-CT-using-prior/10.1117/1.JMI.11.S1.S12804.full"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2024,
+            5,
+            24
+          ]
+        ]
+      },
+      "references-count": 23,
+      "journal-issue": {
+        "issue": "S1",
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              12,
+              1
+            ]
+          ]
+        }
+      },
+      "URL": "http://dx.doi.org/10.1117/1.JMI.11.S1.S12804",
+      "relation": {},
+      "ISSN": [
+        "2329-4302",
+        "2329-4310"
+      ],
+      "subject": [],
+      "container-title-short": "J. Med. Imag.",
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            5,
+            24
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "doi": "10.1002/mp.14945",
+    "title": "Technical Note: SpekPy v2.0—a software toolkit for modeling x‐ray tube spectra",
+    "year": 2021,
+    "csl": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            27
+          ]
+        ],
+        "date-time": "2026-10-27T00:00:04Z",
+        "timestamp": 1793059204769,
+        "version": "4.5.0"
+      },
+      "reference-count": 30,
+      "publisher": "Wiley",
+      "issue": "7",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2021,
+                6,
+                10
+              ]
+            ],
+            "date-time": "2021-06-10T00:00:00Z",
+            "timestamp": 1623283200000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "aapm.onlinelibrary.wiley.com"
+        ],
+        "crossmark-restriction": true
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2021,
+            7
+          ]
+        ]
+      },
+      "abstract": "<jats:sec><jats:title>Purpose</jats:title><jats:p>SpekPy is a free toolkit for modeling x‐ray tube spectra with the Python programming language. In this article, the advances in version 2.0 (v2) of the software are described, including additional target materials and more accurate modeling of the heel effect. Use of the toolkit is also demonstrated.</jats:p></jats:sec><jats:sec><jats:title>Methods</jats:title><jats:p>The predictions of SpekPy are illustrated in comparison to experimentally determined spectra: three radiation quality reference (RQR) series tungsten spectra and one mammography spectrum with a molybdenum target. The capability of the software to correctly model changes in tube output with tube potential is also assessed, using the example of a GE Revolution<jats:styled-content><jats:sup>TM</jats:sup></jats:styled-content> CT scanner (GE Healthcare, Waukesha, WI, USA) and specifications in the system's Technical Reference Manual. Furthermore, we note that there are several physics models available in SpekPy. These are compared on and off the central axis, to illustrate the differences.</jats:p></jats:sec><jats:sec><jats:title>Results</jats:title><jats:p>SpekPy agrees closely with the experimental spectra over a wide range of tube potentials, both visually and in terms of first and second half‐value layers (HVLs) (within 2% here). The CT scanner spectrum output (normalized to 120 kV tube potential) agreed within 4% over the range of 70 to 140 kV. The default physics model (<jats:italic>casim</jats:italic>) is adequate in most situations. The advanced option (<jats:italic>kqp</jats:italic>) should be used if high accuracy is desired for modeling the anode heel effect, as it fully includes the effects of bremsstrahlung anisotropy.</jats:p></jats:sec><jats:sec><jats:title>Conclusions</jats:title><jats:p>SpekPy v2 can reliably predict on‐ and off‐axis spectra for tungsten and molybdenum targets. SpekPy's open‐source MIT license allows users the freedom to incorporate this powerful toolkit into their own projects.</jats:p></jats:sec>",
+      "DOI": "10.1002/mp.14945",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2021,
+            5,
+            16
+          ]
+        ],
+        "date-time": "2021-05-16T07:27:00Z",
+        "timestamp": 1621150020000
+      },
+      "page": "3630-3637",
+      "update-policy": "https://doi.org/10.1002/crossmark_policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 219,
+      "title": "Technical Note: SpekPy v2.0—a software toolkit for modeling x‐ray tube spectra",
+      "prefix": "10.1002",
+      "volume": "48",
+      "author": [
+        {
+          "given": "Gavin",
+          "family": "Poludniowski",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Medical Radiation Physics and Nuclear Medicine Karolinska University Hospital Stockholm Sweden"
+            },
+            {
+              "name": "Department of Clinical Science, Intervention and Technology Karolinska Institutet Stockholm Sweden"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Artur",
+          "family": "Omar",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Medical Radiation Physics and Nuclear Medicine Karolinska University Hospital Stockholm Sweden"
+            },
+            {
+              "name": "Department of Oncology and Pathology Karolinska Institutet Stockholm Sweden"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Robert",
+          "family": "Bujila",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Medical Radiation Physics and Nuclear Medicine Karolinska University Hospital Stockholm Sweden"
+            },
+            {
+              "name": "GE Healthcare Waukesha WI 53188 USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Pedro",
+          "family": "Andreo",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Medical Radiation Physics and Nuclear Medicine Karolinska University Hospital Stockholm Sweden"
+            },
+            {
+              "name": "Department of Oncology and Pathology Karolinska Institutet Stockholm Sweden"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "311",
+      "published-online": {
+        "date-parts": [
+          [
+            2021,
+            6,
+            10
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "e_1_2_10_2_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1080/14786442308565244"
+        },
+        {
+          "key": "e_1_2_10_3_1",
+          "unstructured": "CranleyK GilmoreBJ FogartyGWA DepondsL.Catalogue of diagnostic x‐ray spectra and other data. IPEM Report No. 78. York UK: IPEM;1997."
+        },
+        {
+          "key": "e_1_2_10_4_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1088/0031-9155/54/19/N01"
+        },
+        {
+          "key": "e_1_2_10_5_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.4866216"
+        },
+        {
+          "key": "e_1_2_10_6_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.4955438"
+        },
+        {
+          "key": "e_1_2_10_7_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.21105/joss.00062"
+        },
+        {
+          "key": "e_1_2_10_8_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1201/9781351188197-18"
+        },
+        {
+          "key": "e_1_2_10_9_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.ejmp.2020.04.026"
+        },
+        {
+          "key": "e_1_2_10_10_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/s41592-019-0686-2"
+        },
+        {
+          "key": "e_1_2_10_11_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/s41586-020-2649-2"
+        },
+        {
+          "key": "e_1_2_10_12_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/MCSE.2007.55"
+        },
+        {
+          "key": "e_1_2_10_13_1",
+          "volume-title": "RevolutionTM CT, RevolutionTM CT ES Technical Reference Manual: 5848888–1EN Revision 1",
+          "author": "Healthcare GE",
+          "year": "2020"
+        },
+        {
+          "key": "e_1_2_10_14_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.nimb.2018.10.026"
+        },
+        {
+          "key": "e_1_2_10_15_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/mp.14359"
+        },
+        {
+          "key": "e_1_2_10_16_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/mp.14360"
+        },
+        {
+          "key": "e_1_2_10_17_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.2734725"
+        },
+        {
+          "key": "e_1_2_10_18_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1118/1.2734726"
+        },
+        {
+          "key": "e_1_2_10_19_1",
+          "volume-title": "XCOM: Photon Cross Sections on a Personal Computer Report NBSIR 87–3597",
+          "author": "Berger MJ",
+          "year": "1997"
+        },
+        {
+          "key": "e_1_2_10_20_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/3578607"
+        },
+        {
+          "key": "e_1_2_10_21_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0168-583X(85)90707-4"
+        },
+        {
+          "key": "e_1_2_10_22_1",
+          "unstructured": "SalvatF.PENELOPE‐2018: A Code System for Monte Carlo Simulation of Electron and Photon Transport. Report NEA/MBDAV/R(2019)1. Issy‐les‐Moulineaux FRA: OECD Nuclear Energy Agency;2018."
+        },
+        {
+          "key": "e_1_2_10_23_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0092-640X(83)90001-3"
+        },
+        {
+          "key": "e_1_2_10_24_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.17632/hjf5sctyt8.3"
+        },
+        {
+          "key": "e_1_2_10_25_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.17632/mnr2zx92h3.1"
+        },
+        {
+          "key": "e_1_2_10_26_1",
+          "unstructured": "International Electrotechnical Commission (IEC).Medical Electrical Equipment ‐ Part 2‐44 Edition 3: Particular requirements for basic safety and essential performance of X‐ray equipment for computed tomography. IEC 60601‐2‐44 Ed. 3. IEC Geneva 2009."
+        },
+        {
+          "key": "e_1_2_10_27_1",
+          "volume-title": "Catalogue of X‐ray Spectra and their Characteristic Data‐ISO and DIN Radiation Qualities, Therapy and Diagnostic Radiation Qualities, Unfiltered X‐ray Spectra PTB Report Dos‐34",
+          "author": "Ankerhold U",
+          "year": "2000"
+        },
+        {
+          "key": "e_1_2_10_28_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1002/mp.12287"
+        },
+        {
+          "key": "e_1_2_10_29_1",
+          "volume-title": "Tissue Substitutes in Radiation Dosimetry and Measurement: Report 44 of the International Commission on Radiation Units and Measurements",
+          "author": "White DR",
+          "year": "1989"
+        },
+        {
+          "key": "e_1_2_10_30_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.radphyschem.2015.10.021"
+        },
+        {
+          "key": "e_1_2_10_31_1",
+          "volume-title": "Key Data for Ionizing Radiation Dosimetry: Measurement Standards and Applications: Report 90 of the International Commission on Radiation Units and Measurements",
+          "author": "Seltzer SM",
+          "year": "2016"
+        }
+      ],
+      "container-title": "Medical Physics",
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/mp.14945",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://onlinelibrary.wiley.com/doi/full-xml/10.1002/mp.14945",
+          "content-type": "application/xml",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://aapm.onlinelibrary.wiley.com/doi/pdf/10.1002/mp.14945",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2023,
+            8,
+            27
+          ]
+        ],
+        "date-time": "2023-08-27T06:31:47Z",
+        "timestamp": 1693117907000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.14945"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2021,
+            6,
+            10
+          ]
+        ]
+      },
+      "references-count": 30,
+      "journal-issue": {
+        "issue": "7",
+        "published-print": {
+          "date-parts": [
+            [
+              2021,
+              7
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1002/mp.14945"
+      ],
+      "URL": "http://dx.doi.org/10.1002/mp.14945",
+      "relation": {},
+      "ISSN": [
+        "0094-2405",
+        "2473-4209"
+      ],
+      "subject": [],
+      "container-title-short": "Medical Physics",
+      "published": {
+        "date-parts": [
+          [
+            2021,
+            6,
+            10
+          ]
+        ]
+      },
+      "assertion": [
+        {
+          "value": "2021-02-02",
+          "order": 0,
+          "name": "received",
+          "label": "Received",
+          "group": {
+            "name": "publication_history",
+            "label": "Publication History"
+          }
+        },
+        {
+          "value": "2021-05-07",
+          "order": 1,
+          "name": "accepted",
+          "label": "Accepted",
+          "group": {
+            "name": "publication_history",
+            "label": "Publication History"
+          }
+        },
+        {
+          "value": "2021-06-10",
+          "order": 2,
+          "name": "published",
+          "label": "Published",
+          "group": {
+            "name": "publication_history",
+            "label": "Publication History"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "doi": "10.1016/j.sab.2011.09.011",
+    "title": "The xraylib library for X-ray–matter interactions. Recent developments",
+    "year": 2011,
+    "csl": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            23
+          ]
+        ],
+        "date-time": "2026-10-23T03:18:38Z",
+        "timestamp": 1792725518220,
+        "version": "4.5.0"
+      },
+      "reference-count": 33,
+      "publisher": "Elsevier BV",
+      "issue": "11-12",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2011,
+                11,
+                1
+              ]
+            ],
+            "date-time": "2011-11-01T00:00:00Z",
+            "timestamp": 1320105600000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2011,
+            11
+          ]
+        ]
+      },
+      "DOI": "10.1016/j.sab.2011.09.011",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2011,
+            10,
+            14
+          ]
+        ],
+        "date-time": "2011-10-14T04:27:01Z",
+        "timestamp": 1318566421000
+      },
+      "page": "776-784",
+      "source": "Crossref",
+      "is-referenced-by-count": 408,
+      "title": "The xraylib library for X-ray–matter interactions. Recent developments",
+      "prefix": "10.1016",
+      "volume": "66",
+      "author": [
+        {
+          "given": "Tom",
+          "family": "Schoonjans",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Antonio",
+          "family": "Brunetti",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Bruno",
+          "family": "Golosio",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Manuel",
+          "family": "Sanchez del Rio",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Vicente Armando",
+          "family": "Solé",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Claudio",
+          "family": "Ferrero",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Laszlo",
+          "family": "Vincze",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "78",
+      "reference": [
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0005",
+          "doi-asserted-by": "crossref",
+          "first-page": "845",
+          "DOI": "10.1039/b718355k",
+          "article-title": "Reference-free X-ray spectrometry based on metrology using synchrotron radiation",
+          "volume": "23",
+          "author": "Beckhoff",
+          "year": "2008",
+          "journal-title": "J. Anal. At. Spectrom."
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0010",
+          "author": "Lepy"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0015",
+          "series-title": "Technical Report, Guelph-Waterloo Physics Institute, University of Guelph",
+          "article-title": "X-ray energies: transition probabilities, fluorescence and Coster–Kronig probabilities",
+          "author": "Campbell",
+          "year": "2010"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0020",
+          "series-title": "Technical Report, Bruker-AXS",
+          "article-title": "A comparison of five available X ray absorption tables",
+          "author": "Caussin",
+          "year": "2010"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0025",
+          "author": "Berger"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0030",
+          "author": "Bandyopadhyay"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0035",
+          "doi-asserted-by": "crossref",
+          "first-page": "471",
+          "DOI": "10.1063/1.555523",
+          "article-title": "Atomic form factors, incoherent scattering functions and photon scattering cross sections",
+          "volume": "4",
+          "author": "Hubbell",
+          "year": "1975",
+          "journal-title": "J. Phys. Chem. Ref. Data"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0040",
+          "doi-asserted-by": "crossref",
+          "first-page": "69",
+          "DOI": "10.1063/1.555593",
+          "article-title": "Relativistic atomic form-factors and photon coherent scattering cross-sections",
+          "volume": "8",
+          "author": "Hubbell",
+          "year": "1979",
+          "journal-title": "J. Phys. Chem. Ref. Data"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0045",
+          "series-title": "Technical Report UCRL-51326, Lawrence Livermore National Laboratory",
+          "article-title": "Theoretical photoionization cross sections from 1 to 1500keV",
+          "author": "Scofield",
+          "year": "1973"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0050",
+          "series-title": "Technical Report UCRL-50174, Lawrence Livermore National Laboratory",
+          "article-title": "Compilation of X-ray cross sections",
+          "author": "McMaster",
+          "year": "1969"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0055",
+          "doi-asserted-by": "crossref",
+          "first-page": "307",
+          "DOI": "10.1063/1.555594",
+          "article-title": "Atomic radiative and radiationless yields for K-shells and L-shells",
+          "volume": "8",
+          "author": "Krause",
+          "year": "1979",
+          "journal-title": "J. Phys. Chem. Ref. Data"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0060",
+          "doi-asserted-by": "crossref",
+          "first-page": "121",
+          "DOI": "10.1016/S0969-806X(01)00227-4",
+          "article-title": "A new atomic database for X-ray spectroscopic calculations",
+          "volume": "63",
+          "author": "Elam",
+          "year": "2002",
+          "journal-title": "Radiat. Phys. Chem."
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0065",
+          "doi-asserted-by": "crossref",
+          "first-page": "1725",
+          "DOI": "10.1016/j.sab.2004.03.014",
+          "article-title": "A library for X-ray-matter interaction cross sections for X-ray fluorescence applications",
+          "volume": "59",
+          "author": "Brunetti",
+          "year": "2004",
+          "journal-title": "Spectrochim. Acta Part B"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0070",
+          "doi-asserted-by": "crossref",
+          "first-page": "185",
+          "DOI": "10.1016/S0969-806X(00)00290-5",
+          "article-title": "RTAB: the Rayleigh scattering database",
+          "volume": "59",
+          "author": "Kissel",
+          "year": "2000",
+          "journal-title": "Radiat. Phys. Chem."
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0075",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.1103/PhysRevA.81.012703",
+          "article-title": "Resonant Raman scattering of polarized and unpolarized X-ray radiation from Mg, Al, and Si",
+          "volume": "81",
+          "author": "Sokaras",
+          "year": "2010",
+          "journal-title": "Phys. Rev. A"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0080",
+          "series-title": "Lawrence Livermore National Laboratory Report",
+          "article-title": "EPDL97: the evaluated photon library",
+          "author": "Cullen",
+          "year": "1997"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0085",
+          "doi-asserted-by": "crossref",
+          "first-page": "283",
+          "DOI": "10.1016/0371-1951(55)80081-1",
+          "article-title": "The theoretical derivation of fluorescent X-ray intensities from mixtures",
+          "author": "Sherman",
+          "year": "1955",
+          "journal-title": "Spectrochim. Acta Part B"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0090",
+          "doi-asserted-by": "crossref",
+          "first-page": "553",
+          "DOI": "10.1016/0584-8547(93)80060-8",
+          "article-title": "A general Monte-Carlo simulation of Energy-Dispersive X-Ray-Fluorescence spectrometers. 1. Unpolarized radiation, homogeneous samples",
+          "volume": "48",
+          "author": "Vincze",
+          "year": "1993",
+          "journal-title": "Spectrochim. Acta Part B"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0095",
+          "doi-asserted-by": "crossref",
+          "first-page": "127",
+          "DOI": "10.1016/0584-8547(94)00124-E",
+          "article-title": "A general Monte Carlo simulation of ED-XRF spectrometers. II: polarized monochromatic radiation, homegeneous samples",
+          "volume": "50",
+          "author": "Vincze",
+          "year": "1995",
+          "journal-title": "Spectrochim. Acta Part B"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0100",
+          "doi-asserted-by": "crossref",
+          "first-page": "1747",
+          "DOI": "10.1016/j.sab.2004.03.016",
+          "article-title": "Voxel-based Monte Carlo simulation of X-ray imaging and spectroscopy experiments",
+          "volume": "59",
+          "author": "Bottigli",
+          "year": "2004",
+          "journal-title": "Spectrochim. Acta Part B"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0105",
+          "doi-asserted-by": "crossref",
+          "first-page": "449",
+          "DOI": "10.1103/PhysRevA.21.449",
+          "article-title": "Relativistic M-shell radiationless transitions",
+          "volume": "21",
+          "author": "Chen",
+          "year": "1980",
+          "journal-title": "Phys. Rev. A"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0110",
+          "doi-asserted-by": "crossref",
+          "first-page": "2989",
+          "DOI": "10.1103/PhysRevA.27.2989",
+          "article-title": "Radiationless transitions to atomic M1,2,3 shells — results of relativistic theory",
+          "volume": "27",
+          "author": "Chen",
+          "year": "1983",
+          "journal-title": "Phys. Rev. A"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0115",
+          "doi-asserted-by": "crossref",
+          "first-page": "13",
+          "DOI": "10.1016/0092-640X(79)90037-8",
+          "article-title": "Relativistic radiationless transition probabilities for atomic K- and L-shells",
+          "volume": "24",
+          "author": "Chen",
+          "year": "1979",
+          "journal-title": "At. Data Nucl. Data Tables"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0120",
+          "doi-asserted-by": "crossref",
+          "first-page": "716",
+          "DOI": "10.1103/RevModPhys.44.716",
+          "article-title": "X-Ray-fluorescence yields, Auger, and Coster–Kronig transition probabilities",
+          "volume": "44",
+          "author": "Bambynek",
+          "year": "1972",
+          "journal-title": "Rev. Mod. Phys."
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0125",
+          "doi-asserted-by": "crossref",
+          "first-page": "311",
+          "DOI": "10.1016/0092-640X(77)90024-9",
+          "article-title": "Semiempirical Auger-electron energies for elements 10≤Z≤100",
+          "volume": "20",
+          "author": "Larkins",
+          "year": "1977",
+          "journal-title": "At. Data Nucl. Data Tables"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0130",
+          "doi-asserted-by": "crossref",
+          "first-page": "1041",
+          "DOI": "10.1103/PhysRevA.9.1041",
+          "article-title": "Exchange corrections of K X-ray emission rates",
+          "volume": "9",
+          "author": "Scofield",
+          "year": "1974",
+          "journal-title": "Phys. Rev. A"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0135",
+          "doi-asserted-by": "crossref",
+          "first-page": "121",
+          "DOI": "10.1016/S0092-640X(74)80019-7",
+          "article-title": "Relativistic Hartree–Slater values for K and L X-ray emission rates",
+          "volume": "14",
+          "author": "Scofield",
+          "year": "1974",
+          "journal-title": "At. Data Nucl. Data Tables"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0140",
+          "doi-asserted-by": "crossref",
+          "first-page": "916",
+          "DOI": "10.1088/0022-3700/3/7/004",
+          "article-title": "Radiative transition probabilities for vacancies in M sub-shells",
+          "volume": "3",
+          "author": "Bhalla",
+          "year": "1970",
+          "journal-title": "J. Phys. B: At. Mol. Opt. Phys."
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0145",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1006/adnd.2000.0848",
+          "article-title": "Widths of the atomic K-N7 levels",
+          "volume": "77",
+          "author": "Campbell",
+          "year": "2001",
+          "journal-title": "At. Data Nucl. Data Tables"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0150",
+          "doi-asserted-by": "crossref",
+          "first-page": "175",
+          "DOI": "10.1002/xrs.1137",
+          "article-title": "Self-enhancement effects on XRF K-lines due to natural width",
+          "volume": "38",
+          "author": "Fernandez",
+          "year": "2009",
+          "journal-title": "X-Ray Spectrom."
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0155",
+          "doi-asserted-by": "crossref",
+          "first-page": "201",
+          "DOI": "10.1016/0092-640X(75)90030-3",
+          "article-title": "Hartree-Fock Compton profiles for the elements",
+          "volume": "16",
+          "author": "Biggs",
+          "year": "1975",
+          "journal-title": "At. Data Nucl. Data Tables"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0160",
+          "doi-asserted-by": "crossref",
+          "first-page": "489",
+          "DOI": "10.1016/0168-9002(94)91215-7",
+          "article-title": "Implementation of the Doppler broadening of a Compton-scattered photon into the EGS4 code",
+          "volume": "349",
+          "author": "Namito",
+          "year": "1994",
+          "journal-title": "Nucl. Instrum. Methods Phys. Res. Sect. A"
+        },
+        {
+          "key": "10.1016/j.sab.2011.09.011_bb0165",
+          "doi-asserted-by": "crossref",
+          "first-page": "735",
+          "DOI": "10.1351/pac199163050735",
+          "article-title": "Nomenclature, symbols, units and their usage in spectrochemical analysis. VIII. Nomenclature system for X-ray spectroscopy — (Recommendations 1991)",
+          "volume": "63",
+          "author": "Jenkins",
+          "year": "1991",
+          "journal-title": "Pure Appl. Chem."
+        }
+      ],
+      "container-title": "Spectrochimica Acta Part B: Atomic Spectroscopy",
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://api.elsevier.com/content/article/PII:S0584854711001984?httpAccept=text/xml",
+          "content-type": "text/xml",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://api.elsevier.com/content/article/PII:S0584854711001984?httpAccept=text/plain",
+          "content-type": "text/plain",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2018,
+            11,
+            29
+          ]
+        ],
+        "date-time": "2018-11-29T10:22:55Z",
+        "timestamp": 1543486975000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0584854711001984"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2011,
+            11
+          ]
+        ]
+      },
+      "references-count": 33,
+      "journal-issue": {
+        "issue": "11-12",
+        "published-print": {
+          "date-parts": [
+            [
+              2011,
+              11
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "S0584854711001984"
+      ],
+      "URL": "http://dx.doi.org/10.1016/j.sab.2011.09.011",
+      "relation": {},
+      "ISSN": [
+        "0584-8547"
+      ],
+      "subject": [],
+      "container-title-short": "Spectrochimica Acta Part B: Atomic Spectroscopy",
+      "published": {
+        "date-parts": [
+          [
+            2011,
+            11
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "doi": "10.1007/978-3-319-24574-4_28",
+    "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+    "year": 2015,
+    "csl": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            29
+          ]
+        ],
+        "date-time": "2026-10-29T03:28:58Z",
+        "timestamp": 1793244538399,
+        "version": "4.5.0"
+      },
+      "publisher-location": "Cham",
+      "reference-count": 14,
+      "publisher": "Springer International Publishing",
+      "isbn-type": [
+        {
+          "value": "9783319245737",
+          "type": "print"
+        },
+        {
+          "value": "9783319245744",
+          "type": "electronic"
+        }
+      ],
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2015,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2015-01-01T00:00:00Z",
+            "timestamp": 1420070400000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "http://www.springer.com/tdm"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2015,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2015-01-01T00:00:00Z",
+            "timestamp": 1420070400000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "http://www.springer.com/tdm"
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "link.springer.com"
+        ],
+        "crossmark-restriction": false
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2015
+          ]
+        ]
+      },
+      "DOI": "10.1007/978-3-319-24574-4_28",
+      "type": "book-chapter",
+      "created": {
+        "date-parts": [
+          [
+            2015,
+            9,
+            24
+          ]
+        ],
+        "date-time": "2015-09-24T03:03:02Z",
+        "timestamp": 1443063782000
+      },
+      "page": "234-241",
+      "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 64425,
+      "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+      "prefix": "10.1007",
+      "author": [
+        {
+          "given": "Olaf",
+          "family": "Ronneberger",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Philipp",
+          "family": "Fischer",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Thomas",
+          "family": "Brox",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "297",
+      "published-online": {
+        "date-parts": [
+          [
+            2015,
+            11,
+            18
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "28_CR1",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Cardona, A., et al.: An integrated micro- and macroarchitectural analysis of the drosophila brain by computer-assisted serial section electron microscopy. PLoS Biol. 8(10), e1000502 (2010)",
+          "DOI": "10.1371/journal.pbio.1000502"
+        },
+        {
+          "key": "28_CR2",
+          "unstructured": "Ciresan, D.C., Gambardella, L.M., Giusti, A., Schmidhuber, J.: Deep neural networks segment neuronal membranes in electron microscopy images. In: NIPS, pp. 2852–2860 (2012)"
+        },
+        {
+          "key": "28_CR3",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Dosovitskiy, A., Springenberg, J.T., Riedmiller, M., Brox, T.: Discriminative unsupervised feature learning with convolutional neural networks. In: NIPS (2014)",
+          "DOI": "10.1109/CVPR.2015.7298761"
+        },
+        {
+          "key": "28_CR4",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Hariharan, B., Arbeláez, P., Girshick, R., Malik, J.: Hypercolumns for object segmentation and fine-grained localization (2014), arXiv:1411.5752 [cs.CV]",
+          "DOI": "10.1109/CVPR.2015.7298642"
+        },
+        {
+          "key": "28_CR5",
+          "doi-asserted-by": "crossref",
+          "unstructured": "He, K., Zhang, X., Ren, S., Sun, J.: Delving deep into rectifiers: Surpassing human-level performance on imagenet classification (2015), arXiv:1502.01852 [cs.CV]",
+          "DOI": "10.1109/ICCV.2015.123"
+        },
+        {
+          "key": "28_CR6",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Jia, Y., Shelhamer, E., Donahue, J., Karayev, S., Long, J., Girshick, R., Guadarrama, S., Darrell, T.: Caffe: Convolutional architecture for fast feature embedding (2014), arXiv:1408.5093 [cs.CV]",
+          "DOI": "10.1145/2647868.2654889"
+        },
+        {
+          "key": "28_CR7",
+          "unstructured": "Krizhevsky, A., Sutskever, I., Hinton, G.E.: Imagenet classification with deep convolutional neural networks. In: NIPS, pp. 1106–1114 (2012)"
+        },
+        {
+          "issue": "4",
+          "key": "28_CR8",
+          "doi-asserted-by": "publisher",
+          "first-page": "541",
+          "DOI": "10.1162/neco.1989.1.4.541",
+          "volume": "1",
+          "author": "Y. LeCun",
+          "year": "1989",
+          "unstructured": "LeCun, Y., Boser, B., Denker, J.S., Henderson, D., Howard, R.E., Hubbard, W., Jackel, L.D.: Backpropagation applied to handwritten zip code recognition. Neural Computation 1(4), 541–551 (1989)",
+          "journal-title": "Neural Computation"
+        },
+        {
+          "key": "28_CR9",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Long, J., Shelhamer, E., Darrell, T.: Fully convolutional networks for semantic segmentation (2014), arXiv:1411.4038 [cs.CV]",
+          "DOI": "10.1109/CVPR.2015.7298965"
+        },
+        {
+          "key": "28_CR10",
+          "doi-asserted-by": "publisher",
+          "first-page": "1609",
+          "DOI": "10.1093/bioinformatics/btu080",
+          "volume": "30",
+          "author": "M. Maska",
+          "year": "2014",
+          "unstructured": "Maska, M., et al.: A benchmark for comparison of cell tracking algorithms. Bioinformatics 30, 1609–1617 (2014)",
+          "journal-title": "Bioinformatics"
+        },
+        {
+          "key": "28_CR11",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Seyedhosseini, M., Sajjadi, M., Tasdizen, T.: Image segmentation with cascaded hierarchical models and logistic disjunctive normal networks. In: 2013 IEEE International Conference on Computer Vision (ICCV), pp. 2168–2175 (2013)",
+          "DOI": "10.1109/ICCV.2013.269"
+        },
+        {
+          "key": "28_CR12",
+          "unstructured": "Simonyan, K., Zisserman, A.: Very deep convolutional networks for large-scale image recognition (2014), arXiv:1409.1556 [cs.CV]"
+        },
+        {
+          "key": "28_CR13",
+          "unstructured": "WWW: Web page of the cell tracking challenge, \n                      \n                        http://www.codesolorzano.com/celltrackingchallenge/Cell_Tracking_Challenge/Welcome.html"
+        },
+        {
+          "key": "28_CR14",
+          "unstructured": "WWW: Web page of the em segmentation challenge, \n                      \n                        http://brainiac2.mit.edu/isbi_challenge/"
+        }
+      ],
+      "container-title": "Lecture Notes in Computer Science",
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "http://link.springer.com/content/pdf/10.1007/978-3-319-24574-4_28",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            10,
+            5
+          ]
+        ],
+        "date-time": "2020-10-05T20:49:06Z",
+        "timestamp": 1601930946000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "http://link.springer.com/10.1007/978-3-319-24574-4_28"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2015
+          ]
+        ]
+      },
+      "ISBN": [
+        "9783319245737",
+        "9783319245744"
+      ],
+      "references-count": 14,
+      "URL": "http://dx.doi.org/10.1007/978-3-319-24574-4_28",
+      "relation": {
+        "is-referenced-by": [
+          {
+            "id-type": "doi",
+            "id": "10.1007/s12530-026-09825-x",
+            "asserted-by": "object"
+          }
+        ]
+      },
+      "ISSN": [
+        "0302-9743",
+        "1611-3349"
+      ],
+      "subject": [],
+      "published": {
+        "date-parts": [
+          [
+            2015
+          ]
+        ]
+      },
+      "assertion": [
+        {
+          "value": "18 November 2015",
+          "order": 1,
+          "name": "first_online",
+          "label": "First Online",
+          "group": {
+            "name": "ChapterHistory",
+            "label": "Chapter History"
+          }
+        },
+        {
+          "value": "This content has been made available to all.",
+          "name": "free",
+          "label": "Free to read"
+        }
+      ]
+    }
+  },
+  {
+    "doi": "10.1023/B:JMIV.0000011325.36760.1e",
+    "title": "An Algorithm for Total Variation Minimization and Applications",
+    "year": 2004,
+    "csl": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            27
+          ]
+        ],
+        "date-time": "2026-10-27T03:27:30Z",
+        "timestamp": 1793071650438,
+        "version": "4.5.0"
+      },
+      "reference-count": 19,
+      "publisher": "Springer Science and Business Media LLC",
+      "issue": "1-2",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2004,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2004-01-01T00:00:00Z",
+            "timestamp": 1072915200000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2004,
+                1,
+                1
+              ]
+            ],
+            "date-time": "2004-01-01T00:00:00Z",
+            "timestamp": 1072915200000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://www.springernature.com/gp/researchers/text-and-data-mining"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2004,
+            1
+          ]
+        ]
+      },
+      "DOI": "10.1023/b:jmiv.0000011325.36760.1e",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2004,
+            1,
+            9
+          ]
+        ],
+        "date-time": "2004-01-09T20:20:27Z",
+        "timestamp": 1073679627000
+      },
+      "page": "89-97",
+      "source": "Crossref",
+      "is-referenced-by-count": 893,
+      "title": "An Algorithm for Total Variation Minimization and Applications",
+      "prefix": "10.1007",
+      "volume": "20",
+      "author": [
+        {
+          "given": "Antonin",
+          "family": "Chambolle",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "297",
+      "reference": [
+        {
+          "key": "5151174_CR1",
+          "doi-asserted-by": "crossref",
+          "unstructured": "A. Braides, Gamma-Convergence for Beginners, No. 22 in Oxford Lecture Series in Mathematics and Its Applications.Oxford University Press, 2002.",
+          "DOI": "10.1093/acprof:oso/9780198507840.001.0001"
+        },
+        {
+          "key": "5151174_CR2",
+          "unstructured": "K.A. Brakke, The Motion of a Surface by its Mean Curva-ture, Vol. 20 of Mathematical Notes. Princeton University Press: Princeton, NJ, 1978."
+        },
+        {
+          "key": "5151174_CR3",
+          "unstructured": "J.L. Carter, \"Dual methods for total variation-Based image restoration,\" Ph.D. thesis, U.C.L.A. (Advisor: T. F. Chan), 2001."
+        },
+        {
+          "key": "5151174_CR4",
+          "unstructured": "A. Chambolle, \"An algorithm for mean curvature motion,\" to appear in Interfaces Free Bound."
+        },
+        {
+          "issue": "2",
+          "key": "5151174_CR5",
+          "doi-asserted-by": "crossref",
+          "first-page": "167",
+          "DOI": "10.1007/s002110050258",
+          "volume": "76",
+          "author": "A. Chambolle",
+          "year": "1997",
+          "unstructured": "A. Chambolle and P.-L. Lions, \"Image recovery via total vari-ation minimization and related problems,\" Numer. Math.,Vol. 76, No. 2, pp. 167–188, 1997.",
+          "journal-title": "Numer. Math."
+        },
+        {
+          "issue": "6",
+          "key": "5151174_CR6",
+          "doi-asserted-by": "crossref",
+          "first-page": "1964",
+          "DOI": "10.1137/S1064827596299767",
+          "volume": "20",
+          "author": "T.F. Chan",
+          "year": "1999",
+          "unstructured": "T.F. Chan, G.H. Golub, and P. Mulet, \"A nonlinear primal-dual method for total variation-based image restoration,\" SIAM J. Sci. Comput.,Vol. 20, No.6, pp. 1964–1977, 1999 (electronic).",
+          "journal-title": "SIAM J. Sci. Comput."
+        },
+        {
+          "key": "5151174_CR7",
+          "volume-title": "Collection Mathèmatiques Appliquèes pour la Mâýtrise",
+          "author": "P.G. Ciarlet",
+          "year": "1982",
+          "unstructured": "P.G. Ciarlet, EsIntroduction à l'analyse numèrique matricielle et à l'optimisation, Collection Mathèmatiques Appliquèes pour la Mâýtrise. [Collection of Applied Mathematics for the Master's Degree]. Masson: Paris, 1982."
+        },
+        {
+          "key": "5151174_CR8",
+          "doi-asserted-by": "crossref",
+          "unstructured": "P.L. Combettes and J. Luo, \"An adaptive level set method for nondifferentiable constrained image recovery,\" IEEE Trans.Image Process.,Vol. 11, 2002.",
+          "DOI": "10.1109/TIP.2002.804527"
+        },
+        {
+          "issue": "2",
+          "key": "5151174_CR9",
+          "doi-asserted-by": "crossref",
+          "first-page": "646",
+          "DOI": "10.1137/S0036142998334838",
+          "volume": "37",
+          "author": "F. Dibos",
+          "year": "2000",
+          "unstructured": "F. Dibos and G. Koepfler, \"Global total variation minimiza-tion,\" SIAM J. Numer. Anal.,Vol. 37, No. 2, pp. 646–664, 2000 (electronic).",
+          "journal-title": "SIAM J. Numer. Anal."
+        },
+        {
+          "issue": "5",
+          "key": "5151174_CR10",
+          "doi-asserted-by": "crossref",
+          "first-page": "1779",
+          "DOI": "10.1137/S003614299528701X",
+          "volume": "34",
+          "author": "D.C. Dobson",
+          "year": "1997",
+          "unstructured": "D.C. Dobson and C.R. Vogel, \"Convergence of an iterative method for total variation denoising,\" SIAM J. Numer. Anal., Vol. 34, No. 5, pp. 1779–1791, 1997.",
+          "journal-title": "SIAM J. Numer. Anal."
+        },
+        {
+          "key": "5151174_CR11",
+          "volume-title": "Convex Analysis and Variational Problems",
+          "author": "I. Ekeland",
+          "year": "1976",
+          "unstructured": "I. Ekeland and R. Temam, Convex Analysis and Variational Problems. Amsterdam: North Holland, 1976."
+        },
+        {
+          "key": "5151174_CR12",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.1007/978-1-4684-9486-0",
+          "volume-title": "Minimal Surfaces and Functions of Bounded Varia-tion",
+          "author": "E. Giusti",
+          "year": "1984",
+          "unstructured": "E. Giusti, Minimal Surfaces and Functions of Bounded Varia-tion. Birkhäuser Verlag: Basel, 1984."
+        },
+        {
+          "key": "5151174_CR13",
+          "first-page": "1741",
+          "volume": "3",
+          "author": "F. Guichard",
+          "year": "1998",
+          "unstructured": "F. Guichard and F. Malgouyres, \"Total variation based inter-polation,\" in Proceedings of the European Signal Processing Conference,Vol. 3, pp. 1741–1744, 1998.",
+          "journal-title": "Proceedings of the European Signal Processing Conference"
+        },
+        {
+          "key": "5151174_CR14",
+          "first-page": "305",
+          "volume-title": "Grundlehren der Mathematischen Wissenschaften",
+          "author": "J.-B. Hiriart-Urruty",
+          "year": "1993",
+          "unstructured": "J.-B. Hiriart-Urruty and C. Lemarèchal, Convex Analysis and Minimization Algorithms. I, II,Vol. 305–306 of Grundlehren der Mathematischen Wissenschaften [Fundamental Principles of Mathematical Sciences]. Springer-Verlag: Berlin, 1993 (two volumes)."
+        },
+        {
+          "key": "5151174_CR15",
+          "doi-asserted-by": "crossref",
+          "first-page": "987",
+          "DOI": "10.1109/83.503914",
+          "volume": "5",
+          "author": "Y. Li",
+          "year": "1996",
+          "unstructured": "Y. Li and F. Santosa, \"Acomputational algorithm for minimizing total variation in image restoration,\" IEEE Trans. Image Process-ing, Vol. 5, pp. 987–995, 1996.",
+          "journal-title": "IEEE Trans. Image Process-ing"
+        },
+        {
+          "issue": "1",
+          "key": "5151174_CR16",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1137/S0036142999362286",
+          "volume": "39",
+          "author": "F. Malgouyres",
+          "year": "2001",
+          "unstructured": "F. Malgouyres and F. Guichard, \"Edge direction preserving im-age zooming: A mathematical and numerical analysis,\" SIAM J. Numer. Anal.,Vol. 39, No. 1, pp. 1–37, 2001 (electronic).",
+          "journal-title": "SIAM J. Numer. Anal."
+        },
+        {
+          "key": "5151174_CR17",
+          "doi-asserted-by": "crossref",
+          "first-page": "259",
+          "DOI": "10.1016/0167-2789(92)90242-F",
+          "volume": "60",
+          "author": "L.I. Rudin",
+          "year": "1992",
+          "unstructured": "L.I. Rudin, S. Osher, and E. Fatemi, \"Nonlinear total variation based noise removal algorithms,\" Physica D,Vol. 60, pp. 259–268, 1992.",
+          "journal-title": "Physica D"
+        },
+        {
+          "issue": "2",
+          "key": "5151174_CR18",
+          "doi-asserted-by": "crossref",
+          "first-page": "199",
+          "DOI": "10.1137/S0036144598347059",
+          "volume": "41",
+          "author": "J.A. Sethian",
+          "year": "1999",
+          "unstructured": "J.A. Sethian, \"Fast marching methods,\" SIAM Rev., Vol. 41, No. 2, pp. 199–235, 1999 (electronic).",
+          "journal-title": "SIAM Rev."
+        },
+        {
+          "issue": "1",
+          "key": "5151174_CR19",
+          "doi-asserted-by": "crossref",
+          "first-page": "227",
+          "DOI": "10.1137/0917016",
+          "volume": "17",
+          "author": "C.R. Vogel",
+          "year": "1996",
+          "unstructured": "C.R. Vogel and M.E. Oman, \"Iterative methods for total varia-tion denoising,\" SIAM J. Sci. Comput.,Vol. 17, No. 1, pp. 227–238, 1996. Special issue on iterative methods in numerical linear algebra (Breckenridge, CO, 1994).",
+          "journal-title": "SIAM J. Sci. Comput."
+        }
+      ],
+      "container-title": "Journal of Mathematical Imaging and Vision",
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://link.springer.com/content/pdf/10.1023/B:JMIV.0000011325.36760.1e.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://link.springer.com/article/10.1023/B:JMIV.0000011325.36760.1e/fulltext.html",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://link.springer.com/content/pdf/10.1023/B:JMIV.0000011325.36760.1e.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            12
+          ]
+        ],
+        "date-time": "2025-06-12T06:22:28Z",
+        "timestamp": 1749709348000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://link.springer.com/10.1023/B:JMIV.0000011325.36760.1e"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2004,
+            1
+          ]
+        ]
+      },
+      "references-count": 19,
+      "journal-issue": {
+        "issue": "1-2",
+        "published-print": {
+          "date-parts": [
+            [
+              2004,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "5151174"
+      ],
+      "URL": "http://dx.doi.org/10.1023/B:JMIV.0000011325.36760.1e",
+      "relation": {},
+      "ISSN": [
+        "0924-9907",
+        "1573-7683"
+      ],
+      "subject": [],
+      "container-title-short": "Journal of Mathematical Imaging and Vision",
+      "published": {
+        "date-parts": [
+          [
+            2004,
+            1
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "doi": "10.1038/s41597-025-06246-4",
+    "title": "A cone-beam photon-counting CT dataset for spectral image reconstruction and deep learning",
+    "year": 2025,
+    "csl": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            8,
+            17
+          ]
+        ],
+        "date-time": "2026-08-17T21:51:20Z",
+        "timestamp": 1787003480765,
+        "version": "build-2736575974"
+      },
+      "reference-count": 53,
+      "publisher": "Springer Science and Business Media LLC",
+      "issue": "1",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                18
+              ]
+            ],
+            "date-time": "2025-12-18T00:00:00Z",
+            "timestamp": 1766016000000
+          },
+          "content-version": "tdm",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2025,
+                12,
+                18
+              ]
+            ],
+            "date-time": "2025-12-18T00:00:00Z",
+            "timestamp": 1766016000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://creativecommons.org/licenses/by/4.0"
+        }
+      ],
+      "funder": [
+        {
+          "DOI": "10.13039/501100001809",
+          "name": "National Natural Science Foundation of China",
+          "doi-asserted-by": "publisher",
+          "award": [
+            "32227801"
+          ],
+          "award-info": [
+            {
+              "award-number": [
+                "32227801"
+              ]
+            }
+          ],
+          "id": [
+            {
+              "id": "10.13039/501100001809",
+              "id-type": "DOI",
+              "asserted-by": "publisher"
+            }
+          ]
+        }
+      ],
+      "content-domain": {
+        "domain": [
+          "link.springer.com"
+        ],
+        "crossmark-restriction": false
+      },
+      "abstract": "<jats:title>Abstract</jats:title>\n                  <jats:p>Photon-counting CT has gained significant attention in recent years; however, publicly available datasets for spectral reconstruction and deep learning training remain limited. Consequently, many image process algorithms and deep learning models are developed and validated using simulated rather than real spectral CT data. To address this gap, we present a cone-beam photon-counting CT (PCCT) dataset acquired using a custom-built micro-PCCT system and 15 walnut samples. Each walnut was scanned from four bed positions under dual energy thresholds (15 keV and 30 keV), resulting in a total of 172,800 raw projection images with a resolution of 2063 × 505 pixels. The dataset provides full access to raw multi-energy projections, system parameters, calibration tables, calibration phantom raw projection data and reconstruction code, enabling comprehensive spectral CT studies including spectral CT reconstruction, material decomposition, artifact correction, and deep learning-based methods. It addresses the scarcity of real PCCT datasets for developing and validating data-driven approaches and aims to foster fair and reproducible comparisons across spectral CT image process algorithms.</jats:p>",
+      "DOI": "10.1038/s41597-025-06246-4",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            18
+          ]
+        ],
+        "date-time": "2025-12-18T14:58:54Z",
+        "timestamp": 1766069934000
+      },
+      "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+      "source": "Crossref",
+      "is-referenced-by-count": 3,
+      "title": "A cone-beam photon-counting CT dataset for spectral image reconstruction and deep learning",
+      "prefix": "10.1038",
+      "volume": "12",
+      "author": [
+        {
+          "ORCID": "https://orcid.org/0000-0002-8308-7628",
+          "authenticated-orcid": false,
+          "given": "Enze",
+          "family": "Zhou",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Wenjian",
+          "family": "Li",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Wenting",
+          "family": "Xu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Kefei",
+          "family": "Wan",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yuwei",
+          "family": "Lu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Shangbin",
+          "family": "Chen",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Gang",
+          "family": "Zheng",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Tianwu",
+          "family": "Xie",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Qian",
+          "family": "Liu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "297",
+      "published-online": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            18
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "6246_CR1",
+          "first-page": "1",
+          "volume": "26",
+          "author": "L Ren",
+          "year": "2018",
+          "unstructured": "Ren, L., Zheng, B. & Liu, H. Tutorial on X-ray photon counting detector characterization. J. X-Ray Sci. Technol. 26, 1–28 (2018).",
+          "journal-title": "J. X-Ray Sci. Technol."
+        },
+        {
+          "key": "6246_CR2",
+          "doi-asserted-by": "publisher",
+          "first-page": "03TR01",
+          "DOI": "10.1088/1361-6560/abc5a5",
+          "volume": "66",
+          "author": "M Danielsson",
+          "year": "2021",
+          "unstructured": "Danielsson, M., Persson, M. & Sjölin, M. Photon-counting x-ray detectors for CT. Phys. Med. Biol. 66, 03TR01 (2021).",
+          "journal-title": "Phys. Med. Biol."
+        },
+        {
+          "key": "6246_CR3",
+          "doi-asserted-by": "publisher",
+          "first-page": "733",
+          "DOI": "10.1088/0031-9155/21/5/002",
+          "volume": "21",
+          "author": "RE Alvarez",
+          "year": "1976",
+          "unstructured": "Alvarez, R. E. & Macovski, A. Energy-selective reconstructions in X-ray computerised tomography. Phys. Med. Biol. 21, 733–744 (1976).",
+          "journal-title": "Phys. Med. Biol."
+        },
+        {
+          "key": "6246_CR4",
+          "doi-asserted-by": "publisher",
+          "first-page": "488",
+          "DOI": "10.1097/RLI.0000000000000949",
+          "volume": "58",
+          "author": "FR Schwartz",
+          "year": "2023",
+          "unstructured": "Schwartz, F. R., Samei, E. & Marin, D. Exploiting the Potential of Photon-Counting CT in Abdominal Imaging. Invest. Radiol. 58, 488–498 (2023).",
+          "journal-title": "Invest. Radiol."
+        },
+        {
+          "key": "6246_CR5",
+          "doi-asserted-by": "publisher",
+          "first-page": "2257",
+          "DOI": "10.3174/ajnr.A5402",
+          "volume": "38",
+          "author": "A Pourmorteza",
+          "year": "2017",
+          "unstructured": "Pourmorteza, A. et al. Photon-Counting CT of the Brain: In Vivo Human Results and Image-Quality Assessment. Am. J. Neuroradiol. 38, 2257–2263 (2017).",
+          "journal-title": "Am. J. Neuroradiol."
+        },
+        {
+          "key": "6246_CR6",
+          "doi-asserted-by": "publisher",
+          "first-page": "135",
+          "DOI": "10.1097/RLI.0000000000000418",
+          "volume": "53",
+          "author": "R Symons",
+          "year": "2018",
+          "unstructured": "Symons, R. et al. Photon-Counting Computed Tomography for Vascular Imaging of the Head and Neck: First In Vivo Human Results. Invest. Radiol. 53, 135–142 (2018).",
+          "journal-title": "Invest. Radiol."
+        },
+        {
+          "key": "6246_CR7",
+          "doi-asserted-by": "publisher",
+          "first-page": "1542703",
+          "DOI": "10.3389/fmars.2025.1542703",
+          "volume": "12",
+          "author": "M Xue",
+          "year": "2025",
+          "unstructured": "Xue, M., Xie, T. & Liu, Q. Evaluation of photon-counting micro-CT scanning for imaging marine organisms. Front. Mar. Sci. 12, 1542703 (2025).",
+          "journal-title": "Front. Mar. Sci."
+        },
+        {
+          "key": "6246_CR8",
+          "doi-asserted-by": "publisher",
+          "first-page": "91",
+          "DOI": "10.1097/RLI.0000000000000614",
+          "volume": "55",
+          "author": "K Rajendran",
+          "year": "2020",
+          "unstructured": "Rajendran, K. et al. Dose Reduction for Sinus and Temporal Bone Imaging Using Photon-Counting Detector CT With an Additional Tin Filter. Invest. Radiol. 55, 91–100 (2020).",
+          "journal-title": "Invest. Radiol."
+        },
+        {
+          "key": "6246_CR9",
+          "doi-asserted-by": "publisher",
+          "first-page": "342",
+          "DOI": "10.1016/j.neunet.2021.08.026",
+          "volume": "144",
+          "author": "W Wu",
+          "year": "2021",
+          "unstructured": "Wu, W. et al. Deep learning based spectral CT imaging. Neural Netw. 144, 342–358 (2021).",
+          "journal-title": "Neural Netw."
+        },
+        {
+          "key": "6246_CR10",
+          "doi-asserted-by": "publisher",
+          "unstructured": "Hein, D., Liappis, K., Grönberg, F., Eguizabal, A. & Persson, M. Ring Artifact Correction in Photon-Counting Spectral CT Using a Convolutional Neural Network With Spectral Loss. Preprint at https://doi.org/10.48550/arXiv.2302.00921 (2023).",
+          "DOI": "10.48550/arXiv.2302.00921"
+        },
+        {
+          "key": "6246_CR11",
+          "doi-asserted-by": "publisher",
+          "first-page": "3476",
+          "DOI": "10.1109/TMI.2024.3440651",
+          "volume": "43",
+          "author": "R Chen",
+          "year": "2024",
+          "unstructured": "Chen, R. et al. PRECISION: A Physics-Constrained and Noise-Controlled Diffusion Model for Photon Counting Computed Tomography. IEEE Trans. Med. Imaging 43, 3476–3489 (2024).",
+          "journal-title": "IEEE Trans. Med. Imaging"
+        },
+        {
+          "key": "6246_CR12",
+          "doi-asserted-by": "publisher",
+          "first-page": "3830",
+          "DOI": "10.1109/TMI.2024.3402079",
+          "volume": "43",
+          "author": "Y Shi",
+          "year": "2024",
+          "unstructured": "Shi, Y. et al. Learned Tensor Neural Network Texture Prior for Photon-Counting CT Reconstruction. IEEE Trans. Med. Imaging 43, 3830–3842 (2024).",
+          "journal-title": "IEEE Trans. Med. Imaging"
+        },
+        {
+          "key": "6246_CR13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1371/journal.pone.0306627",
+          "volume": "19",
+          "author": "K Han",
+          "year": "2024",
+          "unstructured": "Han, K., Ryu, C. H., Lee, C.-L. & Han, T. H. Deep learning-based material decomposition of iodine and calcium in mobile photon counting detector CT. PLOS ONE 19, e0306627 (2024).",
+          "journal-title": "PLOS ONE"
+        },
+        {
+          "key": "6246_CR14",
+          "doi-asserted-by": "publisher",
+          "first-page": "108854",
+          "DOI": "10.1016/j.compbiomed.2024.108854",
+          "volume": "180",
+          "author": "J Ren",
+          "year": "2024",
+          "unstructured": "Ren, J. et al. Prior image-based generative adversarial learning for multi-material decomposition in photon counting computed tomography. Comput. Biol. Med. 180, 108854 (2024).",
+          "journal-title": "Comput. Biol. Med."
+        },
+        {
+          "key": "6246_CR15",
+          "doi-asserted-by": "publisher",
+          "first-page": "25180",
+          "DOI": "10.1364/OE.400108",
+          "volume": "28",
+          "author": "K An",
+          "year": "2020",
+          "unstructured": "An, K., Wang, J., Zhou, R., Liu, F. & Wu, W. Ring-artifacts removal for photon-counting CT. Opt. Express 28, 25180 (2020).",
+          "journal-title": "Opt. Express"
+        },
+        {
+          "key": "6246_CR16",
+          "doi-asserted-by": "publisher",
+          "unstructured": "Fan, T. et al. Beam Hardening Correction for Image-Domain Material Decomposition in Photon-Counting CT. IEEE Trans. Radiat. Plasma Med. Sci. 1–1, https://doi.org/10.1109/TRPMS.2025.3540212 (2025).",
+          "DOI": "10.1109/TRPMS.2025.3540212"
+        },
+        {
+          "key": "6246_CR17",
+          "doi-asserted-by": "publisher",
+          "first-page": "2653",
+          "DOI": "10.1109/TMI.2023.3261999",
+          "volume": "42",
+          "author": "L Shen",
+          "year": "2023",
+          "unstructured": "Shen, L., Xing, Y. & Zhang, L. Joint Reconstruction and Spectrum Refinement for Photon-Counting-Detector Spectral CT. IEEE Trans. Med. Imaging 42, 2653–2665 (2023).",
+          "journal-title": "IEEE Trans. Med. Imaging"
+        },
+        {
+          "key": "6246_CR18",
+          "doi-asserted-by": "publisher",
+          "first-page": "408",
+          "DOI": "10.1016/j.zemedi.2022.10.003",
+          "volume": "34",
+          "author": "L Xin",
+          "year": "2024",
+          "unstructured": "Xin, L., Zhuo, W., Liu, Q., Xie, T. & Zaidi, H. Triple-source saddle-curve cone-beam photon counting CT image reconstruction: A simulation study. Z. Für Med. Phys. 34, 408–418 (2024).",
+          "journal-title": "Z. Für Med. Phys."
+        },
+        {
+          "key": "6246_CR19",
+          "doi-asserted-by": "publisher",
+          "first-page": "109295",
+          "DOI": "10.1016/j.knosys.2022.109295",
+          "volume": "251",
+          "author": "L Chao",
+          "year": "2022",
+          "unstructured": "Chao, L. et al. Dual-domain attention-guided convolutional neural network for low-dose cone-beam computed tomography reconstruction. Knowl.-Based Syst. 251, 109295 (2022).",
+          "journal-title": "Knowl.-Based Syst."
+        },
+        {
+          "key": "6246_CR20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/s41597-019-0235-y",
+          "volume": "6",
+          "author": "H Der Sarkissian",
+          "year": "2019",
+          "unstructured": "Der Sarkissian, H. et al. A cone-beam X-ray computed tomography data collection designed for machine learning. Sci. Data 6, 215 (2019).",
+          "journal-title": "Sci. Data"
+        },
+        {
+          "key": "6246_CR21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/s41597-021-00893-z",
+          "volume": "8",
+          "author": "J Leuschner",
+          "year": "2021",
+          "unstructured": "Leuschner, J., Schmidt, M., Baguer, D. O. & Maass, P. LoDoPaB-CT, a benchmark dataset for low-dose computed tomography reconstruction. Sci. Data 8, 109 (2021).",
+          "journal-title": "Sci. Data"
+        },
+        {
+          "key": "6246_CR22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/s41597-023-02484-6",
+          "volume": "10",
+          "author": "MB Kiss",
+          "year": "2023",
+          "unstructured": "Kiss, M. B., Coban, S. B., Batenburg, K. J., Van Leeuwen, T. & Lucka, F. 2DeteCT - A large 2D expandable, trainable, experimental Computed Tomography dataset for machine learning. Sci. Data 10, 576 (2023).",
+          "journal-title": "Sci. Data"
+        },
+        {
+          "key": "6246_CR23",
+          "doi-asserted-by": "publisher",
+          "first-page": "124005",
+          "DOI": "10.1088/1361-6501/aa8c29",
+          "volume": "28",
+          "author": "JS Jørgensen",
+          "year": "2017",
+          "unstructured": "Jørgensen, J. S., Coban, S. B., Lionheart, W. R. B., McDonald, S. A. & Withers, P. J. SparseBeads data: benchmarking sparsity-regularized computed tomography. Meas. Sci. Technol. 28, 124005 (2017).",
+          "journal-title": "Meas. Sci. Technol."
+        },
+        {
+          "key": "6246_CR24",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1038/sdata.2018.265",
+          "volume": "5",
+          "author": "K Singh",
+          "year": "2018",
+          "unstructured": "Singh, K. et al. Time-resolved synchrotron X-ray micro-tomography datasets of drainage and imbibition in carbonate rocks. Sci. Data 5, 180265 (2018).",
+          "journal-title": "Sci. Data"
+        },
+        {
+          "key": "6246_CR25",
+          "doi-asserted-by": "publisher",
+          "unstructured": "Hämäläinen, K. et al. Tomographic X-ray data of a walnut. Preprint at https://doi.org/10.48550/arXiv.1502.04064 (2015).",
+          "DOI": "10.48550/arXiv.1502.04064"
+        },
+        {
+          "key": "6246_CR26",
+          "doi-asserted-by": "crossref",
+          "unstructured": "McCollough, C. TU-FG-207A-04: Overview of the Low Dose CT Grand Challenge. Med. Phys. 3759–3760 (2016).",
+          "DOI": "10.1118/1.4957556"
+        },
+        {
+          "key": "6246_CR27",
+          "doi-asserted-by": "publisher",
+          "first-page": "902",
+          "DOI": "10.1002/mp.14594",
+          "volume": "48",
+          "author": "TR Moen",
+          "year": "2021",
+          "unstructured": "Moen, T. R. et al. Low‐dose CT image and projection dataset. Med. Phys. 48, 902–911 (2021).",
+          "journal-title": "Med. Phys."
+        },
+        {
+          "key": "6246_CR28",
+          "doi-asserted-by": "publisher",
+          "first-page": "772",
+          "DOI": "10.1002/mp.16363",
+          "volume": "51",
+          "author": "EY Sidky",
+          "year": "2024",
+          "unstructured": "Sidky, E. Y. & Pan, X. Report on the AAPM deep‐learning spectral CT Grand Challenge. Med. Phys. 51, 772–785 (2024).",
+          "journal-title": "Med. Phys."
+        },
+        {
+          "key": "6246_CR29",
+          "doi-asserted-by": "publisher",
+          "first-page": "055001",
+          "DOI": "10.1088/1361-6560/ad25c8",
+          "volume": "69",
+          "author": "D Richtsmeier",
+          "year": "2024",
+          "unstructured": "Richtsmeier, D., Rodesch, P.-A., Iniewski, K. & Bazalova-Carter, M. Material decomposition with a prototype photon-counting detector CT system: expanding a stoichiometric dual-energy CT method via energy bin optimization and K-edge imaging. Phys. Med. Biol. 69, 055001 (2024).",
+          "journal-title": "Phys. Med. Biol."
+        },
+        {
+          "key": "6246_CR30",
+          "doi-asserted-by": "publisher",
+          "unstructured": "Richtsmeier, D., Rodesch, P.-A., Iniewski, K. & Bazalova-Carter, M. Material decomposition with a prototype photon-counting detector CT system. Borealis https://doi.org/10.5683/SP3/GE6YLE (2023).",
+          "DOI": "10.5683/SP3/GE6YLE"
+        },
+        {
+          "key": "6246_CR31",
+          "doi-asserted-by": "publisher",
+          "first-page": "45",
+          "DOI": "10.1007/s41365-023-01184-5",
+          "volume": "34",
+          "author": "X Guo",
+          "year": "2023",
+          "unstructured": "Guo, X. et al. Material decomposition of spectral CT images via attention-based global convolutional generative adversarial network. Nucl. Sci. Tech. 34, 45 (2023).",
+          "journal-title": "Nucl. Sci. Tech."
+        },
+        {
+          "key": "6246_CR32",
+          "first-page": "529",
+          "volume": "32",
+          "author": "W Cui",
+          "year": "2024",
+          "unstructured": "Cui, W. et al. Feature shared multi-decoder network using complementary learning for Photon counting CT ring artifact suppression. J. X-Ray Sci. Technol. Clin. Appl. Diagn. Ther. 32, 529–547 (2024).",
+          "journal-title": "J. X-Ray Sci. Technol. Clin. Appl. Diagn. Ther."
+        },
+        {
+          "key": "6246_CR33",
+          "doi-asserted-by": "publisher",
+          "unstructured": "Clark, D. P. & Badea, C. Supplemental data archive for the Multi-Channel CT Reconstruction (MCR) Toolkit. Duke Research Data Repository, https://doi.org/10.7924/R45M6CS1F (2022).",
+          "DOI": "10.7924/R45M6CS1F"
+        },
+        {
+          "key": "6246_CR34",
+          "doi-asserted-by": "publisher",
+          "unstructured": "Zhou, E. et al. STEPC: A Pixel-wise Nonuniformity Correction Framework for Photon-Counting CT in Multi-material Imaging Scenarios. Preprint at https://doi.org/10.48550/arXiv.2507.14963 (2025).",
+          "DOI": "10.48550/arXiv.2507.14963"
+        },
+        {
+          "key": "6246_CR35",
+          "doi-asserted-by": "publisher",
+          "unstructured": "Ketcham, R. A. New algorithms for ring artifact removal. in (ed. Bonse, U.) 63180O, https://doi.org/10.1117/12.680939 (San Diego, California, USA, 2006).",
+          "DOI": "10.1117/12.680939"
+        },
+        {
+          "key": "6246_CR36",
+          "doi-asserted-by": "publisher",
+          "first-page": "269",
+          "DOI": "10.3390/s17020269",
+          "volume": "17",
+          "author": "M Eldib",
+          "year": "2017",
+          "unstructured": "Eldib, M. et al. A Ring Artifact Correction Method: Validation by Micro-CT Imaging with Flat-Panel Detectors and a 2D Photon-Counting Detector. Sensors 17, 269 (2017).",
+          "journal-title": "Sensors"
+        },
+        {
+          "key": "6246_CR37",
+          "doi-asserted-by": "publisher",
+          "first-page": "055010",
+          "DOI": "10.1088/2057-1976/2/5/055010",
+          "volume": "2",
+          "author": "A Biguri",
+          "year": "2016",
+          "unstructured": "Biguri, A., Dosanjh, M., Hancock, S. & Soleimani, M. TIGRE: a MATLAB-GPU toolbox for CBCT image reconstruction. Biomed. Phys. Eng. Express 2, 055010 (2016).",
+          "journal-title": "Biomed. Phys. Eng. Express"
+        },
+        {
+          "key": "6246_CR38",
+          "doi-asserted-by": "publisher",
+          "first-page": "015011",
+          "DOI": "10.1088/2631-8695/adbb3a",
+          "volume": "7",
+          "author": "A Biguri",
+          "year": "2025",
+          "unstructured": "Biguri, A. et al. TIGRE v3: Efficient and easy to use iterative computed tomographic reconstruction toolbox for real datasets. Eng. Res. Express 7, 015011 (2025).",
+          "journal-title": "Eng. Res. Express"
+        },
+        {
+          "key": "6246_CR39",
+          "doi-asserted-by": "publisher",
+          "unstructured": "Seltzer, S. Tables of X-Ray Mass Attenuation Coefficients and Mass Energy-Absorption Coefficients, NIST Standard Reference Database 126. National Institute of Standards and Technology, https://doi.org/10.18434/T4D01F (1995).",
+          "DOI": "10.18434/T4D01F"
+        },
+        {
+          "key": "6246_CR40",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5281/zenodo.15738313",
+          "author": "E Zhou",
+          "year": "2025",
+          "unstructured": "Zhou, E. et al. Cone-Beam Photon-counting CT Dataset for Spectral Image Reconstruction and Deep learning: calibration table&sample1, Zenodo, https://doi.org/10.5281/zenodo.15738313 (2025)."
+        },
+        {
+          "key": "6246_CR41",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5281/zenodo.16163983",
+          "author": "E Zhou",
+          "year": "2025",
+          "unstructured": "Zhou, E. et al. Cone-Beam Photon-counting CT Dataset for Spectral Image Reconstruction and Deep learning: sample2-3. Zenodo https://doi.org/10.5281/zenodo.16163983 (2025)."
+        },
+        {
+          "key": "6246_CR42",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5281/zenodo.16172256",
+          "author": "E Zhou",
+          "year": "2025",
+          "unstructured": "Zhou, E. et al. Cone-Beam Photon-counting CT Dataset for Spectral Image Reconstruction and Deep learning: sample4-5. Zenodo https://doi.org/10.5281/zenodo.16172256 (2025)."
+        },
+        {
+          "key": "6246_CR43",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5281/zenodo.16176445",
+          "author": "E Zhou",
+          "year": "2025",
+          "unstructured": "Zhou, E. et al. Cone-Beam Photon-counting CT Dataset for Spectral Image Reconstruction and Deep learning: sample6-7. Zenodo https://doi.org/10.5281/zenodo.16176445 (2025)."
+        },
+        {
+          "key": "6246_CR44",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5281/zenodo.16200172",
+          "author": "E Zhou",
+          "year": "2025",
+          "unstructured": "Zhou, E. et al. Cone-Beam Photon-counting CT Dataset for Spectral Image Reconstruction and Deep learning: sample8-9. Zenodo https://doi.org/10.5281/zenodo.16200172 (2025)."
+        },
+        {
+          "key": "6246_CR45",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5281/zenodo.16200623",
+          "author": "E Zhou",
+          "year": "2025",
+          "unstructured": "Zhou, E. et al. Cone-Beam Photon-counting CT Dataset for Spectral Image Reconstruction and Deep learning: sample10-11. Zenodo https://doi.org/10.5281/zenodo.16200623 (2025)."
+        },
+        {
+          "key": "6246_CR46",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5281/zenodo.16201067",
+          "author": "E Zhou",
+          "year": "2025",
+          "unstructured": "Zhou, E. et al. Cone-Beam Photon-counting CT Dataset for Spectral Image Reconstruction and Deep learning: sample12-13. Zenodo https://doi.org/10.5281/zenodo.16201067 (2025)."
+        },
+        {
+          "key": "6246_CR47",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5281/zenodo.16201186",
+          "author": "E Zhou",
+          "year": "2025",
+          "unstructured": "Zhou, E. et al. Cone-Beam Photon-counting CT Dataset for Spectral Image Reconstruction and Deep learning: sample14-15. Zenodo https://doi.org/10.5281/zenodo.16201186 (2025)."
+        },
+        {
+          "key": "6246_CR48",
+          "doi-asserted-by": "publisher",
+          "first-page": "671",
+          "DOI": "10.1038/nmeth.2089",
+          "volume": "9",
+          "author": "CA Schneider",
+          "year": "2012",
+          "unstructured": "Schneider, C. A., Rasband, W. S. & Eliceiri, K. W. NIH Image to ImageJ: 25 years of image analysis. Nat. Methods 9, 671–675 (2012).",
+          "journal-title": "Nat. Methods"
+        },
+        {
+          "key": "6246_CR49",
+          "doi-asserted-by": "publisher",
+          "first-page": "5457",
+          "DOI": "10.1088/0031-9155/59/18/5457",
+          "volume": "59",
+          "author": "S Lee",
+          "year": "2014",
+          "unstructured": "Lee, S., Choi, Y.-N. & Kim, H.-J. Quantitative material decomposition using spectral computed tomography with an energy-resolved photon-counting detector. Phys. Med. Biol. 59, 5457–5482 (2014).",
+          "journal-title": "Phys. Med. Biol."
+        },
+        {
+          "key": "6246_CR50",
+          "doi-asserted-by": "publisher",
+          "unstructured": "Wang, X. et al. Uniformity correction in photon-counting X-ray detector based on basis material decomposition. in 2008 IEEE Nuclear Science Symposium Conference Record 4902–4905, https://doi.org/10.1109/NSSMIC.2008.4774338 (2008).",
+          "DOI": "10.1109/NSSMIC.2008.4774338"
+        },
+        {
+          "key": "6246_CR51",
+          "doi-asserted-by": "publisher",
+          "first-page": "2324",
+          "DOI": "10.1118/1.3570658",
+          "volume": "38",
+          "author": "RE Alvarez",
+          "year": "2011",
+          "unstructured": "Alvarez, R. E. Estimator for photon counting energy selective x-ray imaging with multibin pulse height analysis: Estimator for multibin PHA. Med. Phys. 38, 2324–2334 (2011).",
+          "journal-title": "Med. Phys."
+        },
+        {
+          "key": "6246_CR52",
+          "doi-asserted-by": "publisher",
+          "first-page": "124701",
+          "DOI": "10.1063/1.1928312",
+          "volume": "97",
+          "author": "EY Sidky",
+          "year": "2005",
+          "unstructured": "Sidky, E. Y., Yu, L., Pan, X., Zou, Y. & Vannier, M. A robust method of x-ray source spectrum estimation from transmission measurements: Demonstrated on computer simulated, scatter-free transmission data. J. Appl. Phys. 97, 124701 (2005).",
+          "journal-title": "J. Appl. Phys."
+        },
+        {
+          "key": "6246_CR53",
+          "doi-asserted-by": "publisher",
+          "first-page": "3630",
+          "DOI": "10.1002/mp.14945",
+          "volume": "48",
+          "author": "G Poludniowski",
+          "year": "2021",
+          "unstructured": "Poludniowski, G., Omar, A., Bujila, R. & Andreo, P. Technical Note: SpekPy v2.0—a software toolkit for modeling x‐ray tube spectra. Med. Phys. 48, 3630–3637 (2021).",
+          "journal-title": "Med. Phys."
+        }
+      ],
+      "container-title": "Scientific Data",
+      "original-title": [],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.nature.com/articles/s41597-025-06246-4.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://www.nature.com/articles/s41597-025-06246-4",
+          "content-type": "text/html",
+          "content-version": "vor",
+          "intended-application": "text-mining"
+        },
+        {
+          "URL": "https://www.nature.com/articles/s41597-025-06246-4.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2026,
+            1,
+            24
+          ]
+        ],
+        "date-time": "2026-01-24T00:10:12Z",
+        "timestamp": 1769213412000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://www.nature.com/articles/s41597-025-06246-4"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            18
+          ]
+        ]
+      },
+      "references-count": 53,
+      "journal-issue": {
+        "issue": "1",
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              12
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "6246"
+      ],
+      "URL": "http://dx.doi.org/10.1038/s41597-025-06246-4",
+      "relation": {
+        "references": [
+          {
+            "id-type": "doi",
+            "id": "10.5281/zenodo.15738313",
+            "asserted-by": "subject"
+          },
+          {
+            "id-type": "doi",
+            "id": "10.5281/zenodo.16163983",
+            "asserted-by": "subject"
+          },
+          {
+            "id-type": "doi",
+            "id": "10.5281/zenodo.16172256",
+            "asserted-by": "subject"
+          },
+          {
+            "id-type": "doi",
+            "id": "10.5281/zenodo.16176445",
+            "asserted-by": "subject"
+          },
+          {
+            "id-type": "doi",
+            "id": "10.5281/zenodo.16200172",
+            "asserted-by": "subject"
+          },
+          {
+            "id-type": "doi",
+            "id": "10.5281/zenodo.16200623",
+            "asserted-by": "subject"
+          },
+          {
+            "id-type": "doi",
+            "id": "10.5281/zenodo.16201067",
+            "asserted-by": "subject"
+          },
+          {
+            "id-type": "doi",
+            "id": "10.5281/zenodo.16201186",
+            "asserted-by": "subject"
+          }
+        ]
+      },
+      "ISSN": [
+        "2052-4463"
+      ],
+      "subject": [],
+      "container-title-short": "Sci Data",
+      "published": {
+        "date-parts": [
+          [
+            2025,
+            12,
+            18
+          ]
+        ]
+      },
+      "assertion": [
+        {
+          "value": "24 July 2025",
+          "order": 1,
+          "name": "received",
+          "label": "Received",
+          "group": {
+            "name": "ArticleHistory",
+            "label": "Article History"
+          }
+        },
+        {
+          "value": "31 October 2025",
+          "order": 2,
+          "name": "accepted",
+          "label": "Accepted",
+          "group": {
+            "name": "ArticleHistory",
+            "label": "Article History"
+          }
+        },
+        {
+          "value": "18 December 2025",
+          "order": 3,
+          "name": "first_online",
+          "label": "First Online",
+          "group": {
+            "name": "ArticleHistory",
+            "label": "Article History"
+          }
+        },
+        {
+          "value": "20 January 2026",
+          "order": 5,
+          "name": "change_date",
+          "label": "Change Date",
+          "group": {
+            "name": "ArticleHistory",
+            "label": "Article History"
+          }
+        },
+        {
+          "value": "Update",
+          "order": 6,
+          "name": "change_type",
+          "label": "Change Type",
+          "group": {
+            "name": "ArticleHistory",
+            "label": "Article History"
+          }
+        },
+        {
+          "value": "In the version of the article initially published, affiliations 2–4 were incorrectly ordered and have now been amended in the HTML and PDF versions of the article to: 2. State Key Laboratory of Digital Medical Engineering, School of Biomedical Engineering, Hainan University, Sanya, China 3. School of Electronic Information and Communications, Huazhong University of Science and Technology, Wuhan, China 4. Institute of Radiation Medicine, Fudan University, Shanghai, China.",
+          "order": 7,
+          "name": "change_details",
+          "label": "Change Details",
+          "group": {
+            "name": "ArticleHistory",
+            "label": "Article History"
+          }
+        },
+        {
+          "value": "The authors declare no competing interests.",
+          "order": 1,
+          "name": "Ethics",
+          "group": {
+            "name": "EthicsHeading",
+            "label": "Competing interests"
+          }
+        }
+      ],
+      "article-number": "1955"
+    }
+  },
+  {
+    "doi": "10.5281/zenodo.17328375",
+    "title": "Cone-Beam Photon-counting CT Dataset for Spectral Image Reconstruction and Deep learning: calibration table&sample1",
+    "year": 2025,
+    "csl": {
+      "type": "dataset",
+      "id": "https://doi.org/10.5281/zenodo.17328375",
+      "categories": [
+        "photon-counting CT",
+        "X-ray",
+        "cone beam",
+        "computed tomography",
+        "deep learning",
+        "image reconstruction",
+        "spectral CT",
+        "material decomposition",
+        "Virtual monoenergetic images"
+      ],
+      "author": [
+        {
+          "family": "Zhou",
+          "given": "Enze"
+        },
+        {
+          "family": "Li",
+          "given": "Wenjian"
+        },
+        {
+          "family": "Xu",
+          "given": "Wenting"
+        },
+        {
+          "family": "Wan",
+          "given": "Kefei"
+        },
+        {
+          "family": "Lu",
+          "given": "Yuwei"
+        },
+        {
+          "family": "Chen",
+          "given": "Shangbin"
+        },
+        {
+          "family": "Zheng",
+          "given": "Gang"
+        },
+        {
+          "family": "Xie",
+          "given": "Tianwu"
+        },
+        {
+          "family": "Liu",
+          "given": "Qian"
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2025,
+            10,
+            11
+          ]
+        ]
+      },
+      "abstract": "This upload contains calibration table data, raw calibration phantom data (including PMMA and aluminum slabs, a water cylinder, and HAP rod insert projections) and the projection and reconstruction images of Sample 1, The data description and source are provided in the reference below:\n\n\n\nZhou, E., Li, W., Xu, W. et al. A cone-beam photon-counting CT dataset for spectral image reconstruction and deep learning. Sci Data 12, 1955 (2025). https://doi.org/10.1038/s41597-025-06246-4\n\n\nAbstract: Photon-counting CT has gained significant attention in recent years; however, publicly available datasets for spectral reconstruction and deep learning training remain limited. Consequently, many image process algorithms and deep learning models are developed and validated using simulated rather than real spectral CT data. To address this gap, we present a cone-beam photon-counting CT (PCCT) dataset acquired using a custom-built micro-PCCT system and 15 walnut samples. Each walnut was scanned from four bed positions under dual energy thresholds (15 keV and 30 keV), resulting in a total of 172,800 raw projection images with a resolution of 2063 × 505 pixels. The dataset provides full access to raw multi-energy projections, system parameters, calibration tables and reconstruction code, enabling comprehensive spectral CT studies including spectral CT reconstruction, material decomposition, artifact correction, and deep learning-based methods. It addresses the scarcity of real PCCT datasets for developing and validating data-driven approaches and aims to foster fair and reproducible comparisons across spectral CT image process algorithms.\n\nMethods: The dataset was acquired using a custom-built Micro photon-counting CT(Micro-PCCT),was jointly developed by Hainan University and United Imaging Life Science Instrument (LSI, Wuhan, China). The photon-counting detector has an effective resolution of 2063 × 505 pixels (after cropping peripheral invalid pixels), with a pixel size of 100 × 100 µm, and supports two independently adjustable energy thresholds. Each energy channel uses a 12-bit counter capable of recording up to 4096 photons per acquisition. Due to the limited detector width, each walnut was scanned at four axial bed positions along circular trajectories, spaced 15 mm apart, to ensure full coverage. The field of view (FOV) was set to 80 mm to encompass the entire walnut. Scans were performed in continuous mode, acquiring 1440 projections per circular trajectory with an angular increment of 0.25°.The imaging parameters are as follows:\n\n\n\n\n\n\n \n\n\nPara\n\n\n\nValue\n\n\n\n\n\nX-ray Source\n\n\n\nTube voltage\n\n\n\n80kV\n\n\n\n\n\nTube current\n\n\n\n200uA\n\n\n\n\n\nFilter\n\n\n\n0.5mm AL\n\n\n\n\n\nPhoton counting Detector\n\n\n\nDetector rows\n\n\n\n2063\n\n\n\n\n\nDetector columns\n\n\n\n505\n\n\n\n\n\nDetector pixel size\n\n\n\n100μm\n\n\n\n\n\nEnergy threshold 1\n\n\n\n15kev\n\n\n\n\n\nEnergy threshold 2\n\n\n\n30kev\n\n\n\n\n\nExposure time\n\n\n\n70ms\n\n\n\n\n\nSystem setting\n\n\n\nField of view\n\n\n\n80mm\n\n\n\n\n\nScan mode\n\n\n\nContinuous\n\n\n\n\n\nNumber of projections per circle\n\n\n\n1440\n\n\n\n\n\nSource to object distance\n\n\n\n140mm\n\n\n\n\n\nSource to detector distance\n\n\n\n325mm\n\n\n\n\n\nSample\n\n\n\nNumber of Walnuts\n\n\n\n15\n\n\n\n\n\n\nPlease refer to the paper for all further technical details\n\nThe complete data set can be found via the following links:  calibrationtable&sample1, sample2-3, sample4-5, sample6-7, sample8-9, sample10-11, sample12-13, sample14-15\n\nThe corresponding Matlab scripts for loading, pre-processing and spectral reconstructing the projection data in the way described in the paper can be found on github: https://github.com/zezisme/WalnutPCCTReconCodes\n\n For more information or guidance in using these dataset, please get in touch with: enzezhou@hust.edu.cn;  tianwuxie@fudan.edu.cn\n\n \n\n\n\n ",
+      "DOI": "10.5281/ZENODO.17328375",
+      "publisher": "Zenodo",
+      "title": "Cone-Beam Photon-counting CT Dataset for Spectral Image Reconstruction and Deep learning: calibration table&sample1",
+      "URL": "https://zenodo.org/doi/10.5281/zenodo.17328375",
+      "copyright": "Creative Commons Attribution 4.0 International"
+    }
+  },
+  {
+    "doi": "10.1109/TIP.2003.819861",
+    "title": "Image quality assessment: from error visibility to structural similarity",
+    "year": 2004,
+    "csl": {
+      "indexed": {
+        "date-parts": [
+          [
+            2026,
+            10,
+            29
+          ]
+        ],
+        "date-time": "2026-10-29T04:04:08Z",
+        "timestamp": 1793246648923,
+        "version": "4.5.0"
+      },
+      "reference-count": 58,
+      "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+      "issue": "4",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2004,
+                4,
+                1
+              ]
+            ],
+            "date-time": "2004-04-01T00:00:00Z",
+            "timestamp": 1080777600000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2004,
+                4,
+                1
+              ]
+            ],
+            "date-time": "2004-04-01T00:00:00Z",
+            "timestamp": 1080777600000
+          },
+          "content-version": "stm-asf",
+          "delay-in-days": 0,
+          "URL": "https://doi.org/10.15223/policy-029"
+        },
+        {
+          "start": {
+            "date-parts": [
+              [
+                2004,
+                4,
+                1
+              ]
+            ],
+            "date-time": "2004-04-01T00:00:00Z",
+            "timestamp": 1080777600000
+          },
+          "content-version": "stm-asf",
+          "delay-in-days": 0,
+          "URL": "https://doi.org/10.15223/policy-037"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2004,
+            4
+          ]
+        ]
+      },
+      "DOI": "10.1109/tip.2003.819861",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2004,
+            4,
+            15
+          ]
+        ],
+        "date-time": "2004-04-15T11:57:06Z",
+        "timestamp": 1082030226000
+      },
+      "page": "600-612",
+      "source": "Crossref",
+      "is-referenced-by-count": 52674,
+      "title": "Image quality assessment: from error visibility to structural similarity",
+      "prefix": "10.1109",
+      "volume": "13",
+      "author": [
+        {
+          "family": "Zhou Wang",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Center for Neural Sci., New York Univ., NY, USA"
+            }
+          ],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "A.C.",
+          "family": "Bovik",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "H.R.",
+          "family": "Sheikh",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "E.P.",
+          "family": "Simoncelli",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "member": "263",
+      "reference": [
+        {
+          "key": "ref1",
+          "first-page": "207",
+          "article-title": "What’s wrong with mean-squared error",
+          "volume-title": "Digital Images and Human Vision",
+          "author": "Girod",
+          "year": "1993"
+        },
+        {
+          "key": "ref2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.172664"
+        },
+        {
+          "key": "ref3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/26.477498"
+        },
+        {
+          "key": "ref4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0165-1684(98)00124-8"
+        },
+        {
+          "key": "ref5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.348438"
+        },
+        {
+          "key": "ref6",
+          "volume-title": "Rate scalable Foveated image and video communications",
+          "author": "Wang",
+          "year": "2001"
+        },
+        {
+          "key": "ref7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/97.995823"
+        },
+        {
+          "key": "ref8",
+          "volume-title": "Demo Images and Free Software for ‘a Universal Image Quality Index’",
+          "author": "Wang"
+        },
+        {
+          "key": "ref9",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ICASSP.2002.5745362"
+        },
+        {
+          "key": "ref10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/TIT.1974.1055250"
+        },
+        {
+          "key": "ref11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/b978-012119792-6/50118-2"
+        },
+        {
+          "key": "ref12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1201/9780203489864-45"
+        },
+        {
+          "key": "ref13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0165-1684(99)00062-6"
+        },
+        {
+          "key": "ref14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1364/JOSAA.10.002458"
+        },
+        {
+          "key": "ref15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0734-189X(87)80184-6"
+        },
+        {
+          "key": "ref16",
+          "first-page": "179",
+          "article-title": "The visible difference predictor: an algorithm for the assessment of image fidelity",
+          "volume-title": "Digital Images and Human Vision",
+          "author": "Daly",
+          "year": "1993"
+        },
+        {
+          "key": "ref17",
+          "first-page": "163",
+          "article-title": "The use of psychophysical data and models in the analysis of display system performance",
+          "volume-title": "Digital Images and Human Vision",
+          "author": "Lubin",
+          "year": "1993"
+        },
+        {
+          "key": "ref18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ICIP.1995.537485"
+        },
+        {
+          "key": "ref19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/18.119725"
+        },
+        {
+          "key": "ref20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.11171/2.152694"
+        },
+        {
+          "key": "ref21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/1.1329896"
+        },
+        {
+          "key": "ref22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/83.605413"
+        },
+        {
+          "key": "ref23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/83.760338"
+        },
+        {
+          "key": "ref24",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1006/jvci.1999.0433"
+        },
+        {
+          "key": "ref25",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.235440"
+        },
+        {
+          "key": "ref26",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1364/JOSAA.14.002379"
+        },
+        {
+          "key": "ref27",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.185904"
+        },
+        {
+          "key": "ref28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/icip.1998.727227"
+        },
+        {
+          "key": "ref29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ICIP.1996.559640"
+        },
+        {
+          "key": "ref30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.220346"
+        },
+        {
+          "key": "ref31",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.429526"
+        },
+        {
+          "key": "ref32",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1364/JOSAA.18.002385"
+        },
+        {
+          "key": "ref33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.469507"
+        },
+        {
+          "key": "ref34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1889/1.1830243"
+        },
+        {
+          "key": "ref35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1364/OE.6.000012"
+        },
+        {
+          "key": "ref36",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ACSSC.1997.680530"
+        },
+        {
+          "key": "ref37",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/83.967393"
+        },
+        {
+          "key": "ref38",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/78.258085"
+        },
+        {
+          "key": "ref39",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/76.499834"
+        },
+        {
+          "key": "ref40",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/83.806616"
+        },
+        {
+          "key": "ref41",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/978-1-4615-0799-4"
+        },
+        {
+          "key": "ref42",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.171150"
+        },
+        {
+          "key": "ref43",
+          "first-page": "819",
+          "article-title": "Natural signal statistics and sensory gain control",
+          "volume": "4",
+          "author": "Schwartz",
+          "year": "2001",
+          "journal-title": "Nature: Neuroscience"
+        },
+        {
+          "key": "ref44",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.7551/mitpress/5583.003.0015"
+        },
+        {
+          "key": "ref45",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/3-540-44522-6_68"
+        },
+        {
+          "key": "ref46",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0031-3203(02)00325-4"
+        },
+        {
+          "key": "ref47",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF03168505"
+        },
+        {
+          "key": "ref48",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0141-9382(99)00009-8"
+        },
+        {
+          "key": "ref49",
+          "article-title": "Visual performance",
+          "volume-title": "Handbook of Optics",
+          "author": "Geisler",
+          "year": "1995"
+        },
+        {
+          "key": "ref50",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/83.951527"
+        },
+        {
+          "key": "ref51",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/34.877520"
+        },
+        {
+          "key": "ref52",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1109/ICIP.2003.1247244"
+        },
+        {
+          "key": "ref53",
+          "volume-title": "The SSIM Index for Image Quality Assessment",
+          "author": "Wang"
+        },
+        {
+          "key": "ref54",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1117/12.201231"
+        },
+        {
+          "key": "ref55",
+          "volume-title": "Image and Video Quality Assessment Research at LIVE",
+          "author": "Sheikh"
+        },
+        {
+          "key": "ref56",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1142/9789812831200_0010"
+        },
+        {
+          "key": "ref57",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0165-1684(98)00123-6"
+        },
+        {
+          "key": "ref58",
+          "volume-title": "Final Report From the Video Quality Experts Group on the Validation of Objective Models of Video Quality Assessment",
+          "year": "2000"
+        }
+      ],
+      "container-title": "IEEE Transactions on Image Processing",
+      "original-title": [],
+      "link": [
+        {
+          "URL": "http://xplorestaging.ieee.org/ielx5/83/28667/01284395.pdf?arnumber=1284395",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2025,
+            2,
+            15
+          ]
+        ],
+        "date-time": "2025-02-15T01:26:28Z",
+        "timestamp": 1739582788000
+      },
+      "score": 1,
+      "resource": {
+        "primary": {
+          "URL": "https://ieeexplore.ieee.org/document/1284395/"
+        }
+      },
+      "subtitle": [],
+      "short-title": [],
+      "issued": {
+        "date-parts": [
+          [
+            2004,
+            4
+          ]
+        ]
+      },
+      "references-count": 58,
+      "journal-issue": {
+        "issue": "4"
+      },
+      "URL": "http://dx.doi.org/10.1109/TIP.2003.819861",
+      "relation": {},
+      "ISSN": [
+        "1057-7149",
+        "1941-0042"
+      ],
+      "subject": [],
+      "container-title-short": "IEEE Trans. on Image Process.",
+      "published": {
+        "date-parts": [
+          [
+            2004,
+            4
+          ]
+        ]
+      }
+    }
+  }
+]

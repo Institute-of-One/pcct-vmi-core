@@ -4,15 +4,17 @@ Spectral simulation testbed for studying how AI denoising of photon-counting-det
 CT (PCD-CT) virtual monoenergetic image (VMI) stacks shifts task detectability
 across energy and affects iodine quantitation.
 
-**Scope.** This is a methodological software contribution using synthetic digital
-phantoms only. It involves no human subjects, no patient data, and makes no
-clinical performance claims; institutional review, informed consent, and clinical
-validation are therefore not applicable.
+**Scope.** This is a methodological study using synthetic digital phantoms and
+public walnut reconstructions with simulated added noise. It involves no human
+subjects or patient data and makes no clinical performance claims. The walnut arm
+is a reconstruction stress test, not independent patient validation.
 
-Real public data (Zenodo walnut PCD-CT dataset, CC BY 4.0; TCIA EID CT, CC BY
-3.0) are **planned** as external validation inputs only (not yet used in the
-current code) and are never redistributed. See `docs/PROTOCOL_FREEZE.md` §4
-and `docs/DATA.md` for conditions and the planned scope.
+The public Zenodo walnut PCD-CT reconstructions are now used in a reconstruction-based
+noise-injection stress test (one specimen; no patient validation). The TCIA comparison
+is not included in the present manuscript. Source images are never redistributed.
+See `docs/PROTOCOL_FREEZE.md` §12 and `docs/DATA.md` for conditions and provenance.
+The English manuscript source, figure/table build, and remaining submission gates
+are documented in [paper/README.md](paper/README.md).
 
 ## What it does
 

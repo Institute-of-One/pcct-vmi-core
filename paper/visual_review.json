@@ -1,0 +1,28 @@
+{
+  "reviewer": "Codex visual inspection",
+  "date": "2026-10-29",
+  "manuscript_pages": 16,
+  "title_pages": 2,
+  "raster_dpi": 150,
+  "all_pages_opened": true,
+  "standalone_figures_opened": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "changed_page_rechecked": "final-page-11.png",
+  "artifacts": {
+    "submission\\jxst\\output\\manuscript.docx": "40bf4c82cf03be19dfc180056fc66ea1dae0902e0654fb8227d896f611802e2f",
+    "submission\\jxst\\output\\manuscript.pdf": "454b0a62517b86cea22353f3b5067728fc6e649f54a961991f2c1449ebdedc1f",
+    "submission\\jxst\\output\\title_page.docx": "94d9da960d26869fe662f7d40a3552b321d546e160cd0952fd13af7df41a76d8",
+    "submission\\jxst\\output\\title_page.pdf": "a5af760a83686d6d3771a60a89029924133bedd7a4fdc2429c791a75312e0988",
+    "paper\\figures\\figure1.png": "9e5ee09b4bc040618615206b4fd029de3a0d7d61d1d5c8ec0bf7601c7052d1e6",
+    "paper\\figures\\figure2.png": "efc938ad59e6ef439d05cd22e5a7bc4571b7b68b9b0f6ca87b0bbda554eee003",
+    "paper\\figures\\figure3.png": "3e4d8aa2812a575b2f7f05654e374b092a31bc385adf79900b58d3b64538e4b5",
+    "paper\\figures\\figure4.png": "0f8dd4f4fd808171cf63b3ac822f707ddf217228a75791637c04d54fed2a30fc",
+    "paper\\figures\\figure5.png": "5b150a942a9bf5cc416a712e17d1c9ac6b3109f9bca1fb274009dbc048ef1d73"
+  },
+  "author_visual_approval": "PENDING"
+}

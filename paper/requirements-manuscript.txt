@@ -1,0 +1,9 @@
+# Versions measured on 2026-10-29. CPU torch wheel may require the official CPU index.
+# This records the working environment; a fresh-environment installation is a pending gate.
+numpy==2.5.3
+scipy==1.18.1
+scikit-image==0.26.0
+matplotlib==3.11.2
+torch==2.14.1
+pydicom==3.0.2
+python-docx==1.2.0

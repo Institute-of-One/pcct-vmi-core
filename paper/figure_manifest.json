@@ -1,0 +1,38 @@
+{
+  "inputs": {
+    "results\\denoised_eval.json": "c3b448930b898036c90339de81be53bf3179343a13e0be8e89b7c0aba09a829b",
+    "results\\denoised_eval_d2.json": "a8ec9a03c860fd1aba50c9050e15f212a047b668443566765aaf22d3d991c961",
+    "results\\tv_eval.json": "045a225c6cdca99d3a205dce434a3eb7e05d4f5a38902fbdd7ca6c413509294b",
+    "results\\walnut_eval_summary.json": "9b97a201e5313fc82a51c8abb8df4c1ece3b9e942d9668972920234281ded527",
+    "results\\walnut_eval_d0.25.json": "a7a45518b48a36835e7448da66c700f63d41e9196da86eef116249b9c313a8ec",
+    "results\\walnut_eval_d0.125.json": "018990db6724c70d409964502e70c592c15366f6990ebdc38b7b29b19447383f",
+    "paper\\figures.py": "a3afe2f35236150a59f0bc0f1cec27bf773a94b6f03b9a02b464b195a685e69f",
+    "tools\\walnut_eval.py": "bdfe62ea5900c5a528cf91770b8bdb09e032cd9e1bf8b8884db0e336a33eb90a",
+    "pcctvmi\\walnut.py": "2e3a5c39c7bf53d5c81564665118bdfd9a62815231b6ddf20030cf2e94ff95b3",
+    "pcctvmi\\denoiser.py": "25ea5022b2fddd0cc306d4ee8019eb53b23a93f84c77f14a05ceaba9cc9f7ed5",
+    "pcctvmi\\tv.py": "39d2d4b001530ba6dadd1960e8ff0197a32a13f40985374a204ddb00ad5f00b2",
+    "pcctvmi\\noise_inject.py": "d0102630ee6c05dc2747af210577d9b2a637bc490260a70befb3856ce7b594e5",
+    "results\\denoiser_d1w_weights.pt": "6ba14ac5522e1e0637b27cfd209c956bbe7240737cf7384c217d09ec72346ef4",
+    "results\\walnut_noise_model_d0.25.npz": "c6dfe3466ff7d49e45dc81ec31f51d3c87af6c4da9768f7db1bf7626a92ee923",
+    "data\\walnut\\PROVENANCE.json": "34989292c582ef73b67fe4d7a439f318d2c4769268ba242b9e0c36c82adf0272"
+  },
+  "outputs": {
+    "figure1.pdf": "a1b2c5ffa675e68bf336821e075428d285895e8b2ad763f46f69151f66028df9",
+    "figure1.png": "9e5ee09b4bc040618615206b4fd029de3a0d7d61d1d5c8ec0bf7601c7052d1e6",
+    "figure2.pdf": "60692b05c62303c229db7edae251e89e67d2a9ea35cd9ff755aa2ad602c1a1ce",
+    "figure2.png": "efc938ad59e6ef439d05cd22e5a7bc4571b7b68b9b0f6ca87b0bbda554eee003",
+    "figure3.pdf": "91d5b184d3cd777a924ccf1356cea3ec0e720d9cea5daf53e6bf9cbc8b0e5c83",
+    "figure3.png": "3e4d8aa2812a575b2f7f05654e374b092a31bc385adf79900b58d3b64538e4b5",
+    "figure4.pdf": "4b8b31278b47a6dac1653e3c9a1066335551c9f83dd860c88295e16733f86643",
+    "figure4.png": "0f8dd4f4fd808171cf63b3ac822f707ddf217228a75791637c04d54fed2a30fc",
+    "figure5.pdf": "f2ce1affaa5241ad0d9b1c97d887c8cc945802e5e99dddccfb00f820a32315bd",
+    "figure5.png": "5b150a942a9bf5cc416a712e17d1c9ac6b3109f9bca1fb274009dbc048ef1d73"
+  },
+  "visual_review": "PENDING",
+  "archive": "D:\\DevGit\\pcct-vmi-core\\data\\walnut\\Reconstructions.zip",
+  "slice": 530,
+  "window_hu": [
+    -500,
+    500
+  ]
+}

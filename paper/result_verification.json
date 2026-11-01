@@ -1,0 +1,10 @@
+{
+  "reaggregation": "PASS",
+  "summary_numeric_values": 328,
+  "max_absolute_difference": 0.0,
+  "slice_replay": "PASS",
+  "slice": 530,
+  "dose": 0.25,
+  "mismatches": {},
+  "scope": "Reaggregation of both 60-slice datasets and one 25% slice replay; not full experiment rerun"
+}

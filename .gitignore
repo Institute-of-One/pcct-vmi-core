@@ -12,6 +12,8 @@ dist/
 # Generated outputs (regenerable via examples / paper build)
 outputs/
 paper/figures/*.png
+paper/figures/*.pdf
+submission/jxst/output/
 paper/figures/results.json
 
 # Quantitation baseline chunk intermediates (merged JSON is committed)
