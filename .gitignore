@@ -9,6 +9,12 @@ dist/
 # Local tooling
 .claude/
 
+# The corresponding author's telephone and street address. The journal needs them on
+# the title page; this repository is public and is the archive the manuscript cites, so
+# they are held outside it. submission/jxst/author_block.py merges this file in, and
+# check_author_identity.py fails if either value reaches a tracked file or a commit.
+paper/author_contact.local.json
+
 # Generated outputs (regenerable via examples / paper build)
 outputs/
 paper/figures/*.png

@@ -16,6 +16,7 @@ PAPER=ROOT/'paper'
 OUT=ROOT/'submission/jxst/output'
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from readiness_gates import pending_gates
+from author_block import load_author
 
 def load(name): return json.loads((ROOT/'results'/name).read_text())
 def conditions(name): return {(c['size_cm'],c['dose_fraction']):c for c in load(name)['conditions']}
@@ -130,7 +131,9 @@ def main():
     title.add_paragraph(source.splitlines()[0][2:],style='Title')
     # The author block comes from paper/author.json, never from a literal here: the
     # affiliation is checked against Crossref and a second copy would drift from it.
-    a=json.loads((PAPER/'author.json').read_text(encoding='utf-8'))
+    # The telephone and street address come from paper/author_contact.local.json, which
+    # is outside the public repository; without it those two lines say [PENDING].
+    a=load_author()
     title.add_paragraph('\n'.join([a['name'],a['affiliation'],'ORCID: '+a['orcid']]))
     title.add_paragraph('\n'.join(['Corresponding author: '+a['name'],
                                    'Address: '+(a['street_address'] or '[PENDING]'),
