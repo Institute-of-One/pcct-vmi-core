@@ -41,9 +41,17 @@ data/               downloaded public data (gitignored)
 
 ```bash
 python -m venv .venv
-.venv/Scripts/pip install -r requirements-dev.txt
+.venv/Scripts/pip install -r requirements.txt
+.venv/Scripts/pip install -e . --no-deps
 .venv/Scripts/pytest
 ```
+
+The editable install is not optional: without it the tests cannot import `pcctvmi`.
+`requirements-dev.txt` adds the linters and the two libraries used only to regenerate the
+committed tables below (`xraylib`, `spekpy`), which are not needed to run the tests.
+`torch` installs its CUDA build by default; for a CPU-only machine take it from
+`https://download.pytorch.org/whl/cpu` first. `.github/workflows/tests.yml` runs exactly
+these steps on every push.
 
 ## Reproducing reference data
 

@@ -29,6 +29,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install torch --index-url https://download.pytorch.org/whl/cpu
           pip install -r requirements.txt pytest
+          # Without this the suite cannot import pcctvmi at all. The first push found
+          # that, because a working tree has the package installed from an earlier day
+          # and nothing here does.
+          pip install -e . --no-deps
 
       - name: Unit tests
         run: pytest -q tests
