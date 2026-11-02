@@ -43,6 +43,8 @@ from pathlib import Path
 import numpy as np
 
 SKIP_SUFFIXES = {".log"}
+# The driver writes its own ledger next to the results; it is not one of them.
+SKIP_NAMES = {"pipeline_run.json"}
 
 
 def _flatten(obj, prefix: str = "") -> dict[str, object]:
@@ -196,7 +198,9 @@ def compare_trees(
             for d in (reference, rerun)
             if d.is_dir()
             for p in d.iterdir()
-            if p.is_file() and p.suffix not in SKIP_SUFFIXES
+            if p.is_file()
+            and p.suffix not in SKIP_SUFFIXES
+            and p.name not in SKIP_NAMES
         }
     )
     if not include_parts:
