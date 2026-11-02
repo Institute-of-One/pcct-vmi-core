@@ -106,3 +106,40 @@ At the author's instruction the repository was made public, tagged and archived.
 
 - Still open and still the author's: the generative-AI declaration's two to-do
   sentences, independent review, the full pipeline rerun, and his own inspection.
+
+## 2026-11-03
+
+- The generative-AI declaration is a declaration. The author confirmed that OpenAI
+  Codex was the only generative-AI tool used during the October research and
+  implementation work, which is what the two sentences above were asking for. The
+  paragraph now names Codex for that stage and Claude from 1 November, says why the
+  two are named separately, and ends on the author's responsibility for the content.
+  `author_declarations` is PASS. This corrects the lines above that say the
+  declaration still carries two to-do sentences, and the Content line that calls the
+  title page's declarations unresolved.
+- The AI-Check sentence above is also out of date. A live `ai_check.py doctor` run on
+  2026-11-02 returned pass from Codex (codex-cli 0.165.0-alpha.1.2) and from Claude
+  Code (2.1.302), so "both services failed" describes 26 October, not now. What blocks
+  independent review is structural: AI-Check v1 accepts one test command,
+  `python -m unittest discover`, and will not report PASS without a passing test inside
+  the snapshot it copies, while every test file here is pytest and the submission gates
+  need the repository layout, Word and network access. Its POLICY.md section 4 covers
+  this case: run the project's own execution checks and an independent review, and
+  record what the basis does not cover. No project files have been sent.
+- The full pipeline is being re-executed rather than replayed. `tools/run_pipeline.py`
+  runs it end to end in dependency order, from the physics tables through both training
+  arms to the walnut evaluation, and `tools/compare_results.py` compares what it writes
+  against the frozen results leaf by leaf. The run is in a separate working tree built
+  from `git archive v0.2.0`, with its own environment from
+  `paper/requirements-manuscript.txt`, so nothing it produces can overwrite a frozen
+  result. The frozen results stay the manuscript's source either way; the question the
+  run answers is whether they can be produced again.
+- First comparisons from that run: `pcctvmi/data/spectrum_120kvp.csv` regenerates
+  byte-identical, `mass_attenuation.csv` regenerates with identical values but CRLF line
+  endings, because the generator writes in text mode and git stores the file with LF -
+  a reader who regenerates it on Windows sees a modified file that holds the same
+  numbers. `results/quantitation_baseline.json` regenerates with zero difference across
+  all 160 leaves at a tolerance of exactly zero.
+- `paper/record_visual_review.py` re-pins the visual review and refuses to re-pin a page
+  that changed on disk and was not named as opened, because the repair used to be a hand
+  edit of the JSON and a hand edit can pin bytes nobody has seen.
