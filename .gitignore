@@ -58,3 +58,8 @@ Thumbs.db
 results/*_part*.json
 # Walnut noise-model chunk intermediates (merged npz/json are committed)
 results/walnut_noise_model_*_part*.npz
+
+# Internal working document: the Japanese handoff brief for this manuscript. It points at
+# private paths outside this repository and at the internal project register, and it is
+# not part of the archive the paper cites. Kept on disk, not published.
+docs/MANUSCRIPT_HANDOFF.md
