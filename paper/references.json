@@ -1696,12 +1696,12 @@
         "date-parts": [
           [
             2026,
-            10,
-            27
+            11,
+            2
           ]
         ],
-        "date-time": "2026-10-27T17:55:53Z",
-        "timestamp": 1793123753864,
+        "date-time": "2026-11-02T07:57:07Z",
+        "timestamp": 1793606227819,
         "version": "4.5.0"
       },
       "reference-count": 24,
@@ -1770,7 +1770,7 @@
       },
       "page": "130-138",
       "source": "Crossref",
-      "is-referenced-by-count": 567,
+      "is-referenced-by-count": 568,
       "title": "First Clinical Photon-counting Detector CT System: Technical Evaluation",
       "prefix": "10.1148",
       "volume": "303",
@@ -2233,12 +2233,12 @@
         "date-parts": [
           [
             2026,
-            10,
-            25
+            11,
+            2
           ]
         ],
-        "date-time": "2026-10-25T02:38:11Z",
-        "timestamp": 1792895891477,
+        "date-time": "2026-11-02T07:57:07Z",
+        "timestamp": 1793606227641,
         "version": "4.5.0"
       },
       "reference-count": 74,
@@ -2314,7 +2314,7 @@
       "page": "126-136",
       "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
       "source": "Crossref",
-      "is-referenced-by-count": 569,
+      "is-referenced-by-count": 570,
       "special_numbering": "C",
       "title": "Photon-counting CT review",
       "prefix": "10.1016",
@@ -21511,12 +21511,12 @@
           [
             2026,
             11,
-            1
+            2
           ]
         ],
-        "date-time": "2026-11-01T15:21:16Z",
-        "timestamp": 1793546476089,
-        "version": "4.5.0"
+        "date-time": "2026-11-02T14:27:19Z",
+        "timestamp": 1793629639784,
+        "version": "4.5.1"
       },
       "publisher-location": "Cham",
       "reference-count": 14,
@@ -21594,7 +21594,7 @@
       "page": "234-241",
       "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
       "source": "Crossref",
-      "is-referenced-by-count": 64593,
+      "is-referenced-by-count": 64602,
       "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
       "prefix": "10.1007",
       "author": [

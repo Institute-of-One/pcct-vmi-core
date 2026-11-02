@@ -106,17 +106,31 @@ the submission gates must enforce rather than remember:
 
 See `readiness.json` and `submission/jxst/output/conformance_report.json`.
 Contact details are resolved: on 2026-11-02 the author supplied his telephone number and
-approved the block, so `check_author_identity.py` passes. Of the declarations, ethics,
-conflicting interest, funding, contributions and acknowledgement are final wording; the
-generative-AI declaration still carries two sentences that are to-do notes rather than
-declarations, because only the author knows the full tool list from the research stages.
+approved the block, so `check_author_identity.py` passes. All declarations are now final
+wording. The generative-AI declaration closed on 2026-11-03, when the author confirmed
+that OpenAI Codex was the only generative-AI tool used during the October research and
+implementation work; the two sentences it used to carry were notes asking for exactly
+that, and prose cannot declare what nobody had been asked.
 The public code locator and the version archive DOI are resolved: the repository is
 public at https://github.com/Institute-of-One/pcct-vmi-core, release v0.2.0 is archived
 on Zenodo, and the data-availability statement prints that release's version DOI. They
 are held once in `release.json` and checked by `submission/jxst/check_release_metadata.py`.
-AI-Check's existing 2026-10-26 fixed-prompt report records errors for both services;
-independent review is not PASS. No project files were sent to either reviewer.
-pytest and visual review are outside AI-Check v1's standard unittest execution path.
+
+Independent review is still not PASS, and the reason has changed. The 2026-10-26
+fixed-prompt report recorded errors from both services, but a live `ai_check.py doctor`
+run on 2026-11-02 returned pass from Codex and from Claude Code. What blocks it is that
+AI-Check v1 accepts one test command, `python -m unittest discover`, and will not report
+PASS without a passing test inside the snapshot it copies; every test file here is
+pytest, and the submission gates need the repository layout, Word and network access, so
+none of them run in that snapshot. Its POLICY.md section 4 says to run the project's own
+execution checks and an independent review instead of claiming a basis that did not
+execute. No project files have been sent to either reviewer.
+
+`tools/run_pipeline.py` runs the research pipeline end to end, in dependency order, from
+the physics tables up, and `tools/compare_results.py` compares the results it writes
+against this repository's frozen ones leaf by leaf. Until this existed, every result file
+was produced by a command typed by hand, and `paper/verify_results.py` re-aggregated the
+walnut runs and replayed one slice without retraining anything.
 
 Before submission, the author must inspect every figure and the final Word/PDF,
-approve all declarations, and complete the remaining release and review gates.
+approve all declarations, and complete the remaining review gates.
