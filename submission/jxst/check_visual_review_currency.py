@@ -25,14 +25,27 @@ ROOT = Path(__file__).resolve().parents[2]
 REVIEW = ROOT / 'paper/visual_review.json'
 MANIFEST = ROOT / 'paper/figure_manifest.json'
 READINESS = ROOT / 'paper/readiness.json'
+OUTPUT = ROOT / 'submission/jxst/output'
 REVIEW_GATES = ('figure_visual_review', 'document_all_page_visual_review')
+PAGE_IMAGE = re.compile(r'final-(page|title)-\d+\.png$')
 
 
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest() if path.exists() else None
 
 
-def check(review=None, readiness=None, manifest=None, live=None):
+def basename(rel):
+    return Path(str(rel).replace('\\', '/')).name
+
+
+def rendered_pages():
+    """The page images the build actually wrote, which is the fact the ledger claims."""
+    if not OUTPUT.is_dir():
+        return []
+    return sorted(p.name for p in OUTPUT.iterdir() if PAGE_IMAGE.match(p.name))
+
+
+def check(review=None, readiness=None, manifest=None, live=None, on_disk=None):
     review = json.loads(REVIEW.read_text(encoding='utf-8')) if review is None else review
     readiness = (json.loads(READINESS.read_text(encoding='utf-8'))
                  if readiness is None else readiness)
@@ -59,11 +72,22 @@ def check(review=None, readiness=None, manifest=None, live=None):
         bad.append('the visual review no longer covers what would be submitted: %s' % why)
 
     # The pinned artefacts are the rendered pages, so the review covers a document only
-    # while every page of it has been rasterized and opened.
-    rendered = [r for r in review.get('artifacts', {}) if 'final-page-' in r]
-    if review.get('manuscript_pages') and len(rendered) != review['manuscript_pages']:
-        bad.append('the review says %d manuscript pages but pins %d page images'
-                   % (review['manuscript_pages'], len(rendered)))
+    # while every page of it has been rasterized and opened. Both halves of this have to
+    # come from the build: an earlier version counted the ledger's 'manuscript_pages'
+    # against the page entries in the same hand-written ledger, which is a value compared
+    # with itself. A manuscript that grew to 21 pages would have rendered two images that
+    # appear on neither side, and the rule stayed green.
+    on_disk = rendered_pages() if on_disk is None else sorted(on_disk)
+    pinned = {basename(r) for r in review.get('artifacts', {})
+              if PAGE_IMAGE.match(basename(r))}
+    unpinned = [n for n in on_disk if n not in pinned]
+    if unpinned:
+        bad.append('the build renders %d page image(s) the review does not pin: %s'
+                   % (len(unpinned), ', '.join(unpinned[:5])))
+    pages = [n for n in on_disk if n.startswith('final-page-')]
+    if on_disk and review.get('manuscript_pages') and len(pages) != review['manuscript_pages']:
+        bad.append('the review says %d manuscript pages but the build rendered %d'
+                   % (review['manuscript_pages'], len(pages)))
 
     # Every figure that ships must have been opened, and the count comes from the
     # manifest rather than from a number written into this file.
@@ -88,40 +112,75 @@ def selftest():
     manifest = json.loads(MANIFEST.read_text(encoding='utf-8'))
     live = {rel: digest(ROOT / rel.replace('\\', '/'))
             for rel in review.get('artifacts', {})}
+    on_disk = rendered_pages()
+    GOOD = dict(review=review, readiness=readiness, manifest=manifest,
+                live=live, on_disk=on_disk)
 
     def whole(**kw):
-        kw.setdefault('review', review)
-        kw.setdefault('readiness', readiness)
-        kw.setdefault('manifest', manifest)
-        kw.setdefault('live', live)
-        return check(**kw)
+        merged = dict(GOOD)
+        merged.update(kw)
+        return check(**merged)
 
     baseline = whole()
     print('baseline (the live sources, %d finding(s)):' % len(baseline))
     for b in baseline:
         print('   - %s' % b[:150])
 
-    first = next(iter(review['artifacts']))
-    rebuilt = dict(live, **{first: 'f' * 64})
-    gone = dict(live, **{first: None})
+    a_page = next(r for r in review['artifacts'] if 'final-page-' in r)
+    a_figure = next((r for r in review['artifacts']
+                     if '/figures/' in r.replace('\\', '/')), None)
     one_short = json.loads(json.dumps(review))
     one_short['standalone_figures_opened'] = one_short['standalone_figures_opened'][:-1]
-    claiming = dict(readiness, figure_visual_review='PASS')
+    miscounted = json.loads(json.dumps(review))
+    miscounted['manuscript_pages'] = review['manuscript_pages'] + 2
 
+    # Each case names the finding it must produce. Without that a case can be reported
+    # DETECTED on a finding some other rule raised, which is how a rule that never fires
+    # keeps its green tick.
     cases = [
-        ('an artefact was rebuilt after the review', dict(live=rebuilt)),
-        ('a reviewed artefact is missing', dict(live=gone)),
-        ('one shipped figure was never opened', dict(review=one_short)),
-        ('readiness still claims PASS over a stale review',
-         dict(live=rebuilt, readiness=claiming)),
+        ('a page was rebuilt after the review',
+         dict(live=dict(live, **{a_page: 'f' * 64})),
+         'was rebuilt after the review'),
+        ('a reviewed artefact is missing',
+         dict(live=dict(live, **{a_page: None})),
+         'is missing'),
+        ('one shipped figure was never opened',
+         dict(review=one_short),
+         'the review opened figures'),
+        ('the manuscript grew a page nobody pinned',
+         dict(on_disk=sorted(on_disk + ['final-page-99.png'])),
+         'the review does not pin'),
+        ('the ledger miscounts the pages the build rendered',
+         dict(review=miscounted),
+         'but the build rendered'),
+        ('readiness still records PASS over a stale document review',
+         dict(live=dict(live, **{a_page: 'f' * 64})),
+         'still records document_all_page_visual_review as PASS'),
     ]
+    if a_figure:
+        cases.append((
+            'readiness still records PASS over a regenerated figure',
+            dict(live=dict(live, **{a_figure: 'f' * 64})),
+            'still records figure_visual_review as PASS',
+        ))
+
     ok = True
-    for name, kwargs in cases:
+    for name, kwargs, expect in cases:
+        if all(json.dumps(v, sort_keys=True, default=str)
+               == json.dumps(GOOD[k], sort_keys=True, default=str)
+               for k, v in kwargs.items()):
+            print('  NO-OP    %s (the injection changed none of the inputs)' % name)
+            ok = False
+            continue
         found = [f for f in whole(**kwargs) if f not in baseline]
-        print('  %-8s %s' % ('DETECTED' if found else 'MISSED', name))
-        if found:
-            print('           -> %s' % found[0][:140])
-        ok = ok and bool(found)
+        hit = [f for f in found if expect in f]
+        print('  %-8s %s' % ('DETECTED' if hit else 'MISSED', name))
+        if hit:
+            print('           -> %s' % hit[0][:140])
+        else:
+            ok = False
+            print('           expected a finding containing %r; got %s'
+                  % (expect, [f[:90] for f in found] or 'nothing'))
 
     # Negative control: a review whose hashes are the files on disk must be silent.
     current = json.loads(json.dumps(review))
@@ -132,6 +191,17 @@ def selftest():
     if quiet:
         print('           -> %s' % quiet[0][:140])
     ok = ok and not quiet
+
+    # Second control: the readiness rule must stay silent when the gate is not PASS.
+    if a_figure:
+        not_claiming = dict(readiness, figure_visual_review='PENDING - being redrawn')
+        spoken = [f for f in whole(live=dict(live, **{a_figure: 'f' * 64}),
+                                   readiness=not_claiming)
+                  if 'figure_visual_review as PASS' in f]
+        print('  %-8s %s' % ('SILENT' if not spoken else 'NOISY',
+                             'a stale figure while readiness does not claim PASS'))
+        ok = ok and not spoken
+
     print('selftest %s' % ('PASS' if ok else 'FAIL'))
     return 0 if ok else 1
 

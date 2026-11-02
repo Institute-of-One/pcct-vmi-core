@@ -31,6 +31,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW = ROOT / "paper/visual_review.json"
+OUTPUT = ROOT / "submission/jxst/output"
 
 
 def digest(path: Path) -> str | None:
@@ -58,10 +59,23 @@ def main() -> int:
     artifacts: dict[str, str] = review["artifacts"]
     by_name = {Path(rel.replace("\\", "/")).name: rel for rel in artifacts}
 
-    unknown = [n for n in args.opened if n not in by_name]
-    if unknown:
-        print("not artefacts in the ledger: " + ", ".join(unknown))
-        return 1
+    # A page the build has started rendering is not in the ledger yet, and refusing it
+    # here would leave the hand edit as the only way to extend the review - which is the
+    # thing this module exists to replace. It may be added, but only by being named.
+    added = []
+    for name in args.opened:
+        if name in by_name:
+            continue
+        candidate = OUTPUT / name
+        if not candidate.exists():
+            print("not an artefact in the ledger and not on disk: " + name)
+            return 1
+        rel = str(candidate.relative_to(ROOT)).replace("/", "\\")
+        by_name[name] = rel
+        artifacts[rel] = ""      # no recorded bytes yet; the loop below pins them
+        added.append(rel)
+    for rel in added:
+        print("adding to the ledger: %s" % rel)
 
     changed, unchanged = {}, []
     for rel, recorded in artifacts.items():
