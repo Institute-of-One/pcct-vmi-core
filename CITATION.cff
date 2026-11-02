@@ -5,17 +5,21 @@ type: software
 authors:
   - family-names: Yamamoto
     given-names: Shuji
+    email: yamamoto@lisit.jp
+    affiliation: "Institute of One, LISIT Co., Ltd., Tokyo 150-0044, Japan"
     orcid: "https://orcid.org/0000-0001-9211-1071"
-    affiliation: "Institute of One, LISIT Co., Ltd., Tokyo, Japan"
 repository-code: "https://github.com/Institute-of-One/pcct-vmi-core"
 license: MIT
-version: 0.1.0
+version: 0.2.0
+date-released: "2026-11-02"
 keywords:
   - photon-counting detector CT
   - virtual monoenergetic imaging
   - task-based image quality
   - denoising
+  - iodine quantitation
   - simulation
+  - reproducible research
 abstract: >-
   Synthetic spectral simulation testbed (polyenergetic forward model,
   two-bin photon-counting detection, FBP reconstruction, water/iodine basis

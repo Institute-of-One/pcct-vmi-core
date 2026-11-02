@@ -3,7 +3,7 @@
   "reference_list_matches_the_venue": "PASS - 36 references over 5193 body words, against a measured JXST floor of 26 and median of 40 (paper/venue_reference_benchmark.json, Europe PMC, 2025-2026). Was 10. Every DOI resolves; numbering follows first appearance. submission/jxst/check_reference_density.py",
   "author_contact_details": "PASS - 2026-11-02, submission/jxst/check_author_identity.py; the author supplied his telephone number and confirmed the block. The telephone and street address are held in paper/author_contact.local.json, outside this published repository, and the gate fails if either reaches a tracked file or a commit. The ScholarOne fields must be typed to match the built title page exactly",
   "affiliation_crossref_match": "PASS - 2026-11-02, submission/jxst/check_author_identity.py; the string in paper/author.json is the one Crossref carries on all three journal articles under ORCID 0000-0001-9211-1071",
-  "public_code_and_version_doi": "PENDING",
+  "public_code_and_version_doi": "PENDING - paper/release.json is the one place that holds the repository, the tag, the version and the two DOIs, and submission/jxst/check_release_metadata.py compares the eight files that restate them; the repository is not yet pushed and version_doi is null, so the data-availability statement says the DOI is minted on release rather than naming one",
   "clean_new_environment_figure_rebuild": "PENDING",
   "independent_codex_claude_review": "BLOCKED - latest fixed-prompt probes failed; no project sent",
   "figure_visual_review": "PASS",

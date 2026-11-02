@@ -1,0 +1,46 @@
+name: tests
+
+# A workflow file in a working tree has never run: continuous integration starts at the
+# first push. This also runs weekly, because released code rots without a commit to
+# blame - a dependency removes a function after the release and the archive the paper's
+# DOI points at stops installing.
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '17 3 * * 1'
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # The CPU wheel comes from PyTorch's own index; the default wheel pulls CUDA.
+      # ruff and mypy are deliberately not installed here: requirements-dev.txt does not
+      # pin them, and an unpinned lint gate changes its own rules overnight and takes the
+      # steps after it down with it.
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt pytest
+
+      - name: Unit tests
+        run: pytest -q tests
+
+      # A suite that imports a module has not run the pipeline. This is the path the
+      # README sends a reader down, and it writes the montage and the summary.
+      - name: The documented end-to-end run
+        run: python examples/run_simulation.py
+
+      # Runners are UTF-8, so a print of a non-ASCII character can only fail on the
+      # reader's machine. Japanese Windows encodes stdout as cp932, which is where this
+      # work is developed and where an em dash in a print has killed a release script
+      # before. Nothing else would ever notice.
+      - name: The same run with a non-UTF-8 stdout
+        run: PYTHONIOENCODING=cp932 python examples/run_simulation.py

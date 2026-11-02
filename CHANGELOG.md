@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.2.0 (2026-11-02) — first public release, archived for the manuscript
+
+The repository became public on 2026-11-02, and this is the release the manuscript's
+data-availability statement cites. It carries the sprints below: the spectral forward
+model and reconstruction, the task-detectability machinery, the D1/D1w/D2 denoiser arms,
+the walnut real-data stress test, the sensitivity analyses, the frozen result JSON files
+from which every figure and table is regenerated, and the submission gates.
+
+- Version raised from 0.1.0, which names the 2026-10-09 physics core at the foot of this
+  file and was never published. Zenodo records the version from the `.zenodo.json` of the
+  commit a release points at and cannot correct it afterwards, so an archived release
+  must not reuse the number of a different state of the code.
+- `paper/release.json` holds the repository, the tag, the version and the two DOIs in one
+  place. `submission/jxst/check_release_metadata.py` compares the eight files that
+  restate them, and refuses a concept DOI, an unresolvable DOI, or a placeholder, in the
+  manuscript.
+- The corresponding author's telephone and street address are held outside the
+  repository, in `paper/author_contact.local.json`; the author gate fails if either
+  reaches a tracked file or any commit.
+- `.github/workflows/tests.yml` runs the unit tests, the documented end-to-end example,
+  and that example again with a cp932 stdout, on every push and once a week.
+- No image data is redistributed. The walnut reconstructions are fetched as `docs/DATA.md`
+  describes.
+
 ## Unreleased (2026-10-22) — Sprint 7 complete: H4 evaluation executed, H4 supported
 
 - **Noise model + injection engine** (9f7ff10, `pcctvmi/noise_inject.py`,

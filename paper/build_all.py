@@ -81,6 +81,12 @@ def main():
     # replaced them, which is exactly when the recorded PASS stops being true.
     currency=subprocess.run([sys.executable,'-X','utf8','-B',str(ROOT/'submission/jxst/check_visual_review_currency.py')],cwd=ROOT)
     if currency.returncode and args.strict: raise SystemExit('visual review is stale')
+    # The archived release: one version in every file, the repository this checkout
+    # pushes to, and only DOIs that were minted. It runs in the build rather than at the
+    # tag because Zenodo reads .zenodo.json from the commit the release points at and
+    # cannot correct the version of a published record.
+    release=subprocess.run([sys.executable,'-X','utf8','-B',str(ROOT/'submission/jxst/check_release_metadata.py')],cwd=ROOT)
+    if release.returncode and args.strict: raise SystemExit('release metadata gate failed')
     command=[sys.executable,'-X','utf8','-B',str(ROOT/'submission/jxst/check_template_conformance.py')]
     if args.strict: command.append('--strict')
     subprocess.run(command,cwd=ROOT,check=True)

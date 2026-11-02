@@ -200,7 +200,7 @@ The author received no financial support for the research, authorship, and/or pu
 
 ### Data availability
 
-The source walnut dataset is available at https://doi.org/10.5281/zenodo.17328375. The study code and frozen result JSON files are held in the pcct-vmi-core repository. A public, reachable code locator and the exact version archive DOI must be verified and inserted before submission. Source images are not redistributed in this manuscript package. Acquisition instructions are provided in docs/DATA.md.
+The source walnut dataset is available at https://doi.org/10.5281/zenodo.17328375. The study code, the frozen result files from which every figure and table in this article is regenerated, the trained denoiser weights, and the figure-drawing code are openly available under the MIT licence at {{RELEASE_REPOSITORY}}. {{RELEASE_ARCHIVE}} Source images are not redistributed in this manuscript package; acquisition instructions are provided in docs/DATA.md.
 
 ### Declaration of generative AI use
 

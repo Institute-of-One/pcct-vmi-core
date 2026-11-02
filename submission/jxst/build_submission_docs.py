@@ -88,9 +88,31 @@ def configure(doc):
     fld=OxmlElement('w:fldSimple'); fld.set(qn('w:instr'),'PAGE'); p._p.append(fld)
     doc.core_properties.author=''; doc.core_properties.last_modified_by=''
 
+def release_statement(release):
+    """The data-availability sentence about the archive, resolved from paper/release.json.
+
+    Before Zenodo mints the DOI the sentence says so in words. It must not contain a
+    token - PENDING, TODO, 10.5281/zenodo.XXXX - because a token is what survives into
+    a submitted PDF: it reads as filled in at a glance and only a reader who looks
+    closely sees that it is not a DOI.
+    """
+    doi=release.get('version_doi')
+    if not doi:
+        return ('The exact version used for this article is release %s of that repository; '
+                'its archive DOI is minted on release and inserted before submission.'
+                %release['tag'])
+    return ('The exact version used for this article is archived at https://doi.org/%s '
+            '(release %s).'%(doi,release['tag']))
+
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
     source=(PAPER/'manuscript.md').read_text(encoding='utf-8')
+    # The repository URL and the archive DOI are written in one file and nowhere else:
+    # AGENTS.md section 5. A second copy in the prose drifts from the record that the
+    # release actually minted, and nothing in a rendered page shows that it has.
+    release=json.loads((PAPER/'release.json').read_text(encoding='utf-8'))
+    source=(source.replace('{{RELEASE_REPOSITORY}}',release['repository'])
+                  .replace('{{RELEASE_ARCHIVE}}',release_statement(release)))
     ts=tables(); refs=refs_text()
     expanded=source.replace('{{REFERENCES}}',refs)
     for i,t in enumerate(ts,1):
@@ -156,7 +178,7 @@ def main():
     body=source.split('## 1. Introduction')[1].split('## Acknowledgements')[0]
     abstract=source.split('## Abstract')[1].split('Keywords:')[0]
     summary={'body_words':len(body.split()),'abstract_words_including_labels':len(abstract.split()),'tables':3,'figures':5,
-             'inputs':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [PAPER/'manuscript.md',PAPER/'references.json',Path(__file__)]},
+             'inputs':{str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in [PAPER/'manuscript.md',PAPER/'references.json',PAPER/'release.json',Path(__file__)]},
              'status':('DRAFT - open gates: '+', '.join(open_gates)) if open_gates else 'all gates in paper/readiness.json record PASS'}
     (OUT/'build_report.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
     print(summary)

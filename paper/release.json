@@ -1,0 +1,11 @@
+{
+  "_comment": "The archived release the manuscript cites: one place for the version, the tag, the repository and the two DOIs. version_doi identifies this exact version and is the one the manuscript prints; concept_doi resolves to the newest version and is the one the README badge and CITATION.cff advertise. AGENTS.md section 5: the same facts otherwise get written out by hand in eight files and drift. Both DOIs are null until Zenodo mints them, and submission/jxst/check_release_metadata.py keeps a placeholder, an unresolvable identifier, or the concept DOI out of the manuscript.",
+  "archive": "Zenodo",
+  "repository": "https://github.com/Institute-of-One/pcct-vmi-core",
+  "license": "MIT",
+  "version": "0.2.0",
+  "tag": "v0.2.0",
+  "date_released": "2026-11-02",
+  "version_doi": null,
+  "concept_doi": null
+}

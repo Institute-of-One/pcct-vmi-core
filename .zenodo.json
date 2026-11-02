@@ -1,13 +1,15 @@
 {
   "title": "pcct-vmi-core: a spectral simulation testbed for task detectability and quantitation after denoising of photon-counting-detector CT virtual monoenergetic images",
-  "description": "Synthetic spectral simulation testbed (polyenergetic forward model, two-bin photon-counting detection, FBP reconstruction, water/iodine basis decomposition, virtual monoenergetic image synthesis) for studying how AI denoising shifts detectability-optimal energy and affects iodine quantitation in PCD-CT VMI stacks.",
-  "license": "MIT",
+  "description": "<p>Synthetic spectral simulation testbed (polyenergetic forward model, two-bin photon-counting detection, FBP reconstruction, water/iodine basis decomposition, virtual monoenergetic image synthesis) for studying how AI denoising shifts detectability-optimal energy and affects iodine quantitation in PCD-CT VMI stacks.</p><p>This release is the version archived for the manuscript. It carries the frozen result JSON files from which every figure and table is regenerated, the figure-drawing code, the trained denoiser weights, and the submission gates. <strong>No image data is redistributed.</strong> The walnut reconstructions used in the real-data stress test are obtained from their own public record following docs/DATA.md.</p>",
   "upload_type": "software",
+  "license": "MIT",
   "access_right": "open",
+  "version": "0.2.0",
+  "language": "eng",
   "creators": [
     {
       "name": "Yamamoto, Shuji",
-      "affiliation": "Institute of One, LISIT Co., Ltd.",
+      "affiliation": "Institute of One, LISIT Co., Ltd., Tokyo 150-0044, Japan",
       "orcid": "0000-0001-9211-1071"
     }
   ],
@@ -16,6 +18,23 @@
     "virtual monoenergetic imaging",
     "task-based image quality",
     "denoising",
-    "simulation"
-  ]
+    "iodine quantitation",
+    "simulation",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/Institute-of-One/pcct-vmi-core",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.17328375",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "The concept DOI of this record is deliberately not set as a top-level \"doi\": setting it there stops Zenodo minting a version DOI for each release, and the manuscript cites the version DOI. The affiliation string is the one Crossref carries on this author's published articles, city before postcode; paper/author.json holds it and submission/jxst/check_release_metadata.py refuses a copy here that differs."
 }

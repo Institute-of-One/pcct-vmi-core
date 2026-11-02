@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pcctvmi"
-version = "0.1.0"
+version = "0.2.0"
 description = "Spectral simulation testbed for task detectability and quantitation after denoising of PCD-CT virtual monoenergetic images"
 readme = "README.md"
 license = { text = "MIT" }
