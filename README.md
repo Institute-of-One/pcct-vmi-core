@@ -64,7 +64,11 @@ The committed CSVs under `pcctvmi/data/` are generated, not hand-written:
 
 ## Citation
 
-See `CITATION.cff`. DOI is minted on release (Zenodo).
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23875046.svg)](https://doi.org/10.5281/zenodo.23875046)
+
+The badge is the **concept DOI**: it resolves to whichever version is newest. A paper
+citing the exact code it ran should cite the **version DOI** of that release instead,
+which `CITATION.cff` lists and `paper/release.json` holds.
 
 ## License
 

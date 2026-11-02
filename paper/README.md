@@ -1,8 +1,10 @@
 # IORN-016 manuscript source and build
 
 `manuscript.md` is the editable English source. Do not edit generated DOCX files.
-The primary manuscript contains approximately 4,600 body words, a 200-word abstract,
-five figures, three tables, and ten DOI-verified references.
+The primary manuscript contains 5,193 body words, a 200-word abstract, five figures,
+three tables, and 36 DOI-verified references. Those counts are measured by the build and
+written to `submission/jxst/output/build_report.json`; the sentence above is prose and
+can go stale, which it did once already at ten references.
 
 ## Build
 
@@ -108,8 +110,10 @@ approved the block, so `check_author_identity.py` passes. Of the declarations, e
 conflicting interest, funding, contributions and acknowledgement are final wording; the
 generative-AI declaration still carries two sentences that are to-do notes rather than
 declarations, because only the author knows the full tool list from the research stages.
-No public code locator or version archive DOI was invented (this checkout has no
-configured Git remote). A clean snapshot/new environment figure rebuild remains.
+The public code locator and the version archive DOI are resolved: the repository is
+public at https://github.com/Institute-of-One/pcct-vmi-core, release v0.2.0 is archived
+on Zenodo, and the data-availability statement prints that release's version DOI. They
+are held once in `release.json` and checked by `submission/jxst/check_release_metadata.py`.
 AI-Check's existing 2026-10-26 fixed-prompt report records errors for both services;
 independent review is not PASS. No project files were sent to either reviewer.
 pytest and visual review are outside AI-Check v1's standard unittest execution path.

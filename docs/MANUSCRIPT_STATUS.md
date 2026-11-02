@@ -81,6 +81,28 @@ Everything above is the record of 2026-10-29 and some of it has been overtaken.
   is pinned to the page rasters, which a rebuild leaves byte-identical when the content
   is unchanged. Four reference-list defects visible only on the page were fixed.
 - Structural injection tests are 14, not 5; pytest is still 96.
-- Still open and still the author's: the public code locator and version DOI (no Git
-  remote is configured), the clean-environment figure rebuild, independent review, the
-  full pipeline rerun, and his own inspection.
+## Published — 2026-11-02
+
+At the author's instruction the repository was made public, tagged and archived.
+
+- `https://github.com/Institute-of-One/pcct-vmi-core`, public, default branch `main`.
+- Release **v0.2.0**, archived on Zenodo: version DOI **10.5281/zenodo.23875047**,
+  concept DOI **10.5281/zenodo.23875046**. The manuscript cites the version DOI; the
+  README badge carries the concept DOI. Both are held once in `paper/release.json`.
+- The version was raised from 0.1.0 because that number already names the 2026-10-09
+  physics core in `CHANGELOG.md`, and Zenodo cannot correct the version of a published
+  record.
+- The corresponding author's telephone and street address are **not** in the repository.
+  They live in `paper/author_contact.local.json`, which `.gitignore` excludes, and the
+  author gate fails if either reaches a tracked file or any commit. The history was
+  rewritten before the first push, because both had been committed.
+- `.github/workflows/tests.yml` runs on every push and weekly. Its first run failed:
+  the documented install never installed the package, so no test could import
+  `pcctvmi`. Both the workflow and the README now do an editable install.
+- `docs/DATA.md` was English-only in the manuscript's reach; it is now English first,
+  Japanese after, and its third section - an internal plan naming a third party - is no
+  longer in the public file. `docs/MANUSCRIPT_HANDOFF.md` is untracked for the same
+  reason, though it was in the first push and so is in the public history.
+
+- Still open and still the author's: the generative-AI declaration's two to-do
+  sentences, independent review, the full pipeline rerun, and his own inspection.

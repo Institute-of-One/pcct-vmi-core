@@ -12,6 +12,16 @@ repository-code: "https://github.com/Institute-of-One/pcct-vmi-core"
 license: MIT
 version: 0.2.0
 date-released: "2026-11-02"
+# The concept DOI resolves to the newest version and is what the README badge carries.
+# The manuscript cites the *version* DOI of the release it was built from; both are held
+# in paper/release.json and checked by submission/jxst/check_release_metadata.py.
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23875046"
+    description: "Concept DOI (resolves to the latest version)"
+  - type: doi
+    value: "10.5281/zenodo.23875047"
+    description: "Version DOI of the 0.2.0 release, the one the manuscript cites"
 keywords:
   - photon-counting detector CT
   - virtual monoenergetic imaging

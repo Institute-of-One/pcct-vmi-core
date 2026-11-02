@@ -14,8 +14,8 @@
   ],
   "changed_page_rechecked": "final-page-11.png",
   "artifacts": {
-    "submission\\jxst\\output\\final-title-1.png": "daa1f4996c0baaf2e5b645d6ce25235eccfea81fd7d9fb853c113d281fea6240",
-    "submission\\jxst\\output\\final-title-2.png": "259ec41711f5c98f79da60652d52cd505f2843853b0a74f9b6626bcaa751e727",
+    "submission\\jxst\\output\\final-title-1.png": "c5d06f04074929a3cbaa9e336e03833fb43560fd9086751b3d8206e78831419a",
+    "submission\\jxst\\output\\final-title-2.png": "8db9f49fdd61215bcbe3c631917a28f22840e5301ac07fd6acfd98f3a321a1e5",
     "submission\\jxst\\output\\final-page-01.png": "51ac91b858e1fba44e462daad7e038144210dc65c54f8feb998cd675d9a8a97b",
     "submission\\jxst\\output\\final-page-02.png": "a1ac32d5f7a31b9e44aecf2a8cdb1d36ef5a7f9845ba8ef7b0e4677245cc75e8",
     "submission\\jxst\\output\\final-page-03.png": "3ef108ff57acc667c2b3e6adf05adc85dab8ce74f9064e029b37a65eabf42dc6",
@@ -26,7 +26,7 @@
     "submission\\jxst\\output\\final-page-08.png": "0eaa53cfdda32641e3ddca927e5424ed50fdad73a800e5ba16b2a2f9b1ee26af",
     "submission\\jxst\\output\\final-page-09.png": "5949a04b51069b5a25eda15192b3af8b24e033533e27575ebc0765db0c9e93ae",
     "submission\\jxst\\output\\final-page-10.png": "2be9f3e16caf6a76c7f9187557cde07be26dcd00dade95a75b65e91f7994eb01",
-    "submission\\jxst\\output\\final-page-11.png": "73bca5ee58fb68d8a9eb3512e69d068c209520947c4daa56ed93bfb5b138d0d3",
+    "submission\\jxst\\output\\final-page-11.png": "5b2b137166cfcdb1eaa5ce9b3a446d3a228dc97745f8b8a38f1720343a8259ce",
     "submission\\jxst\\output\\final-page-12.png": "6adaaccd8b39841f9dec2586833e144dadeaeb6bef1175e6d22e9edd84f8d6da",
     "submission\\jxst\\output\\final-page-13.png": "36541de8757331644b2d897df696db9636ae7ce867baa57d857b492dd7dce9e6",
     "submission\\jxst\\output\\final-page-14.png": "a3df0e7f2611b1c7f8a58a267020d730909ba1ca2681f153a7d03e2204665fb9",
@@ -74,13 +74,11 @@
     "reference list format consistent across entries",
     "draft markers and internal to-do notes printed in the document"
   ],
-  "findings": "None outstanding in the pages themselves. This pass followed the data-availability statement being rebuilt from paper/release.json: it now names the public repository and says the archive DOI is minted on release, in words, with no placeholder token. The reference list was reread where it reflowed; entry 35 prints \"calibration table&sample1\" because that is the title the Zenodo record is registered under, checked against doi.org on 2026-11-02, not a mangling in the build. Two deliberate draft markers remain and must disappear before submission: the DRAFT line on the title page, which lists the gates still open in paper/readiness.json, and two sentences in the generative-AI declaration that are to-do notes rather than declarations. The statement will be rebuilt once more when Zenodo has minted the version DOI.",
+  "findings": "None outstanding in the pages themselves. Zenodo minted the archive for release v0.2.0 on 2026-11-02, so the data-availability statement now prints the version DOI 10.5281/zenodo.23875047 rather than saying the DOI is pending, and the DRAFT line on the title page lists four open gates instead of six. The three pages that changed were reopened: title page 1 carries the complete corresponding-author block including the telephone and street address, which are held outside the repository; title page 2 and manuscript page 11 carry the statement. Two deliberate draft markers remain and must disappear before submission: that DRAFT line, and two sentences in the generative-AI declaration that are to-do notes rather than declarations.",
   "not_checked": "Scientific correctness of the figures and numbers, which the author verifies. Print-size legibility was judged from a 150-dpi raster, not from paper.",
   "reopened_in_this_pass": [
     "final-page-11.png",
-    "final-page-12.png",
-    "final-page-13.png",
-    "final-page-14.png",
+    "final-title-1.png",
     "final-title-2.png"
   ],
   "unchanged_pages_note": "Every other pinned image is byte-identical to the one opened earlier on 2026-11-02, so the hashes below all cover pages that have been seen at these exact bytes.",
@@ -89,6 +87,12 @@
       "reviewer": "Codex visual inspection",
       "date": "2026-10-29",
       "manuscript_pages": 16,
+      "title_pages": 2
+    },
+    {
+      "reviewer": "Claude (Opus 5) page-by-page inspection, at the author's direction",
+      "date": "2026-11-02",
+      "manuscript_pages": 19,
       "title_pages": 2
     },
     {

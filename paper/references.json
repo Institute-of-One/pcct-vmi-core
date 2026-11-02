@@ -15927,12 +15927,12 @@
         "date-parts": [
           [
             2026,
-            10,
-            30
+            11,
+            2
           ]
         ],
-        "date-time": "2026-10-30T21:03:55Z",
-        "timestamp": 1793394235649,
+        "date-time": "2026-11-02T00:13:12Z",
+        "timestamp": 1793578392772,
         "version": "4.5.0"
       },
       "reference-count": 48,
@@ -16051,7 +16051,7 @@
       },
       "page": "1348-1357",
       "source": "Crossref",
-      "is-referenced-by-count": 1478,
+      "is-referenced-by-count": 1479,
       "title": "Low-Dose CT Image Denoising Using a Generative Adversarial Network With Wasserstein Distance and Perceptual Loss",
       "prefix": "10.1109",
       "volume": "37",
@@ -24023,11 +24023,11 @@
           [
             2026,
             11,
-            1
+            2
           ]
         ],
-        "date-time": "2026-11-01T15:23:50Z",
-        "timestamp": 1793546630068,
+        "date-time": "2026-11-02T01:51:45Z",
+        "timestamp": 1793584305166,
         "version": "4.5.0"
       },
       "reference-count": 58,
@@ -24110,7 +24110,7 @@
       },
       "page": "600-612",
       "source": "Crossref",
-      "is-referenced-by-count": 52793,
+      "is-referenced-by-count": 52794,
       "title": "Image quality assessment: from error visibility to structural similarity",
       "prefix": "10.1109",
       "volume": "13",

@@ -281,7 +281,14 @@ def selftest():
                                     '    description: "Version DOI of the %s release"\n'
                                   % (concept, minted, version))
     good_files['README.md'] = live_files['README.md'] + '\n[![DOI](https://zenodo.org/badge/DOI/%s.svg)](https://doi.org/%s)\n' % (concept, concept)
-    good_built = '%s %s see https://doi.org/%s' % (live_built or '', repo, minted)
+    # The control is a complete, consistent, minted release. The live DOI has to be
+    # swapped for the invented one rather than left beside it: once a real version DOI
+    # reaches the manuscript, a document carrying both is a document citing a Zenodo
+    # record that is not this release, which is a rule - so the control tripped it.
+    base = live_built or ''
+    if live_release.get('version_doi'):
+        base = base.replace(live_release['version_doi'], minted)
+    good_built = '%s %s see https://doi.org/%s' % (base, repo, minted)
     always_true = lambda doi: True
     quiet = check(release=good_release, files=good_files, built=good_built,
                   resolve=always_true, remote=repo)
