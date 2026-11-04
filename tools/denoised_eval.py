@@ -419,6 +419,20 @@ def plot(results: dict, path: Path) -> None:
     print(f"wrote {path}")
 
 
+def resolve_final(value: Path) -> Path:
+    """Put the merged result where the part files and the plot already go.
+
+    Everything else here is written as ``OUT / ...``; only the merged JSON used
+    the raw ``--final`` value, so the command this module's own docstring gives
+    (``--final denoised_eval_d2.json``) wrote the D2 result into the working
+    directory and left ``results/`` holding only the chunks and the plot. A
+    relative path is therefore taken as a name under ``results/``; an absolute
+    path is still honoured, for a caller who means somewhere else.
+    """
+    value = Path(value)
+    return value if value.is_absolute() else OUT / value
+
+
 def main() -> None:
     # D2 (2026-10-20): allow evaluating alternate denoisers (e.g. the
     # spectral-loss D2 arm) without touching the frozen D1 artifacts.
@@ -445,7 +459,7 @@ def main() -> None:
     args = ap.parse_args()
     OUT.mkdir(exist_ok=True)
     WEIGHTS = args.weights
-    FINAL = args.final
+    FINAL = resolve_final(args.final)
     if args.merge:
         parts = [
             json.loads(p.read_text(encoding="utf-8"))

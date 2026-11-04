@@ -128,6 +128,17 @@ def _val_metrics(
     return {"val_l2": total / len(idxs)}
 
 
+def seeded_model(n_channels: int) -> VMIDenoiser:
+    """Build the network from a seeded global RNG; see tools/train_denoiser.py.
+
+    The same defect: ``SEED`` reached only the local generator for batch order
+    and crop offsets, while the convolution weights came from the unseeded
+    global RNG. The D1w weights shipped in release v0.2.0 predate this call.
+    """
+    torch.manual_seed(SEED)
+    return VMIDenoiser(n_channels=n_channels)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--steps-per-run", type=int, default=250)
@@ -142,7 +153,7 @@ def main() -> None:
     val_idxs = list(range(N_TRAIN, N_SAMPLES))
     train_idxs = list(range(N_TRAIN))
 
-    model = VMIDenoiser(n_channels=2)
+    model = seeded_model(2)
     opt = torch.optim.Adam(model.parameters(), lr=LR)
     generator = torch.Generator().manual_seed(SEED)
 
