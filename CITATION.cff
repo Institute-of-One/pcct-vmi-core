@@ -20,8 +20,8 @@ identifiers:
     value: "10.5281/zenodo.23875046"
     description: "Concept DOI (resolves to the latest version)"
   - type: doi
-    value: "10.5281/zenodo.23875047"
-    description: "Version DOI of the 0.2.0 release, the one the manuscript cites"
+    value: "10.5281/zenodo.24468454"
+    description: "Version DOI of the 0.3.0 release, the one the manuscript cites"
 keywords:
   - photon-counting detector CT
   - virtual monoenergetic imaging

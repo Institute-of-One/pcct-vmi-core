@@ -15,7 +15,7 @@
   "changed_page_rechecked": "final-page-11.png",
   "artifacts": {
     "submission\\jxst\\output\\final-title-1.png": "8230f94b16ecd5d65180b71a3ee0200e0bd7210dc5fc60d8f45b6f05fa8c0cc4",
-    "submission\\jxst\\output\\final-title-2.png": "5da746e97b36fa36c058b3f676919abecfe767c0e31daf29e9ad643d6c06c170",
+    "submission\\jxst\\output\\final-title-2.png": "5c98e0bd3483d2f556590070b361731daa424e0788af05b2c01c48e6023a8e31",
     "submission\\jxst\\output\\final-page-01.png": "8322f20c0ecb180f9c9c6d5627c52a15d42848ebdbef1f226f5f77d9bd861760",
     "submission\\jxst\\output\\final-page-02.png": "b2e98cb6b3570ff88921eac92330407914b79feba9e54aa2cafe9531c2c76dc0",
     "submission\\jxst\\output\\final-page-03.png": "b45a61293b510921ee614ec7cf980cc24e741a48aaebc833fc0967492b3c8522",
@@ -27,7 +27,7 @@
     "submission\\jxst\\output\\final-page-09.png": "33e8deb84575d3ab6ac00e7b696c7e67902fe1cc85eb12263498efc5a65c6aa6",
     "submission\\jxst\\output\\final-page-10.png": "efef9a432332f5e453fb6d5116a3986dfb7d763c01b5f4a714db34dc7703841c",
     "submission\\jxst\\output\\final-page-11.png": "1abfb68606157aa42e7b13a53d1c06570389ab0a99c1635436d0ef437f12c4fe",
-    "submission\\jxst\\output\\final-page-12.png": "b960c00014464a044a57a24b9dbf2d6eef302ef3427690ed9c4a1fa246d7ca3f",
+    "submission\\jxst\\output\\final-page-12.png": "64b8c83e26fbb42b6544146fce5b4c38ef0746ce345e4b00695bdb6c2211b71f",
     "submission\\jxst\\output\\final-page-13.png": "4e0f3927e5ae9ee9d0588d083bb4e0e7e968c3491f56ffe577181a590ef341d5",
     "submission\\jxst\\output\\final-page-14.png": "84c2a0cd31318db613e500bb47f64a3bef5f1cfe32195520412b1738e9d168de",
     "submission\\jxst\\output\\final-page-15.png": "3529b86e1319ad39b7248257b5ad53776d136253d622ff0306f73f739e2811f6",
@@ -76,30 +76,10 @@
     "reference list format consistent across entries",
     "draft markers and internal to-do notes printed in the document"
   ],
-  "findings": "Every page of the manuscript and both title pages opened at 150 dpi after the three-seed replication was written into sections 2.3, 2.7, 3.3, 4.4 and 5 and into the abstract. The document grew from 19 to 20 pages. One defect was found and fixed: Table 3 came out with its caption and first two rows at the foot of page 8 and the remaining four rows on page 9. The fix is in the builder, not the document - submission/jxst/build_submission_docs.py now sets w:cantSplit on every table row, keep_with_next on every table caption, and keep_with_next on every row but the last, so a table and its title move to the next page together. After the rebuild Table 3 is whole on page 9 with its caption, and pages 8 to 11 were reopened to confirm it. Checked on every page: no blank or near-blank page, no heading or caption separated from what it labels, no other table split, no markup printed as text, no draft marker inside the body, figure legends inside the canvas and axis labels legible, reference list format consistent. The abstract is exactly 200 words including its labels. Title page 1 still carries the DRAFT line and the three open gates. This pass also corrected record_visual_review.py, which re-pinned hashes but carried the page counts forward unchanged, so a ledger that said 19 pages could not be brought up to 20 except by the hand edit the module exists to prevent; the counts are now derived from the pinned artefacts.",
+  "findings": "Re-pinned after the v0.3.0 data-availability statement: both pages were opened at 150 dpi and read. Page 12 cites https://doi.org/10.5281/zenodo.24468454 (release v0.3.0) in the Data availability section, with no heading orphaned and no paragraph broken; title page 2 carries the same sentence. The other eighteen manuscript pages and title page 1 rasterized byte-identically to the bytes already pinned, so only these two changed.",
   "not_checked": "Scientific correctness of the figures and numbers, which the author verifies. Print-size legibility was judged from a 150-dpi raster, not from paper.",
   "reopened_in_this_pass": [
-    "submission\\jxst\\output\\final-page-01.png",
-    "submission\\jxst\\output\\final-page-02.png",
-    "submission\\jxst\\output\\final-page-03.png",
-    "submission\\jxst\\output\\final-page-04.png",
-    "submission\\jxst\\output\\final-page-05.png",
-    "submission\\jxst\\output\\final-page-06.png",
-    "submission\\jxst\\output\\final-page-07.png",
-    "submission\\jxst\\output\\final-page-08.png",
-    "submission\\jxst\\output\\final-page-09.png",
-    "submission\\jxst\\output\\final-page-10.png",
-    "submission\\jxst\\output\\final-page-11.png",
     "submission\\jxst\\output\\final-page-12.png",
-    "submission\\jxst\\output\\final-page-13.png",
-    "submission\\jxst\\output\\final-page-14.png",
-    "submission\\jxst\\output\\final-page-15.png",
-    "submission\\jxst\\output\\final-page-16.png",
-    "submission\\jxst\\output\\final-page-17.png",
-    "submission\\jxst\\output\\final-page-18.png",
-    "submission\\jxst\\output\\final-page-19.png",
-    "submission\\jxst\\output\\final-page-20.png",
-    "submission\\jxst\\output\\final-title-1.png",
     "submission\\jxst\\output\\final-title-2.png"
   ],
   "unchanged_pages_note": "Every other pinned image is byte-identical to the one opened earlier, so the hashes below all cover pages that have been seen at these exact bytes.",
@@ -150,6 +130,12 @@
       "reviewer": "Claude (Opus 5) page-by-page inspection, at the author's direction",
       "date": "2026-11-23",
       "manuscript_pages": 19,
+      "title_pages": 2
+    },
+    {
+      "reviewer": "Claude (Opus 5) page-by-page inspection, at the author's direction",
+      "date": "2026-11-23",
+      "manuscript_pages": 20,
       "title_pages": 2
     }
   ]

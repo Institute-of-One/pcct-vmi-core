@@ -255,3 +255,54 @@ point at an interpreter with python-docx 1.2.0.
 Three gates are unchanged and remain the reasons this is a draft:
 `independent_codex_claude_review` BLOCKED, `research_end_to_end_reexecution` PARTIAL, and
 `author_visual_approval` PENDING, which is the author's and was not recorded here.
+
+## 2026-11-23, later still — v0.3.0, because v0.2.0 could not answer the paper
+
+The manuscript cited release v0.2.0, archive DOI 10.5281/zenodo.23875047. That archive
+does not contain `tools/seed_replication_d2.py`, `results/seed_replication_d2.json` or
+`tests/test_training_seeding.py`, all written today. Section 2.3 states that the seeding
+defect "is corrected in the released code and is covered by a test", and section 3.3
+reports numbers from the replication. Against the cited archive a reader could check
+neither. The runbook's rule is the same one in other words: a release has to contain
+every result file the manuscript cites.
+
+So v0.3.0 was cut. **No reported value changed**; the figures, tables and frozen result
+files are the ones v0.2.0 carried, and the manuscript's numbers still come from the
+archived weights of that state of the code.
+
+- Version raised **before** the tag, in `pcctvmi/__init__.py`, `pyproject.toml`,
+  `.zenodo.json`, `CITATION.cff` and `paper/release.json`, because Zenodo reads
+  `.zenodo.json` from the commit the release points at and cannot correct a published
+  record (runbook 5.8.1). `version_doi` was set to null in between, so the built
+  data-availability sentence said in words that the DOI was not yet minted rather than
+  carrying a token that reads as filled in.
+- `tools/verify_archive.py` expanded the tag into an empty directory (135 files), built
+  a new environment from the shipped pins, ran `paper/figures.py` there and compared
+  bytes: **all ten figure files identical**. The check first reported a rotten archive
+  for a reason of its own — it passed a work directory in the Windows 8.3 short form
+  (`C:\Users\YAMAMO~1\...`) to a subprocess that resolves paths to the long form, and
+  `figures.py` then failed `relative_to` on its own file. The fix is in the gate, and is
+  in the tag.
+- Tag and release pushed; Zenodo minted **10.5281/zenodo.24468454** at 14:34 UTC. That
+  DOI, the `CITATION.cff` identifier and its description were written afterwards. The
+  README badge stays the concept DOI, 10.5281/zenodo.23875046.
+- The rebuild changed exactly two pages: manuscript page 12 and title page 2, both the
+  data-availability sentence. Both were opened at 150 dpi and read; the other twenty
+  rasterized byte-identically, so the review was re-pinned for those two only.
+- Gates after the rebuild: release metadata OK (both DOIs resolved through doi.org),
+  author identity OK, reference density OK, visual-review currency OK,
+  `check_template_conformance.py` structural PASS, pytest 109 passed. CI green on the
+  pushed commits.
+
+**One thing is not finished on disk.** `submission/jxst/output/manuscript.pdf` is held
+open by another process — a viewer still showing the copy delivered earlier — so Word
+could not overwrite it and the file in `output/` is still the 21:39 export with the
+v0.2.0 DOI. The `.docx` is current, the page rasters are current, and the PDF content is
+known: it was exported to a scratch directory from the same `.docx` and inspected there.
+Close the PDF and re-run the build to put it back in place:
+
+    $env:DOCX_PYTHON = "C:\Users\YamamotoShuji\AppData\Local\Python\pythoncore-3.14-64\python.exe"
+    .\.venv\Scripts\python.exe -X utf8 -B paper\build_all.py
+
+Until that runs, do not send `output/manuscript.pdf` anywhere: it is the previous
+version.
