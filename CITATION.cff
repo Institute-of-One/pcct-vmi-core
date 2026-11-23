@@ -10,8 +10,8 @@ authors:
     orcid: "https://orcid.org/0000-0001-9211-1071"
 repository-code: "https://github.com/Institute-of-One/pcct-vmi-core"
 license: MIT
-version: 0.2.0
-date-released: "2026-11-02"
+version: 0.3.0
+date-released: "2026-11-23"
 # The concept DOI resolves to the newest version and is what the README badge carries.
 # The manuscript cites the *version* DOI of the release it was built from; both are held
 # in paper/release.json and checked by submission/jxst/check_release_metadata.py.

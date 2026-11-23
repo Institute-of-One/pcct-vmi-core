@@ -1,5 +1,37 @@
 # Changelog
 
+## 0.3.0 (2026-11-23) — the release the submitted manuscript cites
+
+0.2.0 was archived before the D2 arm was replicated. The manuscript now reports the
+spread of the D2 result over three training seeds and states, in its Methods, that the
+seeding defect is corrected in the released code and covered by a test. Neither the
+replication nor that test was in 0.2.0, so a reader of the cited archive could check
+neither claim. This release is cut so that it can.
+
+Nothing in the reported values changed. The figures, tables and frozen result files of
+0.2.0 are unchanged, and the manuscript's numbers still come from the archived weights
+of that state of the code.
+
+- `tools/seed_replication_d2.py` retrains the D2 arm from three seeds fixed before any
+  outcome was inspected (20261019, 20261020, 20261021) on the same pre-generated phantom
+  files, the same 160/32 split, β = 3.0 and 4000 steps, and runs the frozen six-condition
+  evaluation on each. The verdict is `results/seed_replication_d2.json`: quarter-count
+  two-basis residual 4.81–6.35 HU, 5.09–6.67 × D1 over the nine seed-and-condition
+  combinations, lowest single training 5.09 ×.
+- `tools/train_denoiser.py` takes `--seed`, defaulting to the protocol seed so that no
+  reported arm changes; the seed is logged in every entry, written into the checkpoint,
+  and a checkpoint refuses to resume under a different seed.
+- `tests/test_training_seeding.py` pins the repair: the seed now reaches the global torch
+  RNG that initializes the convolution weights, not only the local generator that draws
+  batch order and crop offsets. The archived 0.2.0 weights predate the repair and cannot
+  be regenerated from a seed; section 2.3 of the manuscript says so.
+- `submission/jxst/build_submission_docs.py` keeps a table and its caption on one page
+  (`w:cantSplit` on every row, `keep_with_next` on the caption and on every row but the
+  last). Table 3 had split across two pages when the manuscript grew.
+- `paper/record_visual_review.py` derives the reviewed page counts from the pinned
+  artefacts instead of carrying them forward, so a rebuild that changes the page count
+  cannot leave the ledger describing a document nobody opened.
+
 ## 0.2.0 (2026-11-02) — first public release, archived for the manuscript
 
 The repository became public on 2026-11-02, and this is the release the manuscript's

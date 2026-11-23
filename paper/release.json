@@ -3,9 +3,9 @@
   "archive": "Zenodo",
   "repository": "https://github.com/Institute-of-One/pcct-vmi-core",
   "license": "MIT",
-  "version": "0.2.0",
-  "tag": "v0.2.0",
-  "date_released": "2026-11-02",
-  "version_doi": "10.5281/zenodo.23875047",
+  "version": "0.3.0",
+  "tag": "v0.3.0",
+  "date_released": "2026-11-23",
+  "version_doi": null,
   "concept_doi": "10.5281/zenodo.23875046"
 }
