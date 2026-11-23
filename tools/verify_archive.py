@@ -149,8 +149,13 @@ def main():
     p.add_argument('--force', action='store_true')
     args = p.parse_args()
 
-    workdir = Path(args.workdir) if args.workdir else \
-        Path(tempfile.gettempdir()) / ('pcct-archive-' + args.tag)
+    # Resolved, because the path is handed to a subprocess that compares it with a path
+    # of its own. On Windows TEMP is often the 8.3 short form (C:\Users\YAMAMO~1\...)
+    # while anything that calls resolve() gets the long form, and the two compare
+    # unequal as strings: paper/figures.py then fails relative_to on its own file and
+    # the release check reports a rotten archive when nothing is wrong with it.
+    workdir = (Path(args.workdir) if args.workdir else
+               Path(tempfile.gettempdir()) / ('pcct-archive-' + args.tag)).resolve()
     data = Path(args.data).resolve()
     if not data.is_dir():
         raise SystemExit('%s is not a directory; fetch the walnut data as docs/DATA.md '
