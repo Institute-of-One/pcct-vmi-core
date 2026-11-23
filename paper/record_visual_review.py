@@ -128,6 +128,16 @@ def main() -> int:
         "hashes below all cover pages that have been seen at these exact bytes."
     )
     artifacts.update(changed)
+    # How many pages were reviewed is a fact about the pinned artefacts, not a
+    # number to carry forward: a rebuild can add or drop a page, and a count
+    # left behind describes a document nobody opened. The currency gate
+    # compares these against what the build rendered, so they are derived here.
+    names = [Path(rel.replace("\\", "/")).name for rel in artifacts]
+    titles = sorted(n for n in names if n.startswith("final-title-"))
+    pages = sorted(n for n in names if n.startswith("final-page-"))
+    review["manuscript_pages"] = len(pages)
+    review["title_pages"] = len(titles)
+    review["pages_opened"] = titles + pages
     REVIEW.write_text(
         json.dumps(review, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",

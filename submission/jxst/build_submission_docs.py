@@ -125,7 +125,14 @@ def main():
         if not block: continue
         m=re.fullmatch(r'\{\{TABLE(\d)\}\}',block)
         if m:
-            i=int(m[1])-1; doc.add_paragraph(TITLES[i],style='Caption')
+            i=int(m[1])-1
+            # A table and its title go on one page. The caption keeps with the
+            # table, every row refuses to split in half, and every row but the
+            # last keeps with the next, so Word moves the whole table down
+            # rather than breaking it. w:cantSplit precedes w:tblHeader because
+            # CT_TrPr fixes that order.
+            caption=doc.add_paragraph(TITLES[i],style='Caption')
+            caption.paragraph_format.keep_with_next=True
             table=doc.add_table(rows=0,cols=len(ts[i][0])); table.style='Table Grid'
             for k,row in enumerate(ts[i]):
                 cells=table.add_row().cells
@@ -133,8 +140,13 @@ def main():
                     cell.text=value
                     for p in cell.paragraphs:
                         for r in p.runs: r.font.size=Pt(8)
+                trPr=table.rows[-1]._tr.get_or_add_trPr()
+                trPr.append(OxmlElement('w:cantSplit'))
                 if k==0:
-                    hdr=OxmlElement('w:tblHeader'); table.rows[-1]._tr.get_or_add_trPr().append(hdr)
+                    trPr.append(OxmlElement('w:tblHeader'))
+            for row in table.rows[:-1]:
+                for cell in row.cells:
+                    for p in cell.paragraphs: p.paragraph_format.keep_with_next=True
             doc.add_paragraph()
         elif block.startswith('# '): doc.add_paragraph(block[2:],style='Title')
         elif block.startswith('### '): doc.add_heading(block[4:],level=2)

@@ -37,6 +37,10 @@ results/denoiser_d1w_checkpoint.pt
 results/denoiser_d2_checkpoint.pt
 results/denoiser_d2b*_checkpoint.pt
 results/denoiser_d2b*_weights.pt
+# D2 seed replication: per-seed checkpoints only
+# (weights, logs and evaluations are committed, because the spread they measure
+#  is reported in the manuscript and has to be checkable)
+results/denoiser_d2_s*_checkpoint.pt
 # Training data (publicly regenerable via tools/make_training_data.py)
 data/training/
 # D1w walnut-arm training data (regenerable via tools/make_training_data_walnut.py)

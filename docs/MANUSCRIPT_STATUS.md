@@ -189,3 +189,69 @@ At the author's instruction the repository was made public, tagged and archived.
   `independent_codex_claude_review` structurally unable to run under AI-Check v1,
   which POLICY.md section 4 covers by requiring the project's own execution checks and
   a record of what the basis does not cover. Nothing was sent.
+
+## 2026-11-23, later — the three changes are made
+
+All three changes identified above are in `paper/manuscript.md`, and the document was
+rebuilt and reinspected.
+
+- **The Conclusions lead with the three rules.** Both the abstract's Conclusions and
+  Section 5 now state them in order — a narrower iodine distribution is not a more
+  accurate one, a penalty on the material coordinates does not protect what is
+  orthogonal to them, and a fixed-template calculation credits noise suppression but not
+  signal loss — and keep the scope limits after them. Section 5 ends on what a reader
+  should do, not on what was not done. The abstract is still exactly 200 words, which is
+  an equality in `check_template_conformance.py`, not a maximum: the new clause was paid
+  for word for word elsewhere in the abstract.
+- **The loss ablation is named as one.** The Introduction's contribution sentence now
+  says D1 and D2 differ in the loss alone, on identical data under an identical
+  protocol, so the effect of the loss term is separable from the effect of denoising,
+  and the abstract's Methods describes D2 as the same network with an added penalty.
+- **The seed spread is measured, and the claim survives.** `tools/seed_replication_d2.py`
+  retrained the D2 arm from three seeds fixed before any outcome was seen — 20261019,
+  20261020, 20261021 — on the same pre-generated phantom files, the same 160/32 split,
+  β = 3.0 and 4000 steps, and ran the frozen six-condition evaluation on each.
+  `tools/train_denoiser.py` gained `--seed`, defaulting to the protocol seed so no
+  reported arm changes, logged in every entry, written into the checkpoint, and guarded
+  so a checkpoint cannot be resumed under a different seed.
+  - Quarter count: the two-basis residual was 4.81–6.35 HU, a standard deviation over
+    the three seeds of 0.67–0.71 HU within a condition, and 5.09–6.67 times the D1
+    residual across the nine seed-and-condition combinations, mean 5.95. The lowest
+    single training was still 5.1 times D1.
+  - Full count: 1.07–1.63 HU, 2.78–4.18 times D1.
+  - The archived v0.2.0 realization, 5.26–5.29 HU and 5.56–5.59 times D1, falls inside
+    both ranges. It is not at the favourable edge of the spread; it is near the middle.
+  - The iodine deviation does not behave that way. The penalty improved the absolute
+    deviation in six of the nine combinations rather than in a fixed subset of
+    conditions, and the spread across seeds within one condition, 0.81–0.98 mgI/mL, is
+    as large as the D2 − D1 difference itself, 0.36–1.32 mgI/mL. So the orthogonal-residual
+    increase is a property of the loss term, while the direction of the iodine change is
+    not separable from the draw at three replicates. Section 5's second rule says that.
+  - Results in `results/seed_replication_d2.json`. The manuscript's reported values are
+    unchanged and still come from the archived weights, which predate the seeding repair
+    and cannot be regenerated; Section 2.3 now says so in the article itself. D1 and TV
+    were not retrained, so the spread is the ratio's numerator alone.
+
+The rebuild went from 19 to 20 pages, and every page and both title pages were opened at
+150 dpi. One defect was found: Table 3 came out with its caption and first two rows at
+the foot of page 8 and its remaining four rows on page 9. The fix is in the builder, not
+the document — `submission/jxst/build_submission_docs.py` now sets `w:cantSplit` on every
+table row, `keep_with_next` on every caption, and `keep_with_next` on every row but the
+last, so a table and its title move to the next page together. Table 3 is now whole on
+page 9. `paper/record_visual_review.py` was also corrected: it re-pinned hashes but
+carried the page counts forward unchanged, so a ledger saying 19 pages could not be
+brought to 20 except by the hand edit that module exists to prevent; the counts are now
+derived from the pinned artefacts.
+
+Checks after the rebuild: `check_template_conformance.py` structural PASS,
+`check_reference_density.py` OK at 36 references over 5,895 body words,
+`check_author_identity.py` OK, `check_release_metadata.py` OK,
+`check_visual_review_currency.py` OK, pytest 109 passed in 35.5 s.
+
+The build needs two interpreters and says so when it is given one: the project `.venv`
+carries numpy, scipy, scikit-image, matplotlib, torch and pydicom, and `DOCX_PYTHON` must
+point at an interpreter with python-docx 1.2.0.
+
+Three gates are unchanged and remain the reasons this is a draft:
+`independent_codex_claude_review` BLOCKED, `research_end_to_end_reexecution` PARTIAL, and
+`author_visual_approval` PENDING, which is the author's and was not recorded here.
