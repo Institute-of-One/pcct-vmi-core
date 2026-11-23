@@ -143,3 +143,49 @@ At the author's instruction the repository was made public, tagged and archived.
 - `paper/record_visual_review.py` re-pins the visual review and refuses to re-pin a page
   that changed on disk and was not named as opened, because the repair used to be a hand
   edit of the JSON and a hand edit can pin bytes nobody has seen.
+
+## 2026-11-23
+
+- The special issue was re-read on its live call page, which had last been checked on
+  2026-11-02. It is unchanged: submission deadline 31 December 2026, first decision
+  28 February 2027, Online First roughly 40 days after acceptance, issue intended Q2
+  2027, submission through ScholarOne with the manuscript type
+  "Special Issue - AI in PCCT". The call welcomes original research articles, reviews
+  and methodological papers, and two of its listed topics name what this manuscript
+  measures: AI-based spectral information utilisation, material decomposition and
+  quantitative imaging, and evaluation metrics, robustness and uncertainty analysis.
+  The abstract and the cover letter should answer the call in its own words rather
+  than leave the mapping to the reader.
+- Three substantive changes to the manuscript were identified, none of them cosmetic.
+  1. **The Conclusions state a strategy where the results support a rule.** "Noise
+     suppression, signal preservation, and material fidelity require separate
+     assessment" is an exhortation. The results carry three findings a reader can act
+     on, each with its own number: a reduced iodine spread did not mean an unbiased
+     estimate, since D1 kept a quarter-count deviation of roughly −1.94 to
+     −2.59 mgI/mL while its variability improved; a penalty on the material
+     coordinates did not protect what is orthogonal to them, the secondary spectral
+     residual rising about 5.6-fold at quarter count; and a frozen-template
+     detectability calculation credits noise suppression without accounting for
+     signal loss, since amplitude scaling moved one condition's optimum from 40 keV
+     to 190 keV. Both Conclusions sections should lead with those three and keep the
+     scope limits after them, not instead of them.
+  2. **The loss comparison is the manuscript's most transferable result and is
+     currently introduced as an aside** ("a deliberately tested spectral-loss
+     alternative", end of the Introduction's contribution sentence). D1 against D2 is
+     a loss-function ablation in which the physics-motivated term made an orthogonal
+     component measurably worse. It belongs in the contribution sentence and in the
+     abstract's Results as such.
+  3. **The seed spread of the trained arms is not measured.** The 2026-11-04
+     re-execution established that nothing downstream of training reproduces and
+     diagnosed why (the global RNG was never seeded; `seeded_model()` and
+     `tests/test_training_seeding.py` fix it going forward), but the size of the
+     run-to-run spread at the end of training is still unknown, and the only figure on
+     record is a 0.26 % difference in training loss at step 150 of 4000. The claims
+     that rest on a single draw should be replicated across seeds on the D2 arm, which
+     carries the sharpest of them — the 5.6-fold increase. If it survives three seeds
+     it is reported as surviving three seeds; the shipped v0.2.0 weights predate the
+     seeding repair either way and stay the manuscript's archived source.
+- Two gates remain as they were: `author_visual_approval` PENDING, and
+  `independent_codex_claude_review` structurally unable to run under AI-Check v1,
+  which POLICY.md section 4 covers by requiring the project's own execution checks and
+  a record of what the basis does not cover. Nothing was sent.
