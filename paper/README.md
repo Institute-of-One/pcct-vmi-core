@@ -84,8 +84,7 @@ the submission gates must enforce rather than remember:
 - A publication fee of `$450/£350` is payable on acceptance *on the subscription route*;
   open access via Sage Choice is a separate, optional fee.
 - Single-anonymized. "Two independent reviews are required for a manuscript to reach a
-  Revise decision", so the submission needs suggested reviewers to be realistic about
-  timing - but see AGENTS.md section 1: reviewer names are the author's to supply.
+  Revise decision".
 - Structured abstract of 200 words between the title and the body; minimum 4-5 keywords.
 - Sage Vancouver references. "Citations to preprints are otherwise discouraged."
 - Title page as a separate file, not sent to reviewers, carrying the title, every author
@@ -134,3 +133,30 @@ walnut runs and replayed one slice without retraining anything.
 
 Before submission, the author must inspect every figure and the final Word/PDF,
 approve all declarations, and complete the remaining review gates.
+
+### Re-checked 2026-11-23, with the cover letter
+
+Both live pages were read again in the author's own Chrome. The call, the dates, the
+manuscript type and the fee are unchanged, and the guidelines still say
+"Identity transparency: Single anonymized". Two things were read that the earlier
+transcription had wrong or did not have:
+
+- **The journal does not take suggested reviewers at all.** "To ensure the integrity of
+  the peer review process we assign reviewers and cannot accept author recommendations."
+  The 2026-11-02 note above said the submission "needs suggested reviewers to be
+  realistic about timing"; that is not an option here, and the line has been removed
+  rather than left to be acted on.
+- **The fee is a publication fee on the subscription route, not an open-access charge.**
+  "When an article is accepted for publication, authors are required to pay a
+  publication fee of $450/£350." Nothing is payable at submission. Optional open access
+  through Sage Choice is a separate fee, and the discounts Sage lists depend on the
+  corresponding author's affiliation matching an Open Access agreement at acceptance,
+  which this affiliation does not.
+- The colour wording is still inconsistent between the two sections of the same page:
+  "There is no charge for reproducing figures in colour in the printed version" under
+  artwork, and "If you wish to have colour figures in the printed version, fees will be
+  determined and applied at production stage" under fees. Ask for a quote rather than
+  assume either.
+
+The call's six numbered topics were taken verbatim for the cover letter; this manuscript
+answers topics 2, 3 and 6. `submission/jxst/build_cover_letter.py` holds them.
