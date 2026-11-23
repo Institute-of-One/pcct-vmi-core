@@ -1,0 +1,12 @@
+{
+  "project_root": ".",
+  "manuscript": "paper/manuscript.md",
+  "policy": "publication/IoO_Publication_Policy.md",
+  "artifacts": ["submission/final.pdf", "submission/cover_letter.md"],
+  "reviews": {
+    "Claude Code": "publication/reviews/claude.json",
+    "Codex": "publication/reviews/codex.json",
+    "ChatGPT": "publication/reviews/chatgpt.json"
+  },
+  "human": "publication/reviews/human.json"
+}

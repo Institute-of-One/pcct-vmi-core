@@ -52,19 +52,20 @@ for: energy-dependent model-observer detectability, and iodine quantitation afte
 material decomposition. A convolutional denoiser was trained on simulated spectral data \
 in two arms that differ in the loss alone - a reconstruction loss, and the same network \
 with an added penalty on the material-basis coordinates - and both were compared with a \
-total-variation reference over six dose and lesion-size conditions, with a public \
-specimen reconstruction as a stress test.
+total-variation reference over six conditions of simulated incident-count fraction and \
+insert size, with a single publicly available specimen reconstruction, carrying injected \
+simulated noise, as a stress test.
 
 The result I would put in front of this issue's readers is that loss ablation. The \
 physics-motivated penalty improved the quantity it targeted in some conditions, and \
 made the spectral residual orthogonal to those coordinates several times worse at \
-quarter count. Retraining that arm from three seeds fixed before any outcome was \
-inspected reproduced the effect in every draw, so it is a property of the loss term \
-rather than of the initialization. Two further findings follow from the same \
-measurements: a narrower iodine distribution was not a more accurate one, and a \
-fixed-template detectability calculation credits noise suppression without accounting \
-for signal loss, which moved one condition's optimal energy to the top of the sampled \
-grid.
+quarter count. Retraining that arm three times, under seeds fixed before any replication \
+outcome was inspected, reproduced the increase in every draw - measured, as the manuscript states \
+where it reports the ratio, against a reconstruction-loss arm that was trained once and \
+not replicated. Two further findings follow from the same measurements: a narrower \
+iodine distribution was not an unbiased one, and a fixed-template detectability \
+calculation credits noise suppression without accounting for signal loss, and correcting \
+for that loss moved one condition's maximum to the top of the sampled energy grid.
 
 This is the manuscript's own summary of what was measured, quoted from its abstract:
 

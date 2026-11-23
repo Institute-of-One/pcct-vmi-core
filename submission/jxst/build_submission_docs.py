@@ -43,6 +43,24 @@ TITLES=['Table 1. Peak energy (keV) / NPWE d′ magnitude. Scaled columns retain
         'Table 2. Noiseless iodine baseline and deviation mean ± realization SD (mgI/mL). N = 64 per condition.',
         'Table 3. Walnut summary over 60 adjacent slices from one specimen. Material bias / mean pixel SD are on the calibration-table mg/cm³-scale. RMSE is centrally masked; SSIM is whole-image.']
 
+MINUS=re.compile(r'-(?=\d)')
+
+
+def minus(s):
+    """A negative number set with a real minus sign, U+2212.
+
+    Python's %+f writes ASCII hyphen-minus, and Word treats a hyphen as a legal line
+    break: a cell holding '-3212.5 / 1989.3' can come out as '-' at the end of one line
+    and '3212.5' at the start of the next, which reads as a positive number. The prose
+    already uses U+2212 because it is written by hand; the tables are generated, so the
+    generator has to do it. The lookahead keeps hyphens that are not signs - none are in
+    these tables today, and a header like 'Raw-to-D1w' would be wrong to convert.
+
+    Not applied to the CSV copies of the tables: those are read by software.
+    """
+    return MINUS.sub('−',s)
+
+
 def clean(s):
     """Crossref titles carry HTML. Printed as-is they reach the editor as '&amp;'."""
     return re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',html.unescape(str(s)))).strip()
@@ -117,7 +135,7 @@ def main():
     expanded=source.replace('{{REFERENCES}}',refs)
     for i,t in enumerate(ts,1):
         with (OUT/f'table{i}.csv').open('w',encoding='utf-8-sig',newline='') as f: csv.writer(f).writerows(t)
-        expanded=expanded.replace('{{TABLE'+str(i)+'}}',TITLES[i-1]+'\n\n'+'\n'.join(' | '.join(row) for row in t))
+        expanded=expanded.replace('{{TABLE'+str(i)+'}}',TITLES[i-1]+'\n\n'+'\n'.join(' | '.join(minus(v) for v in row) for row in t))
     (OUT/'manuscript.txt').write_text(expanded,encoding='utf-8')
     doc=Document(); configure(doc)
     for block in source.replace('{{REFERENCES}}',refs).split('\n\n'):
@@ -137,7 +155,7 @@ def main():
             for k,row in enumerate(ts[i]):
                 cells=table.add_row().cells
                 for cell,value in zip(cells,row):
-                    cell.text=value
+                    cell.text=minus(value)
                     for p in cell.paragraphs:
                         for r in p.runs: r.font.size=Pt(8)
                 trPr=table.rows[-1]._tr.get_or_add_trPr()

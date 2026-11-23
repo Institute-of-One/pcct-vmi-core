@@ -1,0 +1,80 @@
+{
+  "written": "2026-11-24",
+  "what": "The change in absolute iodine deviation that the basis-coordinate penalty produced against the D1 arm, at quarter count, for the archived D2 weights and for each of the three seed replicates. Derived from frozen evaluations; nothing was retrained.",
+  "sources": [
+    "results/denoised_eval.json",
+    "results/denoised_eval_d2.json",
+    "results/seed_replication_d2.json"
+  ],
+  "conditions": [
+    {
+      "size_cm": 0.3,
+      "dose_fraction": 0.25,
+      "d1_abs_deviation_mgi_ml": 1.9365531392614028,
+      "shipped_d2_abs_deviation_mgi_ml": 1.9602795780074835,
+      "shipped_change_vs_d1_mgi_ml": 0.023726438746080714,
+      "seed_abs_deviation_mgi_ml": {
+        "20261019": 1.5740114359253463,
+        "20261020": 1.9639915814480313,
+        "20261021": 2.3838896914993146
+      },
+      "seed_change_vs_d1_mgi_ml": [
+        -0.3625417033360565,
+        0.027438442186628498,
+        0.4473365522379118
+      ],
+      "seed_spread_mgi_ml": 0.8098782555739683
+    },
+    {
+      "size_cm": 0.5,
+      "dose_fraction": 0.25,
+      "d1_abs_deviation_mgi_ml": 2.0954966079263815,
+      "shipped_d2_abs_deviation_mgi_ml": 1.6742020720657065,
+      "shipped_change_vs_d1_mgi_ml": -0.421294535860675,
+      "seed_abs_deviation_mgi_ml": {
+        "20261019": 1.2220688713085914,
+        "20261020": 1.9116192065877202,
+        "20261021": 2.110479769889077
+      },
+      "seed_change_vs_d1_mgi_ml": [
+        -0.87342773661779,
+        -0.18387740133866126,
+        0.014983161962695668
+      ],
+      "seed_spread_mgi_ml": 0.8884108985804857
+    },
+    {
+      "size_cm": 0.8,
+      "dose_fraction": 0.25,
+      "d1_abs_deviation_mgi_ml": 2.5900818199798343,
+      "shipped_d2_abs_deviation_mgi_ml": 1.8687907319188513,
+      "shipped_change_vs_d1_mgi_ml": -0.7212910880609831,
+      "seed_abs_deviation_mgi_ml": {
+        "20261019": 1.270138883569386,
+        "20261020": 2.103175009662876,
+        "20261021": 2.2469443247892085
+      },
+      "seed_change_vs_d1_mgi_ml": [
+        -1.3199429364104482,
+        -0.48690681031695826,
+        -0.34313749519062586
+      ],
+      "seed_spread_mgi_ml": 0.9768054412198224
+    }
+  ],
+  "verdict": {
+    "n_runs": 9,
+    "n_improved": 6,
+    "n_worsened": 3,
+    "largest_improvement_mgi_ml": 1.3199429364104482,
+    "largest_worsening_mgi_ml": 0.4473365522379118,
+    "seed_spread_within_condition_mgi_ml": [
+      0.8098782555739683,
+      0.9768054412198224
+    ],
+    "shipped_change_vs_d1_abs_mgi_ml": [
+      0.023726438746080714,
+      0.7212910880609831
+    ]
+  }
+}

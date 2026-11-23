@@ -1,0 +1,9 @@
+{
+  "approved": false,
+  "name": "TODO",
+  "approved_at": "TODO",
+  "approval_evidence": "TODO",
+  "snapshot": "TODO",
+  "review_sha256": {"Claude Code": "TODO", "Codex": "TODO", "ChatGPT": "TODO"},
+  "ending_rationale": ""
+}

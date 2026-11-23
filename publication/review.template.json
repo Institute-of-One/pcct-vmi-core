@@ -1,0 +1,20 @@
+{
+  "role": "TODO",
+  "session": "TODO",
+  "reviewed_at": "TODO",
+  "snapshot": "TODO",
+  "policy_sha256": "TODO",
+  "independent": false,
+  "decision": "blocked",
+  "unresolved": ["Review not performed"],
+  "ending_quote": "TODO",
+  "ending_rationale": "",
+  "checks": {
+    "discussion_limitations": {"pass": false, "evidence": "TODO"},
+    "contribution_supported": {"pass": false, "evidence": "TODO"},
+    "clinical_scope": {"pass": false, "evidence": "TODO"},
+    "ending_reviewed": {"pass": false, "evidence": "TODO"},
+    "abstract_consistent": {"pass": false, "evidence": "TODO"},
+    "artifacts_verified": {"pass": false, "evidence": "TODO"}
+  }
+}

@@ -306,3 +306,66 @@ Close the PDF and re-run the build to put it back in place:
 
 Until that runs, do not send `output/manuscript.pdf` anywhere: it is the previous
 version.
+
+*(Done the same evening: the file was closed, the build re-ran, and the page rasters
+came out byte-identical to the ones rendered in the scratch directory.)*
+
+## 2026-11-24 — the independent review, and what it found
+
+The IoO publication gate is deployed in this repository. `publication/` is a
+byte-identical copy of `D:/DevGit/IoO/publication`, `publication.json` names the
+manuscript, the policy and the submitted artefacts, and
+`publication/publication_gate.py --snapshot` pins them. An independent **ChatGPT**
+review was obtained over seven rounds against those snapshots, on the author's
+instruction that the cross-check be ChatGPT only. The final record is stored verbatim at
+`publication/reviews/chatgpt.json`; it was read out of the conversation in slices and
+checked against a SHA-256 computed in the browser, so it is the reviewer's text and not
+a paraphrase. Its decision is `blocked`, five of its six checks pass, and it states in
+its own unresolved list that the Codex and Claude reviews the policy requires were not
+obtained.
+
+**It was worth doing.** Four defects it found were real, and three of them were mine,
+introduced the same day:
+
+- **A false statement about the replication.** Section 3.3 said the archived D2
+  realization "falls inside both ranges". At quarter count it does. At full count it
+  does not: the archived low end is 1.0516 HU against a lowest replicate of 1.0671 HU.
+  The text now says where it falls outside, to 0.02 HU.
+- **A number with no source.** Section 3.3 compared the seed spread against "the
+  difference between D2 and D1 itself, 0.36-1.32 mgI/mL". That interval could not be
+  reproduced from any frozen file. The archived D2 arm moved the absolute iodine
+  deviation by 0.02-0.72 mgI/mL, and the change over the nine seed-and-condition runs
+  spans 1.32 better to 0.45 worse. `tools/seed_iodine_summary.py` now derives all of it
+  from the frozen evaluations into `results/seed_iodine_summary.json`, so the prose
+  quotes a file instead of a memory (runbook 3.1).
+- **An attribution stronger than the design.** "The increase in the orthogonal residual
+  is therefore a property of the loss term" rests on three D2 trainings against a single
+  unreplicated D1. Section 1, section 3.3, section 4.4 and the cover letter now say what
+  was actually compared.
+- **A claim contradicted by the paper's own Table 3**, which only became visible once
+  the reviewer had the built document: section 3.4 said RMSE and structural similarity
+  "ranked the extrapolation behavior differently" at 12.5%. They do not. Both rank TV,
+  D1w, Raw. The text now reports the ordering they agree on and makes no rate comparison
+  between two quantities on different scales.
+
+**And reading the pages found one the reviewer could not see.** All 20 manuscript pages
+and both title pages were opened at 150 dpi. The generated tables set negative numbers
+with an ASCII hyphen, which Word may break a line on: a cell could print the minus at
+the end of one line and the digits at the start of the next, which reads as a positive
+number. `submission/jxst/build_submission_docs.py` now writes U+2212 in the table cells
+and in the built text, and leaves the CSV copies alone because software reads those. The
+prose was already correct. The runbook names this defect class in section 3.4; no gate
+in this repository looks for it.
+
+The snapshot definition changed once, for cause. It used to include
+`paper/visual_review.json` and `paper/readiness.json`, which record the inspection of the
+submission - so recording an inspection invalidated the review that inspection was
+carried out for. Those are out; the built manuscript text is in.
+
+**State of the gates.** `check_template_conformance.py` is a structural PASS and
+`submission_status` is BLOCKED on two: `independent_codex_claude_review`, because one
+review of three was obtained, and `research_end_to_end_reexecution`, which is PARTIAL
+because nothing downstream of training reproduces bit-for-bit - disclosed in section 2.3
+and now measured, but still PARTIAL on the record. While either is open the title page
+prints `DRAFT - not for submission`. That banner is the state of the package, and
+removing it is a decision about those two gates, not a formatting step.

@@ -1,0 +1,18 @@
+{
+  "_comment": "The IoO publication gate for this article. publication/ is a byte-identical deployment of D:/DevGit/IoO/publication; the policy is not weakened locally. Two things decide what is listed here. The Word .docx and the Word PDF get new bytes on every export, so a snapshot pinned to them would expire the moment the document is rebuilt; the built text they are made from is deterministic and is listed instead, with the page images covered by the separate visual confirmation the policy requires. And paper/visual_review.json and paper/readiness.json are deliberately NOT artifacts: they record the inspection of the submission, so including them makes the snapshot change every time an inspection is recorded, which invalidates the very review that inspection was carried out for. The circle showed up in practice on 2026-11-24.",
+  "project_root": ".",
+  "manuscript": "paper/manuscript.md",
+  "policy": "publication/IoO_Publication_Policy.md",
+  "artifacts": [
+    "submission/jxst/output/manuscript.txt",
+    "submission/jxst/output/cover_letter.txt",
+    "paper/release.json",
+    "paper/references.json"
+  ],
+  "reviews": {
+    "Claude Code": "publication/reviews/claude.json",
+    "Codex": "publication/reviews/codex.json",
+    "ChatGPT": "publication/reviews/chatgpt.json"
+  },
+  "human": "publication/reviews/human.json"
+}

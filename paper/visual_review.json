@@ -1,6 +1,6 @@
 {
   "reviewer": "Claude (Opus 5) page-by-page inspection, at the author's direction",
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "manuscript_pages": 20,
   "title_pages": 2,
   "raster_dpi": 150,
@@ -14,23 +14,23 @@
   ],
   "changed_page_rechecked": "final-page-11.png",
   "artifacts": {
-    "submission\\jxst\\output\\final-title-1.png": "8230f94b16ecd5d65180b71a3ee0200e0bd7210dc5fc60d8f45b6f05fa8c0cc4",
+    "submission\\jxst\\output\\final-title-1.png": "c90d2c14579df24eb8bb4989fae38a998acbdcd92ed2fc3c31fe2da4f026a5d6",
     "submission\\jxst\\output\\final-title-2.png": "5c98e0bd3483d2f556590070b361731daa424e0788af05b2c01c48e6023a8e31",
-    "submission\\jxst\\output\\final-page-01.png": "8322f20c0ecb180f9c9c6d5627c52a15d42848ebdbef1f226f5f77d9bd861760",
-    "submission\\jxst\\output\\final-page-02.png": "b2e98cb6b3570ff88921eac92330407914b79feba9e54aa2cafe9531c2c76dc0",
+    "submission\\jxst\\output\\final-page-01.png": "c033a02bc3b2aa6ccf52ad79000868a6d9a0dd5290f07d5f51eee9af45f038a0",
+    "submission\\jxst\\output\\final-page-02.png": "c952ee12cbc93a4c660e8ac65708c06a5c4c547cdab38568cc9853446e496b06",
     "submission\\jxst\\output\\final-page-03.png": "b45a61293b510921ee614ec7cf980cc24e741a48aaebc833fc0967492b3c8522",
-    "submission\\jxst\\output\\final-page-04.png": "e28991978baf9a33f2d36017c0fbfab06dab5938c39ab9a25640161377b7cc42",
-    "submission\\jxst\\output\\final-page-05.png": "ae69833205cb0d92b66a1187c338655198b58cfd81268dcdac406b4e17aaa56c",
-    "submission\\jxst\\output\\final-page-06.png": "70df9810186fefbcde6b8e16893c90a9b5a5591101ceaad5a98b8c709d895c94",
-    "submission\\jxst\\output\\final-page-07.png": "a0f7ff7187bd2c5ae51142067ab06fb2a889ed9a2bc571d71a8a250ddedd60d0",
-    "submission\\jxst\\output\\final-page-08.png": "40600e850bd9c78dbd4da77c2925a44e512269170c60cf0d8b1ef0f7831b5d1c",
-    "submission\\jxst\\output\\final-page-09.png": "33e8deb84575d3ab6ac00e7b696c7e67902fe1cc85eb12263498efc5a65c6aa6",
-    "submission\\jxst\\output\\final-page-10.png": "efef9a432332f5e453fb6d5116a3986dfb7d763c01b5f4a714db34dc7703841c",
-    "submission\\jxst\\output\\final-page-11.png": "1abfb68606157aa42e7b13a53d1c06570389ab0a99c1635436d0ef437f12c4fe",
-    "submission\\jxst\\output\\final-page-12.png": "64b8c83e26fbb42b6544146fce5b4c38ef0746ce345e4b00695bdb6c2211b71f",
-    "submission\\jxst\\output\\final-page-13.png": "4e0f3927e5ae9ee9d0588d083bb4e0e7e968c3491f56ffe577181a590ef341d5",
-    "submission\\jxst\\output\\final-page-14.png": "84c2a0cd31318db613e500bb47f64a3bef5f1cfe32195520412b1738e9d168de",
-    "submission\\jxst\\output\\final-page-15.png": "3529b86e1319ad39b7248257b5ad53776d136253d622ff0306f73f739e2811f6",
+    "submission\\jxst\\output\\final-page-04.png": "42f3330ff3e16e47247b32a50e113868fe1acad7c58dc2523a45c7791001856d",
+    "submission\\jxst\\output\\final-page-05.png": "941fc71d04edcc7a8062677ec949f10bd774b9709b66598773fdfbb72d2043a2",
+    "submission\\jxst\\output\\final-page-06.png": "b5ee57e930e2ebddcc6dd91d1b183eb8af685324a7fd4af9bf1c61f4a35590ce",
+    "submission\\jxst\\output\\final-page-07.png": "aa0f6245d22da730f3e821588bffa97f601e34d66da5a74825cf0ee51d809967",
+    "submission\\jxst\\output\\final-page-08.png": "a1ed9ab228b106e4770843110acb3aac10a3a6bb97feaabbc21cf6541db1be32",
+    "submission\\jxst\\output\\final-page-09.png": "190e8a5ed935e90ad6b7a205e2bfeda8b6f1a27dfc109fe5197458555b89db89",
+    "submission\\jxst\\output\\final-page-10.png": "25f2485fd314b070d564803e0479602e7c17f6a3c2bb6605c83f940f82d87064",
+    "submission\\jxst\\output\\final-page-11.png": "a0a49b28e3d9e165b204503d01a2eed1dab46c0a77459eba9b00a23b7a1c79dd",
+    "submission\\jxst\\output\\final-page-12.png": "ace56a9d239f5df25ae9ee0f8b05b77f73b8b47cf428c2ea1076ed7f33f1480b",
+    "submission\\jxst\\output\\final-page-13.png": "741221b5750ac0d4eaa83c34d76c5365504577c1756fe341e870ea572cd0020a",
+    "submission\\jxst\\output\\final-page-14.png": "62ef1a89345221428b5f69882cd18645b71eb3b54b4ed782082803cc7268d7ca",
+    "submission\\jxst\\output\\final-page-15.png": "1264e193f3b32c327a84bd730db1f4af83da19599b3caee3cc387428d3f084c1",
     "submission\\jxst\\output\\final-page-16.png": "54e187ec9998db5f6aa1d7cd759dcdff1f91381312e340552e6a8a335d8ec4e9",
     "submission\\jxst\\output\\final-page-17.png": "7d65748bc29915b71bc29de38bdf59aa107867624674b3e555aeb40e9392f7c0",
     "submission\\jxst\\output\\final-page-18.png": "e6e21e2179be2de6fad73b43ea4f745a59f311edcff3bec12e5e2bf386e59576",
@@ -76,11 +76,11 @@
     "reference list format consistent across entries",
     "draft markers and internal to-do notes printed in the document"
   ],
-  "findings": "Re-pinned after the v0.3.0 data-availability statement: both pages were opened at 150 dpi and read. Page 12 cites https://doi.org/10.5281/zenodo.24468454 (release v0.3.0) in the Data availability section, with no heading orphaned and no paragraph broken; title page 2 carries the same sentence. The other eighteen manuscript pages and title page 1 rasterized byte-identically to the bytes already pinned, so only these two changed.",
+  "findings": "Re-pinned after the last review finding: section 3.4 no longer compares a rate of change between SSIM and RMSE, which are on different scales. Both pages were reopened at 150 dpi; Table 3 is whole on page 9 with its caption, and every negative number in it is U+2212.",
   "not_checked": "Scientific correctness of the figures and numbers, which the author verifies. Print-size legibility was judged from a 150-dpi raster, not from paper.",
   "reopened_in_this_pass": [
-    "submission\\jxst\\output\\final-page-12.png",
-    "submission\\jxst\\output\\final-title-2.png"
+    "submission\\jxst\\output\\final-page-08.png",
+    "submission\\jxst\\output\\final-page-09.png"
   ],
   "unchanged_pages_note": "Every other pinned image is byte-identical to the one opened earlier, so the hashes below all cover pages that have been seen at these exact bytes.",
   "previous_reviews": [
@@ -135,6 +135,18 @@
     {
       "reviewer": "Claude (Opus 5) page-by-page inspection, at the author's direction",
       "date": "2026-11-23",
+      "manuscript_pages": 20,
+      "title_pages": 2
+    },
+    {
+      "reviewer": "Claude (Opus 5) page-by-page inspection, at the author's direction",
+      "date": "2026-11-23",
+      "manuscript_pages": 20,
+      "title_pages": 2
+    },
+    {
+      "reviewer": "Claude (Opus 5) page-by-page inspection, at the author's direction",
+      "date": "2026-11-24",
       "manuscript_pages": 20,
       "title_pages": 2
     }

@@ -1,0 +1,46 @@
+{
+  "role": "ChatGPT",
+  "session": "This ChatGPT publication-gate conversation, final independent review of the photon-counting CT manuscript",
+  "reviewed_at": "2026-11-24T01:43:03+09:00",
+  "snapshot": "4e97c2453e7e32f916bbfaba324100147dde2707bc93bd9e0dcae5456d9ea04a",
+  "policy_sha256": "a474e656741b3843e7a1396c15e01e528c5c33d4c797ca7b41e35855a739031e",
+  "independent": true,
+  "decision": "blocked",
+  "unresolved": [
+    "The policy file matches the stated SHA-256. The publication manifest and snapshot-generation record were unavailable, so the snapshot hash and its file membership could not be independently verified.",
+    "The rendered DOCX and PDF, separate title page, figure images, and portal record were unavailable. Their content, correspondence to the reviewed text, visual rendering including minus-sign line breaks, and upload or submission status could not be independently verified. The author records those checks separately in the readiness ledger.",
+    "The table builder, release inventory, tagged weight files or blob IDs, licence files, and end-to-end reexecution record were unavailable. The builder implementation, release contents, licence coverage, reported byte identity of principal weights across v0.2.0 and v0.3.0, and regeneration of the submission outputs could not be independently verified.",
+    "The full primary and sensitivity evaluation files, dated seed-selection and training records, and seed-repair test output were unavailable. The signed transfer and underlying contrasts at 190 keV, evaluation details beyond the built tables and supplied D2 summaries, seed-selection timing, and reported repair test could not be independently verified.",
+    "The supplied walnut summary supports the aggregate values and rankings. The underlying slice-level outputs, VMI fitting and checking assignments, per-energy calibration agreement records, and material-series discrepancy evidence were unavailable.",
+    "The Abstract has 200 whitespace-delimited words including the four structured labels. The journal's counting convention could not be verified from the supplied files.",
+    "The policy requires three independent reviews. The author directed a ChatGPT-only cross-check and states that this is the sole independent review obtained. The Codex and Claude reviews required by the policy remain absent."
+  ],
+  "ending_quote": "These are simulation results with a single-specimen reconstruction arm, and they do not establish clinical benefit, a universal optimal energy, or a validated patient-dose reduction. Within those limits the practical consequence is specific. Amplitude correction changes which energy wins: in the 8-mm, quarter-count D1 condition it moved the maximum from 40 keV to 190 keV, the edge of the sampled grid, which makes that a sampled maximum and not a recommended imaging energy. When sampled energies are compared for a denoised spectral image, report that comparison under both template conventions, together with a bias measurement against a stated reference and a measurement of the residual orthogonal to the material basis, rather than relying on background-noise-derived detectability or image similarity alone.",
+  "ending_rationale": "The paragraph states the study's limits and ends with an affirmative reporting recommendation. It identifies the 8-mm quarter-count D1 comparison, treats 190 keV as a sampled boundary maximum, and recommends reporting both observer conventions alongside reference-based bias and the orthogonal residual. The ending is acceptable as written.",
+  "checks": {
+    "discussion_limitations": {
+      "pass": true,
+      "evidence": "Section 4.2 identifies the count-dependent noiseless iodine reference and its shared simulation, reconstruction, and basis pipeline. Sections 4.3–4.4 disclose the single specimen, dependence among adjacent slices, adaptation using evaluation slices, lack of independent composition truth, simulator and observer limitations, and absence of reader and clinical validation. Section 4.4 distinguishes the principal archived results from the later D2 trainings."
+    },
+    "contribution_supported": {
+      "pass": true,
+      "evidence": "The attached manuscript contains the quoted §3.4 revision, and the file comparison shows that this paragraph is the only change from the preceding built text. The revised paragraph removes the comparison of rates across RMSE and SSIM. Table 3 and walnut_eval_summary.json support TV, D1w, Raw at 12.5% and D1w, TV, Raw at 25% for both metrics, as well as the 12.5% Raw-to-D1w RMSE decrease from 962.4 to 214.0 HU. Tables 1–2 support the reported observer maxima and iodine deviations, and the supplied D2 summaries support the residual and iodine replication comparisons. Checks that require underlying outputs remain unresolved."
+    },
+    "clinical_scope": {
+      "pass": true,
+      "evidence": "Sections 2.1 and 4.3 identify one specimen reconstruction with simulated added noise and no detection endpoint. Section 4.4 limits transfer to clinical scanners. Section 5 expressly disclaims clinical benefit and validated dose reduction, treats 190 keV as a sampled maximum, and confines the implication to reporting. The supplied cover letter disclaims clinical validation and reports no patient data."
+    },
+    "ending_reviewed": {
+      "pass": true,
+      "evidence": "The final paragraph of §5 names the 8-mm quarter-count D1 shift from 40 to 190 keV, consistent with Table 1. It closes on reporting both template conventions, reference-based bias, and the orthogonal residual."
+    },
+    "abstract_consistent": {
+      "pass": true,
+      "evidence": "The Abstract's '64 realizations each' agrees with §2.1. The supplied cover letter quotes the unchanged Abstract Results paragraph verbatim and attributes the maximum shift to correcting for signal loss, consistent with §3.1 and Table 1. Table 2 supports the iodine deviations from the noiseless reference, the supplied D2 summaries support the residual ranges, and Table 3 and walnut_eval_summary.json support the walnut RMSE and pulp bias."
+    },
+    "artifacts_verified": {
+      "pass": false,
+      "evidence": "The built manuscript contains populated Tables 1–3, figure callouts and captions, a bibliography, and a Data Availability statement whose URLs agree with the supplied cover letter. Tables 2 and 3 retain 19 and 7 U+2212 numeric minus signs, respectively. The rendered DOCX and PDF, figure images, title page, portal record, manifest, and pinned release artefacts were unavailable. The review of the supplied text is complete, but the artefact check and the three-reviewer gate remain open."
+    }
+  }
+}
