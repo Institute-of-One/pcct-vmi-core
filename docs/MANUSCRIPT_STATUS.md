@@ -369,3 +369,50 @@ because nothing downstream of training reproduces bit-for-bit - disclosed in sec
 and now measured, but still PARTIAL on the record. While either is open the title page
 prints `DRAFT - not for submission`. That banner is the state of the package, and
 removing it is a decision about those two gates, not a formatting step.
+
+## 2026-11-24 — the author closed both gates, and the package is complete
+
+He was shown the two open gates and the three options, and chose to record a reasoned
+exception and proceed. The decision, its scope and — more importantly — what does **not**
+exist are written in `publication/reviews/DECISION.md`. In short: one independent review
+(ChatGPT) instead of three; no Codex review and no separate Claude Code review of this
+snapshot; and no `publication/reviews/human.json`, because that file's whole meaning is
+an approval bound to three reviews, and binding it to one would be a false statement in
+a file written to be believed. `python publication/publication_gate.py publication.json`
+still exits non-zero and still names `publication/reviews/claude.json` as missing. That
+output is correct and is not wired out of the build. **This article must not be
+described as having passed a three-reviewer gate.**
+
+With both gates closed:
+
+- `paper/build_all.py --strict` completes. `submission_status` is **PASS** and
+  `pending_gates` is empty. The title page no longer prints the DRAFT banner and the
+  cover letter no longer carries its DRAFT line.
+- Only the two title pages changed; the 20 manuscript pages were untouched. Both were
+  reopened at 150 dpi and re-pinned. Title page 1 carries every item the journal's
+  guidelines list for a title page — title, author, affiliation, ORCID, corresponding
+  author with institutional address, telephone and email, Acknowledgements, Author
+  Contributions, and the Statements and Declarations block — and title page 2 carries
+  the data-availability statement and the generative-AI declaration.
+- Gates: author identity OK, reference density OK, visual-review currency OK, release
+  metadata OK, template conformance PASS, pytest 109 passed.
+
+### The package, and where each piece goes
+
+ScholarOne at `https://mc.manuscriptcentral.com/xst`, manuscript type
+**`Special Issue - AI in PCCT`**, single-anonymized review, deadline 31 December 2026.
+
+| Portal slot | File |
+|---|---|
+| Cover letter (the portal's own box) | `submission/jxst/output/cover_letter.txt`, pasted |
+| Title Page — not sent to reviewers | `submission/jxst/output/title_page.docx` |
+| Main Document | `submission/jxst/output/manuscript.docx` |
+| Figures | embedded in the manuscript at 300 dpi; `paper/figures/figure[1-5].png` if asked separately |
+
+Things the portal will ask that are already settled: the article is original and not
+under consideration elsewhere; there is one author; no conflicting interests; no
+funding; no clinical trial registration; no preprint, so the preprint DOI field stays
+empty; ORCID 0000-0001-9211-1071 should be linked to the account before acceptance. **Do
+not offer suggested reviewers** — the guidelines say the journal assigns them and cannot
+accept author recommendations. A publication fee of $450/£350 falls due on acceptance,
+not at submission.

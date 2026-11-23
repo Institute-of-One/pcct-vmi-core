@@ -14,8 +14,8 @@
   ],
   "changed_page_rechecked": "final-page-11.png",
   "artifacts": {
-    "submission\\jxst\\output\\final-title-1.png": "c90d2c14579df24eb8bb4989fae38a998acbdcd92ed2fc3c31fe2da4f026a5d6",
-    "submission\\jxst\\output\\final-title-2.png": "5c98e0bd3483d2f556590070b361731daa424e0788af05b2c01c48e6023a8e31",
+    "submission\\jxst\\output\\final-title-1.png": "91d649d5aff555006884c8ad62c95fb93ac954b9410d927f10e4ae58b607a5e2",
+    "submission\\jxst\\output\\final-title-2.png": "c895a74938a318a37e7a146069115ff2b7075ee537bbd1864bcfcfb7422f7dad",
     "submission\\jxst\\output\\final-page-01.png": "c033a02bc3b2aa6ccf52ad79000868a6d9a0dd5290f07d5f51eee9af45f038a0",
     "submission\\jxst\\output\\final-page-02.png": "c952ee12cbc93a4c660e8ac65708c06a5c4c547cdab38568cc9853446e496b06",
     "submission\\jxst\\output\\final-page-03.png": "b45a61293b510921ee614ec7cf980cc24e741a48aaebc833fc0967492b3c8522",
@@ -76,11 +76,11 @@
     "reference list format consistent across entries",
     "draft markers and internal to-do notes printed in the document"
   ],
-  "findings": "Re-pinned after the last review finding: section 3.4 no longer compares a rate of change between SSIM and RMSE, which are on different scales. Both pages were reopened at 150 dpi; Table 3 is whole on page 9 with its caption, and every negative number in it is U+2212.",
+  "findings": "Re-pinned after the author closed the last two readiness gates on 2026-11-24, which removed the DRAFT banner from the title page. Both title pages reopened at 150 dpi: page 1 carries the title, the author block with ORCID, the corresponding author's address, telephone and email, Acknowledgements, Author Contributions and the Statements and Declarations the journal lists; page 2 carries the data-availability statement citing 10.5281/zenodo.24468454 and the generative-AI declaration. No banner, no token, nothing orphaned. The 20 manuscript pages did not change.",
   "not_checked": "Scientific correctness of the figures and numbers, which the author verifies. Print-size legibility was judged from a 150-dpi raster, not from paper.",
   "reopened_in_this_pass": [
-    "submission\\jxst\\output\\final-page-08.png",
-    "submission\\jxst\\output\\final-page-09.png"
+    "submission\\jxst\\output\\final-title-1.png",
+    "submission\\jxst\\output\\final-title-2.png"
   ],
   "unchanged_pages_note": "Every other pinned image is byte-identical to the one opened earlier, so the hashes below all cover pages that have been seen at these exact bytes.",
   "previous_reviews": [
@@ -141,6 +141,12 @@
     {
       "reviewer": "Claude (Opus 5) page-by-page inspection, at the author's direction",
       "date": "2026-11-23",
+      "manuscript_pages": 20,
+      "title_pages": 2
+    },
+    {
+      "reviewer": "Claude (Opus 5) page-by-page inspection, at the author's direction",
+      "date": "2026-11-24",
       "manuscript_pages": 20,
       "title_pages": 2
     },
