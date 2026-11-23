@@ -56,6 +56,11 @@ def main():
     pinned_versions(docx_python,only={'python-docx'})
     subprocess.run([sys.executable,'-X','utf8','-B',str(ROOT/'paper/figures.py')],cwd=ROOT,check=True)
     subprocess.run([docx_python,'-X','utf8','-B',str(ROOT/'submission/jxst/build_submission_docs.py')],cwd=ROOT,check=True)
+    # The cover letter is a submitted document too, and it restates the title, the
+    # repository and the archive DOI. Written by hand beside the manuscript it keeps a
+    # retired DOI or an old title and no gate is looking at it, so it is built from the
+    # same sources, here, every time the manuscript is.
+    subprocess.run([sys.executable,'-X','utf8','-B',str(ROOT/'submission/jxst/build_cover_letter.py')],cwd=ROOT,check=True)
     if not args.no_pdf:
         if os.name!='nt': raise RuntimeError('PDF export requires Windows Word; use --no-pdf for a draft-only build')
         # DOCX_PYTHON drives Word through DispatchEx so the author's own Word, if open,
@@ -66,7 +71,7 @@ def main():
         # rather than leaving them to whoever remembers to run the tool.
         subprocess.run([sys.executable,'-X','utf8','-B',str(ROOT/'paper/verify_render_changes.py')],cwd=ROOT,check=True)
     output=ROOT/'submission/jxst/output'
-    artifacts=list(output.glob('*.docx'))+list(output.glob('*.pdf'))+list(output.glob('*.csv'))+[output/'manuscript.txt']
+    artifacts=list(output.glob('*.docx'))+list(output.glob('*.pdf'))+list(output.glob('*.csv'))+[output/'manuscript.txt',output/'cover_letter.txt']
     (output/'delivery_manifest.json').write_text(json.dumps({str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in artifacts},indent=2))
     # The author block, resolved against Crossref and against the page that was just
     # built. It is allowed to be unfinished in a draft build - the telephone and the
