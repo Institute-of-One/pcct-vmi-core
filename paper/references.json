@@ -8,13 +8,13 @@
         "date-parts": [
           [
             2026,
-            10,
-            28
+            11,
+            7
           ]
         ],
-        "date-time": "2026-10-28T02:13:02Z",
-        "timestamp": 1793153582932,
-        "version": "4.5.0"
+        "date-time": "2026-11-07T06:19:56Z",
+        "timestamp": 1794032396553,
+        "version": "4.8.0"
       },
       "reference-count": 98,
       "publisher": "Radiological Society of North America (RSNA)",
@@ -46,7 +46,7 @@
       },
       "page": "293-312",
       "source": "Crossref",
-      "is-referenced-by-count": 1329,
+      "is-referenced-by-count": 1337,
       "title": "Photon-counting CT: Technical Principles and Clinical Prospects",
       "prefix": "10.1148",
       "volume": "289",
@@ -1697,12 +1697,12 @@
           [
             2026,
             11,
-            2
+            7
           ]
         ],
-        "date-time": "2026-11-02T07:57:07Z",
-        "timestamp": 1793606227819,
-        "version": "4.5.0"
+        "date-time": "2026-11-07T00:59:49Z",
+        "timestamp": 1794013189915,
+        "version": "4.8.0"
       },
       "reference-count": 24,
       "publisher": "Radiological Society of North America (RSNA)",
@@ -1770,7 +1770,7 @@
       },
       "page": "130-138",
       "source": "Crossref",
-      "is-referenced-by-count": 568,
+      "is-referenced-by-count": 573,
       "title": "First Clinical Photon-counting Detector CT System: Technical Evaluation",
       "prefix": "10.1148",
       "volume": "303",
@@ -2234,12 +2234,12 @@
           [
             2026,
             11,
-            2
+            6
           ]
         ],
-        "date-time": "2026-11-02T07:57:07Z",
-        "timestamp": 1793606227641,
-        "version": "4.5.0"
+        "date-time": "2026-11-06T13:40:42Z",
+        "timestamp": 1793972442413,
+        "version": "4.8.0"
       },
       "reference-count": 74,
       "publisher": "Elsevier BV",
@@ -2314,7 +2314,7 @@
       "page": "126-136",
       "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
       "source": "Crossref",
-      "is-referenced-by-count": 570,
+      "is-referenced-by-count": 571,
       "special_numbering": "C",
       "title": "Photon-counting CT review",
       "prefix": "10.1016",
@@ -3297,13 +3297,13 @@
         "date-parts": [
           [
             2026,
-            10,
-            28
+            11,
+            5
           ]
         ],
-        "date-time": "2026-10-28T15:07:56Z",
-        "timestamp": 1793200076451,
-        "version": "4.5.0"
+        "date-time": "2026-11-05T21:16:59Z",
+        "timestamp": 1793913419446,
+        "version": "4.8.0"
       },
       "reference-count": 190,
       "publisher": "Wiley",
@@ -3382,7 +3382,7 @@
       },
       "update-policy": "https://doi.org/10.1002/crossmark_policy",
       "source": "Crossref",
-      "is-referenced-by-count": 227,
+      "is-referenced-by-count": 228,
       "title": "Principles and applications of multienergy CT: Report of AAPM Task Group 291",
       "prefix": "10.1002",
       "volume": "47",
@@ -4663,13 +4663,13 @@
         "date-parts": [
           [
             2026,
-            10,
-            27
+            11,
+            7
           ]
         ],
-        "date-time": "2026-10-27T00:34:18Z",
-        "timestamp": 1793061258879,
-        "version": "4.5.0"
+        "date-time": "2026-11-07T11:32:43Z",
+        "timestamp": 1794051163596,
+        "version": "4.8.0"
       },
       "reference-count": 85,
       "publisher": "Springer Science and Business Media LLC",
@@ -4754,7 +4754,7 @@
       "page": "5309-5320",
       "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
       "source": "Crossref",
-      "is-referenced-by-count": 153,
+      "is-referenced-by-count": 154,
       "title": "Clinical applications of photon counting detector CT",
       "prefix": "10.1007",
       "volume": "33",
@@ -6012,13 +6012,13 @@
         "date-parts": [
           [
             2026,
-            10,
-            30
+            11,
+            5
           ]
         ],
-        "date-time": "2026-10-30T21:03:53Z",
-        "timestamp": 1793394233480,
-        "version": "4.5.0"
+        "date-time": "2026-11-05T21:16:49Z",
+        "timestamp": 1793913409196,
+        "version": "4.8.0"
       },
       "reference-count": 41,
       "publisher": "Radiological Society of North America (RSNA)",
@@ -6050,7 +6050,7 @@
       },
       "page": "562-570",
       "source": "Crossref",
-      "is-referenced-by-count": 123,
+      "is-referenced-by-count": 125,
       "title": "Maximizing Iodine Contrast-to-Noise Ratios in Abdominal CT Imaging through Use of Energy Domain Noise Reduction and Virtual Monoenergetic Dual-Energy CT",
       "prefix": "10.1148",
       "volume": "276",
@@ -10843,13 +10843,13 @@
         "date-parts": [
           [
             2026,
-            10,
-            2
+            11,
+            6
           ]
         ],
-        "date-time": "2026-10-02T09:14:05Z",
-        "timestamp": 1790932445439,
-        "version": "4.1.0"
+        "date-time": "2026-11-06T00:25:10Z",
+        "timestamp": 1793924710272,
+        "version": "4.8.0"
       },
       "reference-count": 50,
       "publisher": "Wiley",
@@ -11059,7 +11059,7 @@
       "page": "3906-3923",
       "update-policy": "https://doi.org/10.1002/crossmark_policy",
       "source": "Crossref",
-      "is-referenced-by-count": 98,
+      "is-referenced-by-count": 99,
       "title": "A performance comparison of convolutional neural network‐based image denoising methods: The effect of loss functions on low‐dose CT images",
       "prefix": "10.1002",
       "volume": "46",
@@ -12355,13 +12355,13 @@
         "date-parts": [
           [
             2026,
-            10,
-            26
+            11,
+            3
           ]
         ],
-        "date-time": "2026-10-26T01:28:24Z",
-        "timestamp": 1792978104913,
-        "version": "4.5.0"
+        "date-time": "2026-11-03T20:20:18Z",
+        "timestamp": 1793737218576,
+        "version": "4.6.1"
       },
       "reference-count": 30,
       "publisher": "Wiley",
@@ -12415,7 +12415,7 @@
       "page": "3961-3971",
       "update-policy": "https://doi.org/10.1002/crossmark_policy",
       "source": "Crossref",
-      "is-referenced-by-count": 170,
+      "is-referenced-by-count": 171,
       "title": "Noise and spatial resolution properties of a commercially available deep learning‐based CT reconstruction algorithm",
       "prefix": "10.1002",
       "volume": "47",
@@ -15126,13 +15126,13 @@
         "date-parts": [
           [
             2026,
-            10,
-            22
+            11,
+            5
           ]
         ],
-        "date-time": "2026-10-22T09:18:18Z",
-        "timestamp": 1792660698061,
-        "version": "4.5.0"
+        "date-time": "2026-11-05T05:13:52Z",
+        "timestamp": 1793855632337,
+        "version": "4.6.1"
       },
       "reference-count": 42,
       "publisher": "Optica Publishing Group",
@@ -15323,7 +15323,7 @@
       },
       "page": "679",
       "source": "Crossref",
-      "is-referenced-by-count": 706,
+      "is-referenced-by-count": 707,
       "title": "aLow-dose CT via convolutional neural network",
       "prefix": "10.1364",
       "volume": "8",
@@ -15928,12 +15928,12 @@
           [
             2026,
             11,
-            2
+            6
           ]
         ],
-        "date-time": "2026-11-02T00:13:12Z",
-        "timestamp": 1793578392772,
-        "version": "4.5.0"
+        "date-time": "2026-11-06T18:04:44Z",
+        "timestamp": 1793988284264,
+        "version": "4.8.0"
       },
       "reference-count": 48,
       "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
@@ -16051,7 +16051,7 @@
       },
       "page": "1348-1357",
       "source": "Crossref",
-      "is-referenced-by-count": 1479,
+      "is-referenced-by-count": 1484,
       "title": "Low-Dose CT Image Denoising Using a Generative Adversarial Network With Wasserstein Distance and Perceptual Loss",
       "prefix": "10.1109",
       "volume": "37",
@@ -20525,12 +20525,12 @@
           [
             2026,
             11,
-            1
+            7
           ]
         ],
-        "date-time": "2026-11-01T02:56:19Z",
-        "timestamp": 1793501779699,
-        "version": "4.5.0"
+        "date-time": "2026-11-07T07:33:24Z",
+        "timestamp": 1794036804483,
+        "version": "4.8.0"
       },
       "reference-count": 30,
       "publisher": "Wiley",
@@ -20584,7 +20584,7 @@
       "page": "3630-3637",
       "update-policy": "https://doi.org/10.1002/crossmark_policy",
       "source": "Crossref",
-      "is-referenced-by-count": 220,
+      "is-referenced-by-count": 222,
       "title": "Technical Note: SpekPy v2.0—a software toolkit for modeling x‐ray tube spectra",
       "prefix": "10.1002",
       "volume": "48",
@@ -20956,13 +20956,13 @@
         "date-parts": [
           [
             2026,
-            10,
-            29
+            11,
+            5
           ]
         ],
-        "date-time": "2026-10-29T16:04:44Z",
-        "timestamp": 1793289884286,
-        "version": "4.5.0"
+        "date-time": "2026-11-05T17:47:49Z",
+        "timestamp": 1793900869309,
+        "version": "4.8.0"
       },
       "reference-count": 33,
       "publisher": "Elsevier BV",
@@ -21012,7 +21012,7 @@
       },
       "page": "776-784",
       "source": "Crossref",
-      "is-referenced-by-count": 409,
+      "is-referenced-by-count": 412,
       "title": "The xraylib library for X-ray–matter interactions. Recent developments",
       "prefix": "10.1016",
       "volume": "66",
@@ -21511,12 +21511,12 @@
           [
             2026,
             11,
-            2
+            9
           ]
         ],
-        "date-time": "2026-11-02T14:27:19Z",
-        "timestamp": 1793629639784,
-        "version": "4.5.1"
+        "date-time": "2026-11-09T02:48:56Z",
+        "timestamp": 1794192536731,
+        "version": "4.8.0"
       },
       "publisher-location": "Cham",
       "reference-count": 14,
@@ -21594,7 +21594,7 @@
       "page": "234-241",
       "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
       "source": "Crossref",
-      "is-referenced-by-count": 64602,
+      "is-referenced-by-count": 64940,
       "title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
       "prefix": "10.1007",
       "author": [
@@ -21825,12 +21825,12 @@
           [
             2026,
             11,
-            1
+            8
           ]
         ],
-        "date-time": "2026-11-01T15:18:11Z",
-        "timestamp": 1793546291658,
-        "version": "4.5.0"
+        "date-time": "2026-11-08T12:43:37Z",
+        "timestamp": 1794141817336,
+        "version": "4.8.0"
       },
       "reference-count": 19,
       "publisher": "Springer Science and Business Media LLC",
@@ -21896,7 +21896,7 @@
       },
       "page": "89-97",
       "source": "Crossref",
-      "is-referenced-by-count": 900,
+      "is-referenced-by-count": 905,
       "title": "An Algorithm for Total Variation Minimization and Applications",
       "prefix": "10.1007",
       "volume": "20",
@@ -23022,13 +23022,13 @@
         "date-parts": [
           [
             2026,
-            8,
-            17
+            11,
+            4
           ]
         ],
-        "date-time": "2026-08-17T21:51:20Z",
-        "timestamp": 1787003480765,
-        "version": "build-2736575974"
+        "date-time": "2026-11-04T21:48:54Z",
+        "timestamp": 1793828934432,
+        "version": "4.6.1"
       },
       "reference-count": 53,
       "publisher": "Springer Science and Business Media LLC",
@@ -23113,7 +23113,7 @@
       },
       "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
       "source": "Crossref",
-      "is-referenced-by-count": 3,
+      "is-referenced-by-count": 4,
       "title": "A cone-beam photon-counting CT dataset for spectral image reconstruction and deep learning",
       "prefix": "10.1038",
       "volume": "12",
@@ -24023,12 +24023,12 @@
           [
             2026,
             11,
-            2
+            9
           ]
         ],
-        "date-time": "2026-11-02T01:51:45Z",
-        "timestamp": 1793584305166,
-        "version": "4.5.0"
+        "date-time": "2026-11-09T11:14:59Z",
+        "timestamp": 1794222899237,
+        "version": "4.8.0"
       },
       "reference-count": 58,
       "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
@@ -24110,7 +24110,7 @@
       },
       "page": "600-612",
       "source": "Crossref",
-      "is-referenced-by-count": 52794,
+      "is-referenced-by-count": 53058,
       "title": "Image quality assessment: from error visibility to structural similarity",
       "prefix": "10.1109",
       "volume": "13",
