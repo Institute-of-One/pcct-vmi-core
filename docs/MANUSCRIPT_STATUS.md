@@ -416,3 +416,58 @@ empty; ORCID 0000-0001-9211-1071 should be linked to the account before acceptan
 not offer suggested reviewers** — the guidelines say the journal assigns them and cannot
 accept author recommendations. A publication fee of $450/£350 falls due on acceptance,
 not at submission.
+
+
+## 2026-11-24 — submitted
+
+Submitted through ScholarOne at `https://mc.manuscriptcentral.com/xst`. The portal
+returned **Manuscript ID XST-26-0426**, date submitted 23-Nov-2026 in the portal's own
+time zone, which is 2026-11-24 JST. Manuscript type `Special Issue- AI in PCCT`,
+special issue named in the form as "Artificial Intelligence in Photon-Counting CT:
+Advances in Imaging, Reconstruction, and Applications".
+
+What went into the form:
+
+- `manuscript.docx` (1296 KB) as Main Document, `title_page.docx` (37 KB) as Title
+  Page, which the journal does not send to reviewers. No other files; the figures are
+  embedded at 300 dpi.
+- The abstract pasted into the portal counted **200 of 200 words** on the portal's own
+  counter, which agrees with `check_template_conformance.py`.
+- Keywords: the article's own five, plus three terms from the journal's controlled list
+  (Photon Counting Imaging, Computed Tomography (CT), Machine Learning) because that
+  list is what the reviewer matcher reads.
+- `cover_letter.txt` pasted whole into the portal's box, 4,278 characters.
+- Figures 5, tables 3, words 6,268, taken from `build_report.json`.
+- No funding, no conflicting interests, not previously submitted here, no preprint DOI,
+  no suggested reviewers, not submitted by an agent. Marketing e-mail opted out.
+- The publication fee acknowledgement was ticked: $450/£350 falls due on acceptance.
+
+One required confirmation needed a decision and it is recorded here because the next
+submission to a Sage journal will meet it again. The portal makes you confirm that you
+have prepared "a complete text minus the title page, acknowledgements, and any running
+headers of author names, to allow blinded review". Our main document does carry an
+Acknowledgements section and an Author Contributions section naming the author. That is
+not an oversight: the journal's own guidelines, re-read at submission, say to include
+the Statements and Declarations block "at the end of your submitted article, after the
+Acknowledgements section [and Author Contributions section if applicable]", and the
+journal is **single-anonymized** — "Identity transparency: Single-anonymized" appears
+twice on the guidelines page, and the reviewer never sees an anonymized author. The
+portal text is Sage boilerplate written for double-anonymized journals. The substance
+it asks for is satisfied: the main document has no title page and no running header of
+author names, and the title page is a separate file. The box was ticked on that
+reading.
+
+Not changed, and deliberately: ScholarOne stores the affiliation as Institution
+`LISIT Co., Ltd.` plus Department `Institute of One` and renders the pair in that
+order, which reverses the article's `Institute of One, LISIT Co., Ltd.`. Putting the
+whole string into the Institution field would make the metadata wrong in a worse way
+than the display order is.
+
+Also corrected at submission: the account's Degree field had been typed twice and read
+`PhDPhD`; it now reads `PhD`.
+
+What happens next. Two independent reviews are required for a Revise or Accept
+decision. The journal assigns the reviewers. The editor-in-chief named on the
+guidelines page is Changqing Li, jxst@ucmerced.edu. A manuscript that does not conform
+is returned before review rather than rejected, so the first signal to watch for is a
+return for amendment.
